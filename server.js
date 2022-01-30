@@ -4,7 +4,7 @@ const app = express();
 const routes = require("./routes");
 
 //tell server how to handle html files using handlebars
-app.engine('.handlebars', exphbs.engine({ extname: '.handlebars' }));
+app.engine('.handlebars', exphbs.engine({ defaultLayout: 'main',extname: '.handlebars' }));
 app.set('view engine', '.handlebars');
 
 

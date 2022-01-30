@@ -1,7 +1,7 @@
 body{
     background-image: url("/static/img/background/parchment_1.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
 }
 
 #main-name{
@@ -13,8 +13,69 @@ body{
     background-color: darkred;
 }
 
-#main-title{
+#main-title, #cc-title{
     font-family: 'Alegreya', serif;
     font-weight: bold;
     font-size: 15mm;
+    color: rgb(88, 25, 25); 
+}
+
+#cc-subtitle{
+    font-family: 'Alegreya', serif;
+    font-weight: bold;
+    color: darkred;
+}
+
+#region-title{
+    font-family: 'Alegreya', serif;
+    font-weight: bolder;
+    font-size: 10mm;
+    color: darkred
+}
+
+hr{
+    background-color: darkred;
+}
+
+#region-hr{
+    height: 2px;
+}
+
+#region-div{
+    width: 265px;
+}
+
+#region-list{
+    font-family: 'Alegreya', serif;
+    font-weight: bolder;
+    font-size: 6mm;
+    color: rgb(88, 25, 25);
+}
+
+#overview-title, #boon-title, #region-specific-origin {
+    font-family: 'Alegreya', serif;
+    font-weight: bold;
+    color: rgb(88, 25, 25);
+}
+
+#overview-text{
+    color: rgb(88, 25, 25);
+}
+
+#boons{
+    color: rgb(88, 25, 25);
+}
+
+#boons-hr{
+    width: 500px;
+}
+
+#region-specific-origin a{
+    font-size: 20px;
+    align-self: center;
+    background-color: #f1efea;
+    width: 400px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
