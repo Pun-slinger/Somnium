@@ -1,0 +1,34 @@
+<h1 id="cc-title" class="text-center">{{main_title}}</h1>
+
+<h2 id="cc-subtitle" class="text-center mb-5">{{sub_title}}</h2>
+
+<div id="race-info" class="m-5 px-2 pt-2 rounded">
+
+    <p class="ml-1"><b>Ability Scores</b>: {{ab_score}}</p>
+
+    <p class="ml-1"><b>Size</b>: {{size_desc}} Your size is <b>{{size}}</b>.</p>
+
+    <p class="ml-1"><b>Speed</b>: {{speed}}</p>
+
+    <p class="ml-1"><b>Age</b>: {{age}}</p>
+
+    <p class="ml-1"><b>Alignment</b>: {{alignment}}</p>
+
+    <p class="ml-1"><b>Language</b>: {{language}}</p>
+
+    <hr class="mx-5">
+
+    {{#each additional_ab}}
+    <p class="ml-1"><b>{{ab_name}}</b>: {{ab_desc}}</p>
+
+    {{#if sub_ab}}
+    <ul>
+        {{#each sub_ab}}
+        <li>
+            <p class="ml-1"><b>{{ab_name}}</b>: {{ab_desc}}</p>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+    {{/each}}
+</div>

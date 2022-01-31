@@ -1,5 +1,5 @@
 body{
-    background-image: url("/img/background/parchment_1.jpg");
+    background-image: url("/static/img/background/parchment_1.jpg");
     background-repeat: no-repeat;
     background-size: auto;
 }
@@ -85,10 +85,6 @@ body{
     padding-top: 5px;
     padding-bottom: 5px;
     width: 200px;
-}
-
-a:link, a:visited{
-    color: rgb(88, 25, 25);
 }
 
 #subclasses div{
