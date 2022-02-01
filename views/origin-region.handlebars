@@ -21,6 +21,12 @@
 
 <div id="region-specific-origin" class="d-flex flex-column text-center">
     {{#each region_suborigins}}
-    <a onload="replaceWhitespace" href="/origins/{{../parent_link}}{{link}}">{{suborigin_name}}</a>
+
+    {{#if ../parent_link}}
+    <a href="/origins/{{../parent_link}}{{link}}">{{suborigin_name}}</a>
+    {{else}}
+    <a href="/origins/{{../sub_title}}{{link}}">{{suborigin_name}}</a>   
+    {{/if}}
+
     {{/each}}
 </div>

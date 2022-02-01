@@ -1,7 +1,7 @@
 body{
     background-image: url("/static/img/background/parchment_1.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
 }
 
 #main-name{
@@ -48,17 +48,13 @@ body{
     color: rgb(88, 25, 25);
 }
 
-#overview-title, #boon-title, #region-specific-origin, #races, #subclasses div h2 {
+#overview-title, #boon-title, #region-specific-origin, #races, #subclasses div h2, #ability-title {
     font-family: 'Alegreya', serif;
     font-weight: bold;
     color: rgb(88, 25, 25);
 }
 
-#overview-text{
-    color: rgb(88, 25, 25);
-}
-
-#boons, #race-info{
+#boons, #race-info, #overview-text, #ability-text, #subclass-overview-text, th, td{
     color: rgb(88, 25, 25);
 }
 
@@ -105,4 +101,19 @@ body{
     border-color: darkred;
     border-style: groove;
     border-width: 2px;
+}
+
+#subclass-overview-text{
+    background-color: #f1efea9d;
+    border-style: groove;
+    border-width: 2px;
+}
+
+table, th, td{
+    border: 1px solid black;
+    background-color: #f1efea9d;
+    border-color: darkred;
+    border-style: groove;
+    border-width: 2px;
+    padding: 5px;
 }

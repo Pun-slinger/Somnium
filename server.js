@@ -5,15 +5,16 @@ const app = express();
 const routes = require("./controller/routes");
 const races_routes = require("./controller/races-routes");
 const origins_routes = require("./controller/origins-routes");
+const subclasses_routes = require("./controller/subclasses-routes");
 
-const origins_aprana_routes = require("./controller/origins-aprana-routes");
-const origins_clivania_routes = require("./controller/origins-clivania-routes");    
-const origins_dreavan_routes = require("./controller/origins-dreavan-routes");
-const origins_ewhil_routes = require("./controller/origins-ewhil-routes");
-const origins_fruaqua_routes = require("./controller/origins-fruaqua-routes");
-const origins_ofrye_routes = require("./controller/origins-ofrye-routes");
-const origins_pandora_routes = require("./controller/origins-pandora-routes");
-const origins_ocean_routes = require("./controller/origins-ocean-routes");
+const origins_aprana_routes = require("./controller/origins/origins-aprana-routes");
+const origins_clivania_routes = require("./controller/origins/origins-clivania-routes");    
+const origins_dreavan_routes = require("./controller/origins/origins-dreavan-routes");
+const origins_ewhil_routes = require("./controller/origins/origins-ewhil-routes");
+const origins_fruaqua_routes = require("./controller/origins/origins-fruaqua-routes");
+const origins_ofrye_routes = require("./controller/origins/origins-ofrye-routes");
+const origins_pandora_routes = require("./controller/origins/origins-pandora-routes");
+const origins_ocean_routes = require("./controller/origins/origins-ocean-routes");
 
 //tell server how to handle html files using handlebars
 app.engine('.handlebars', exphbs.engine({ defaultLayout: 'main',extname: '.handlebars' }));
@@ -25,6 +26,7 @@ app.use(express.static("static"));
 app.use("/", routes);
 app.use("/races", races_routes);
 app.use("/origins", origins_routes);
+app.use("/subclasses", subclasses_routes);
 
 app.use("/origins/Aprana", origins_aprana_routes);
 app.use("/origins/Clivania", origins_clivania_routes);

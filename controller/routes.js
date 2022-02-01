@@ -16,7 +16,46 @@ router.get('/races', function (req, res) {
 })
 
 router.get('/subclasses', function (req, res) {
-    res.render('subclass-list', { title: "Somnium: Subclasses" });
+    res.render('subclass-list', {
+        title: "Somnium: Subclasses", classes: [
+            {
+                name: "Barbarian",
+                subclasses: [{ name: "Path of Anti Magic", link: "#" }]
+            },
+            {
+                name: "Bard",
+                subclasses: [{ name: "College of Symphony", link: "#" }]
+            },
+            {
+                name: "Cleric",
+                subclasses: [{ name: "Emotion Domain", link: "#" }]
+            },
+            {
+                name: "Fighter",
+                subclasses: [{ name: "Starglade Blood Battle Style", link: "#" }, { name: "Shapeless Style", link: "#" }]
+            },
+            {
+                name: "Monk",
+                subclasses: [{ name: "Way of the Silver Wing", link: "#" }, { name: "Way of the Destruction Style", link: "#" }]
+            },
+            {
+                name: "Paladin",
+                subclasses: [{ name: "Oath of The Void", link: "#" }]
+            },
+            {
+                name: "Rouge",
+                subclasses: [{ name: "Pirate", link: "#" }]
+            },
+            {
+                name: "Sorcerer",
+                subclasses: [{ name: "Demonic Bloodline", link: "#" }]
+            },
+            {
+                name: "Wizard",
+                subclasses: [{ name: "School of Chorosurgy", link: "#" }]
+            }
+        ]
+    });
 })
 
 module.exports = router;
