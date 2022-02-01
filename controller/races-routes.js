@@ -2,20 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { request, response } = require('express');
 
-//layout: false or express will start looking for layout with main.handlebars by default
-router.get('/', function (req, res) {
-    res.render('index', { title: "Home Page of Somnium" });
-})
-
-router.get('/origins', function (req, res) {
-    res.render('origin-list', { title: "Somnium: Origins" });
-})
-
-router.get('/races', function (req, res) {
-    res.render('race-list', { title: "Somnium: Races" });
-})
-
-router.get('/races/aarakocra', function (req, res) {
+router.get('/aarakocra', function (req, res) {
     res.render('race', {
         title: "Somnium: Aarakocra",
         main_title: "Races",
@@ -34,7 +21,7 @@ router.get('/races/aarakocra', function (req, res) {
     });
 })
 
-router.get('/races/werewolf', function (req, res) {
+router.get('/werewolf', function (req, res) {
     res.render('race', {
         title: "Somnium: Werewolf",
         main_title: "Races",
@@ -75,10 +62,6 @@ router.get('/races/werewolf', function (req, res) {
             }
         ]
     });
-})
-
-router.get('/subclasses', function (req, res) {
-    res.render('subclass-list', { title: "Somnium: Subclasses" });
 })
 
 module.exports = router;
