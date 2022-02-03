@@ -900,6 +900,375 @@ router.get('/Kenku', function (req, res) {
     });
 })
 
+router.get('/Kitsune', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Kitsune",
+        main_title: "Races",
+        sub_title: "Kitsune",
+        ab_score: "Cha +2, Int +1",
+        size_desc: "Kitsune are generally on the smaller side of most humanoids ranging from 4'7 to the tallest being just under 6'. Weight wise kitsune are as light and agile as they look.",
+        size: "Medium",
+        speed: "Your base walking speed is 30 feet. While not carrying anything in your hands you can drop to all fours and increase your movement speed to 35 feet.",
+        age: "Kitsune reach adulthood at 16, cease physical aging in their early 20s and live to be a century and a half.",
+        alignment: "Due to their nature of being a bit mischievous, kitsune are often chaotic. Even the most skilled monks find it difficult to ignore the desire to be a bit mischievous at times, but they tend to approach the trick in a much more planned out and guided manner. Kitsune are known to be both good and evil.",
+        language: "You can speak, read, and write Common and Sylvan.",
+        additional_ab: [
+            { ab_name: "Darkvision", ab_desc: "You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light." },
+            {
+                ab_name: "Rock Paper Scissors", sub_ab: [
+                    {
+                        ab_desc: "Once per long rest, as an action, choose an enemy within 10 ft of you that you can see. That enemy must make a DC 14 Wis saving throw. If fail, they are forced into playing a game of rock paper scissors with you. You and that creature will roll a 1d3 with a 1=Rock, 2=Paper and 3=Scissors. If you win, you can immediately move adjacent to that enemy and make an unarmed attack that does an additional 1d4 Psychic damage. In addition, that enemy is considered confused for 1 turn. If you lose then the enemy can do the same."
+                    },
+                    {
+                        ab_name: "Confused",
+                        ab_desc: "A confused creature must roll a d2 at the start of each of its turn to determine its behavior for that turn:",
+                        sub_ab: [
+                            {
+                                ab_name: "-1",
+                                ab_desc: "An affected creature can’t take any reactions and at the start of its turn, it must use all of its movement to move in a random direction. To determine the direction, roll a d8 and assign a direction to each die face. The creature doesn't take an action this turn."
+                            },
+                            {
+                                ab_name: "-2",
+                                ab_desc: "The creature uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the creature does nothing this turn."
+                            },
+                        ]
+                    }
+                ]
+            },
+            { ab_name: "Among the People", ab_desc: "You can appear as a human and hide that you are a Kitsune. As an action, you can magically hide your ears, fur, and tail(s), and visually replace them with human equivalents. You may drop the illusion as a free action." },
+        ]
+    });
+})
+
+router.get('/Kobold', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Kobold",
+        main_title: "Races",
+        sub_title: "Kobold",
+        ab_score: "Dex +2",
+        size_desc: "Kobolds are between 2 and 3 feet tall and weigh between 25 and 35 pounds.",
+        size: "Small",
+        speed: "30 ft.",
+        age: "Kobolds reach adulthood at age 6 and can live up to 120 years but rarely do so.",
+        alignment: "Kobolds are fundamentally selfish, making them evil, but their reliance on the strength of their group makes them trend toward law.",
+        language: "You can speak, read, and write Common and Draconic.",
+        additional_ab: [
+            { ab_name: "Darkvision", ab_desc: "ou can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+            { ab_name: "Grovel, Cower, and Beg", ab_desc: "As an action on your turn, you can cower pathetically to distract nearby foes. Until the end of your next turn, your allies gain advantage on attack rolls against enemies within 10 feet of you that you can see. Once you use this trait, you can't use it again until you finish a short or long rest." },
+            { ab_name: "Pack Tactics", ab_desc: "You have advantage on an attack roll against a creature if at least one of your allies is within 5 feet of the creature and the ally isn't incapacitated." },
+            { ab_name: "Sunlight Sensitivity", ab_desc: "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight." },
+        ]
+    });
+})
+
+router.get('/Lizardfolk', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Lizardfolk",
+        main_title: "Races",
+        sub_title: "Lizardfolk",
+        ab_score: "Con +2; Wis +1",
+        size_desc: "Lizardfolk are a little bulkier and taller than humans, and their colorful frills make them appear even larger.",
+        size: "Medium",
+        speed: "30 ft., swim 30 ft.",
+        age: "Lizardfolk reach maturity around age 14 and rarely live longer than 60 years.",
+        alignment: "Most lizardfolk are neutral. They see the world as a place of predators and prey, where life and death are natural processes. They wish only to survive, and prefer to leave other creatures to their own devices.",
+        language: "You can speak, read, and write Common and Draconic.",
+        additional_ab: [
+            { ab_name: "Swim Speed", ab_desc: "You have a swimming speed of 30 feet." },
+            { ab_name: "Bite", ab_desc: "Your fanged maw is a natural weapon, which you can use to make unarmed strikes. If you hit with it, you deal piercing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike." },
+            { ab_name: "Cunning Artisan", ab_desc: "As part of a short rest, you can harvest bone and hide from a slain beast, construct, dragon, monstrosity, or plant creature of size small or larger to create one of the following items: a shield, a club, a javelin, or 1d4 darts or blowgun needles. To use this trait, you need a blade, such as a dagger, or appropriate artisan's tools, such as leatherworker's tools." },
+            { ab_name: "Hold Breath", ab_desc: "You can hold your breath for up to 15 minutes at a time." },
+            { ab_name: "Hunter's Lore", ab_desc: "You gain proficiency with two of the following skills of your choice: Animal Handling, Nature, Perception, Stealth, and Survival." },
+            { ab_name: "Natural Armor", ab_desc: "You have tough, scaly skin. When you aren't wearing armor, your AC is 13 + your Dexterity modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal while you use your natural armor." },
+            { ab_name: "Hungry Jaws", ab_desc: "In battle, you can throw yourself into a vicious feeding frenzy. As a bonus action, you can make a special attack with your bite. If the attack hits, it deals its normal damage, and you gain temporary hit points equal to your Constitution modifier (minimum of 1), and you can't use this trait again until you finish a short or long rest." },
+
+        ]
+    });
+})
+
+router.get('/Minotaur', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Minotaur",
+        main_title: "Races",
+        sub_title: "Minotaur",
+        ab_score: "Str +2; Con +1",
+        size_desc: "Minotaurs average over 6 feet in height, and they have stocky builds.",
+        size: "Medium",
+        speed: "30 ft.",
+        age: "Minotaurs mature and age at about the same rate as humans.",
+        alignment: "Minotaurs who leave the walls of Skophos have the opportunity to be free of its culture and pursue chaotic alignments, while those who remain within the polis and its tyrannical regime tend toward lawful alignments.",
+        language: "You can speak, read, and write Common and Giant.",
+        additional_ab: [
+            { ab_name: "Horns", ab_desc: "Your horns are natural melee weapons, which you can use to make unarmed strikes. If you hit with them, you deal piercing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike." },
+            { ab_name: "Goring Rush", ab_desc: "Immediately after you use the Dash action on your turn and move at least 20 feet, you can make one melee attack with your horns as a bonus action." },
+            { ab_name: "Hammering Horns", ab_desc: "Immediately after you hit a creature with a melee attack as part of the Attack action on your turn, you can use a bonus action to attempt to shove that target with your horns. The target must be no more than one size larger than you and within 5 feet of you. Unless it succeeds on a Strength saving throw against a DC equal to 8 + your proficiency bonus + your Strength modifier, you push it up to 10 feet away from you." },
+            { ab_name: "Imposing Presence", ab_desc: "You have proficiency in one of the following skills of your choice: Intimidation or Persuasion." },
+
+        ]
+    });
+})
+
+router.get('/Orc', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Orc",
+        main_title: "Races",
+        sub_title: "Orc",
+        ab_score: "Str +2; Con +1",
+        size_desc: "Orcs are usually over 6 feet tall and weigh between 230 and 280 pounds.",
+        size: "Medium",
+        speed: "30 ft.",
+        age: "Orcs reach adulthood at age 12 and live up to 50 years.",
+        alignment: " Orcs are vicious raiders, who believe that the world should be theirs. They also respect strength above all else and believe the strong must bully the weak to ensure that weakness does not spread like a disease. They are usually chaotic evil.",
+        language: "You can speak, read, and write Common and Orcish.",
+        additional_ab: [
+            { ab_name: "Darkvision", ab_desc: "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+            { ab_name: "Aggressive", ab_desc: "As a bonus action, you can move up to your movement speed toward a hostile creature you can see or hear. You must end this move closer to the enemy than you started." },
+            { ab_name: "Primal Intuition", ab_desc: "You have proficiency in two of the following skills of your choice: Animal Handling, Insight, Intimidation, Medicine, Nature, Perception, and Survival." },
+            { ab_name: "Powerful Build", ab_desc: "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift." },
+
+        ]
+    });
+})
+
+router.get('/Satyr', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Satyr",
+        main_title: "Races",
+        sub_title: "Satyr",
+        ab_score: "Cha +2; Dex +1",
+        size_desc: "Satyrs range from just under 5 feet to about 6 feet in height, with generally slender builds.",
+        size: "Medium",
+        speed: "35 ft.",
+        age: "Satyrs mature and age at about the same rate as humans.",
+        alignment: "Satyrs delight in living a life free of the mantle of law. They gravitate toward being good, but some have devious streaks and enjoy causing dismay.",
+        language: "You can speak, read, and write Common and Sylvan.",
+        additional_ab: [
+            { ab_name: "Fey", ab_desc: "Your creature type is fey, rather than humanoid." },
+            { ab_name: "Ram", ab_desc: "You can use your head and horns to make unarmed strikes. If you hit with them, you deal bludgeoning damage equal to 1d4 + your Strength modifier." },
+            { ab_name: "Magic Resistance", ab_desc: "You have advantage on saving throws against spells and other magical effects." },
+            { ab_name: "Mirthful Leaps", ab_desc: "Whenever you make a long or high jump, you can roll a d8 and add the number rolled to the number of feet you cover, even when making a standing jump. This extra distance costs movement as normal." },
+            { ab_name: "Reveler", ab_desc: "You have proficiency in the Performance and Persuasion skills, and you have proficiency with one musical instrument of your choice." },
+        ]
+    });
+})
+
+router.get('/Sprite', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Sprite",
+        main_title: "Races",
+        sub_races: [
+            {
+                sub_title: "Sprite (Spring)",
+                ab_score: "Dex +2, Int +1",
+                size_desc: "",
+                size: "Small",
+                speed: "30 ft., fly 30 ft.",
+                age: "Any",
+                alignment: "Any",
+                language: "You can speak, read, and write Common and Sylvan.",
+                additional_ab: [
+                    { ab_name: "Type", ab_desc: "You are a Fey." },
+                    { ab_name: "Fairy Flight", ab_desc: "You have a flying speed equal to your walking speed and can hover. This flight is magical and does not require the use of your wings (if you have them)." },
+                    { ab_name: "Small Figure", ab_desc: "Due to your small size, you can not wield two-handed or heavy weapons as well as medium or heavy armor. In addition, you can not carry any creatures when flying." },
+                    { ab_name: "Fairy Magic", ab_desc: "At 3rd level, You know the Speak with Plants spell. You can cast it without expending a spell slot, and you must finish a long rest before you can cast it this way again." },
+                    { ab_name: "New Beginnings", ab_desc: "You have proficiency in Nature and Survival." },
+                    { ab_name: "First Come First Serve", ab_desc: "Your fly speed increases to 50 ft." },
+                ]
+            },
+            {
+                sub_title: "Sprite (Summer)",
+                ab_score: "Dex +2, Con +1",
+                size_desc: "",
+                size: "Small",
+                speed: "30 ft., fly 30 ft.",
+                age: "Any",
+                alignment: "Any",
+                language: "You can speak, read, and write Common and Sylvan.",
+                additional_ab: [
+                    { ab_name: "Type", ab_desc: "You are a Fey." },
+                    { ab_name: "Fairy Flight", ab_desc: "You have a flying speed equal to your walking speed and can hover. This flight is magical and does not require the use of your wings (if you have them)." },
+                    { ab_name: "Small Figure", ab_desc: "Due to your small size, you can not wield two-handed or heavy weapons as well as medium or heavy armor. In addition, you can not carry any creatures when flying." },
+                    { ab_name: "Hard to Hit", ab_desc: "You can now use the Dodge action as a bonus action." },
+                    { ab_name: "Sun Flare", ab_desc: "As an action, you can channel the sunlight that you have been gathering throughout the day and release it. Every creature within 30 ft of you have to make a Con saving throw or be blinded for 1 round." },
+                ]
+            },
+            {
+                sub_title: "Sprite (Fall)",
+                ab_score: "Dex +2, Cha +1",
+                size_desc: "",
+                size: "Small",
+                speed: "30 ft., fly 30 ft.",
+                age: "Any",
+                alignment: "Any",
+                language: "You can speak, read, and write Common and Sylvan.",
+                additional_ab: [
+                    { ab_name: "Type", ab_desc: "You are a Fey." },
+                    { ab_name: "Fairy Flight", ab_desc: "You have a flying speed equal to your walking speed and can hover. This flight is magical and does not require the use of your wings (if you have them)." },
+                    { ab_name: "Small Figure", ab_desc: "Due to your small size, you can not wield two-handed or heavy weapons as well as medium or heavy armor. In addition, you can not carry any creatures when flying." },
+                    { ab_name: "Darkvision", ab_desc: "You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light." },
+                    { ab_name: "Hide and Seek", ab_desc: "You have advantage on stealth checks." },
+                    { ab_name: "Blend In", ab_desc: "You gain access to the spell Disguise Self and you can cast it without expending a spell slot. You can cast this once per long rest." },
+                ]
+            },
+            {
+                sub_title: "Sprite (Winter)",
+                ab_score: "Dex +2, Str +1",
+                size_desc: "",
+                size: "Small",
+                speed: "30 ft., fly 30 ft.",
+                age: "Any",
+                alignment: "Any",
+                language: "You can speak, read, and write Common and Sylvan.",
+                additional_ab: [
+                    { ab_name: "Type", ab_desc: "You are a Fey." },
+                    { ab_name: "Fairy Flight", ab_desc: "You have a flying speed equal to your walking speed and can hover. This flight is magical and does not require the use of your wings (if you have them)." },
+                    { ab_name: "Hardened Warrior", ab_desc: "You are resistant to Cold damage." },
+                    { ab_name: "Iron Wings", ab_desc: "You have proficiency in medium armor and 1 martial weapon of your choice." },
+                    { ab_name: "Powerful Build", ab_desc: "You can now carry 1 creature of size Medium or smaller and you move at half your fly speed when carrying." },
+                ]
+            }
+        ]
+    });
+})
+
+router.get('/Tabaxi', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Tabaxi",
+        main_title: "Races",
+        sub_title: "Tabaxi",
+        ab_score: "Dex +2; Cha +1",
+        size_desc: "Tabaxi are taller on average than humans and relatively slender.",
+        size: "Medium",
+        speed: "30 ft., climb 20 ft.",
+        age: "Tabaxi have lifespans equivalent to humans.",
+        alignment: "Tabaxi tend toward chaotic alignments, as they let impulse and fancy guide their decisions. They are rarely evil, with most of them driven by curiosity rather than greed or other dark impulses.",
+        language: "You can speak, read, and write Common and one other language of your choice.",
+        additional_ab: [
+            { ab_name: "Darkvision", ab_desc: "You have a cat's keen senses, especially in the dark. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+            { ab_name: "Feline Agility", ab_desc: "Your reflexes and agility allow you to move with a burst of speed. When you move on your turn in combat, you can double your speed until the end of the turn. Once you use this trait, you can't use it again until you move 0 feet on one of your turns." },
+            { ab_name: "Cat's Claws", ab_desc: "Because of your claws, you have a climbing speed of 20 feet. In addition, your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike." },
+            { ab_name: "Cat's Talents", ab_desc: "You have proficiency in the Perception and Stealth skills." },
+        ]
+    });
+})
+
+router.get('/Tiefling', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Tiefling",
+        main_title: "Races",
+        sub_title: "Tiefling",
+        ab_score: "Cha +2; Int +1",
+        size_desc: "Tieflings are about the same size and build as humans.",
+        size: "Medium",
+        speed: "30 ft.",
+        age: "Tieflings mature at the same rate as humans but live a few years longer.",
+        alignment: "Tieflings might not have an innate tendency toward evil, but many of them end up there. Evil or not, an independent nature inclines many tieflings toward a chaotic alignment.",
+        language: "You can speak, read, and write Common and Infernal.",
+        additional_ab: [
+            { ab_name: "Darkvision", ab_desc: "Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+            { ab_name: "Hellish Resistance", ab_desc: "You have resistance to fire damage." },
+            { ab_name: "Infernal Legacy", ab_desc: "You know the thaumaturgy cantrip. Once you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell; you must finish a long rest in order to cast the spell again using this trait. Once you reach 5th level, you can also cast the darkness spell; you must finish a long rest in order to cast the spell again using this trait. Charisma is your spellcasting ability for these spells." },
+        ]
+    });
+})
+
+router.get('/Tortle', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Tortle",
+        main_title: "Races",
+        sub_title: "Tortle",
+        ab_score: "Str +2; Wis +1",
+        size_desc: "Tortle adults stand 5 to 6 feet tall and average 450 pounds. Their shells account for roughly one-third of their weight.",
+        size: "Medium",
+        speed: "30 ft.",
+        age: "Young tortles crawl for a few weeks after birth before learning to walk on two legs. They reach adulthood by the age of 15 and live an average of 50 years.",
+        alignment: "Tortles tend to lead orderly, ritualistic lives. They develop customs and routines, becoming more set in their ways as they age. Most are lawful good. A few can be selfish and greedy, tending more toward evil, but it's unusual for a tortle to shuck off order in favor of chaos.",
+        language: "You can speak, read, and write Aquan and Common.",
+        additional_ab: [
+            { ab_name: "Claws", ab_desc: "Your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of bludgeoning damage normal for an unarmed strike." },
+            { ab_name: "Hold Breath", ab_desc: "You can hold your breath for up to 1 hour at a time. Tortles aren't natural swimmers, but they can remain underwater for some time before needing to come up for air." },
+            { ab_name: "Natural Armor", ab_desc: "Due to your shell and the shape of your body, you are ill-suited to wearing armor. Your shell provides ample protection, however; it gives you a base AC of 17 (your Dexterity modifier doesn't affect this number). You gain no benefit from wearing armor, but if you are using a shield, you can apply the shield's bonus as normal." },
+            { ab_name: "Shell Defense", ab_desc: "You can withdraw into your shell as an action. Until you emerge, you gain a +4 bonus to AC, and you have advantage on Strength and Constitution saving throws. While in your shell, you are prone, your speed is 0 and can't increase, you have disadvantage on Dexterity saving throws, you can't take reactions, and the only action you can take is a bonus action to emerge from your shell." },
+            { ab_name: "Survival Instinct", ab_desc: "You gain proficiency in the Survival skill. Tortles have finely honed survival instincts." },
+        ]
+    });
+})
+
+router.get('/Triton', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Triton",
+        main_title: "Races",
+        sub_title: "Triton",
+        ab_score: "Str +1; Con +1; Cha +1",
+        size_desc: "Tritons are slightly shorter than humans, averaging about 5 feet tall.",
+        size: "Medium",
+        speed: "30 ft., swim 30 ft.",
+        age: "Tritons reach maturity around age 15 and can live up to 200 years.",
+        alignment: "Tritons tend toward neutrality. Their culture encourages them to be mindful of life's currents, knowing when to harness fate's tides and when to flow along with them.",
+        language: "You can speak, read, and write Common and Primordial.",
+        additional_ab: [
+            { ab_name: "Swim Speed", ab_desc: "You have a swimming speed of 30 feet." },
+            { ab_name: "Amphibious", ab_desc: "You can breathe air and water." },
+            { ab_name: "Control Air and Water", ab_desc: " A child of the sea, you can call on the magic of elemental air and water. You can cast fog cloud with this trait. Starting at 3rd level, you can cast gust of wind with it, and starting at 5th level, you can also cast wall of water with it. Once you cast a spell with this trait, you can't cast that spell with it again until you finish a long rest. Charisma is your spellcasting ability for these spells." },
+            { ab_name: "Darkvision", ab_desc: "You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+            { ab_name: "Emissary of the Sea", ab_desc: "Aquatic beasts have an extraordinary affinity with your people. You can communicate simple ideas with beasts that can breathe water. They can understand the meaning of your words, though you have no special ability to understand them in return." },
+            { ab_name: "Guardians of the Depths", ab_desc: "Adapted to even the most extreme ocean depths, you have resistance to cold damage." },
+        ]
+    });
+})
+
+router.get('/Warforged', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Warforged",
+        main_title: "Races",
+        sub_title: "Warforged",
+        ab_score: "Con +2; Choose any other +1",
+        size_desc: "",
+        size: "Medium",
+        speed: "30 ft.",
+        age: "A typical warforged is between two and thirty years old. The maximum warforged lifespan remains a mystery; so far, warforged have shown no signs of deterioration due to age. You are immune to magical aging effects.",
+        alignment: "Most warforged take comfort in order and discipline, tending toward law and neutrality. But some have absorbed the morality, or lack thereof, of the beings with which they served.",
+        language: "You can speak, read, and write Common and one other language of your choice.",
+        additional_ab: [
+            {
+                ab_name: "Constructed Resilience",
+                ab_desc: "You were created to have remarkable fortitude, represented by the following benefits:",
+                sub_ab: [
+                    {
+                        ab_desc: "You have advantage on saving throws against being poisoned, and you have resistance to poison damage."
+                    },
+                    {
+                        ab_desc: "You don't need to eat, drink, or breathe."
+                    },
+                    {
+                        ab_desc: "You are immune to disease."
+                    },
+                    {
+                        ab_desc: "You don't need to sleep, and magic can't put you to sleep."
+                    },
+                ]
+            },
+            { ab_name: "Sentry's Rest", ab_desc: "When you take a long rest, you must spend at least six hours in an inactive, motionless state, rather than sleeping. In this state, you appear inert, but it doesn't render you unconscious, and you can see and hear as normal." },
+            {
+                ab_name: "Integrated Protection",
+                ab_desc: "Your body has built-in defensive layers, which can be enhanced with armor:",
+                sub_ab: [
+                    {
+                        ab_desc: "You gain a +1 bonus to Armor Class."
+                    },
+                    {
+                        ab_desc: "You can don only armor with which you have proficiency. To don armor other than a shield, you must incorporate it into your body over the course of 1 hour, during which you remain in contact with the armor. To doff armor, you must spend 1 hour removing it. You can rest while donning or doffing armor in this way."
+                    },
+                    {
+                        ab_desc: "While you live, the armor incorporated into your body can't be removed against your will."
+                    },
+                ]
+            },
+            { ab_name: "Specialized Design", ab_desc: "You gain one skill proficiency and one tool proficiency of your choice." },
+        ]
+    });
+})
+
 router.get('/Werewolf', function (req, res) {
     res.render('race', {
         title: "Somnium: Werewolf",
@@ -939,6 +1308,27 @@ router.get('/Werewolf', function (req, res) {
                 ab_name: "Perks of the Predator",
                 ab_desc: "You gain proficiency in the Perception and Survival."
             }
+        ]
+    });
+})
+
+router.get('/Yuan-ti', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Yuan-ti",
+        main_title: "Races",
+        sub_title: "Yuan-ti",
+        ab_score: "Cha +2; Int +1",
+        size_desc: "Purebloods match humans in average size and weight.",
+        size: "Medium",
+        speed: "30 ft.",
+        age: "Purebloods mature at the same rate as humans and have lifespans similar in length to theirs.",
+        alignment: "Purebloods are devoid of emotion and see others as tools to manipulate. They care little for law or chaos and are typically neutral evil.",
+        language: "You can speak, read, and write Common, Abyssal, and Draconic.",
+        additional_ab: [
+            { ab_name: "Darkvision", ab_desc: "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+            { ab_name: "Innate Spellcasting", ab_desc: "You know the poison spray cantrip. You can cast animal friendship an unlimited number of times with this trait, but you can target only snakes with it. Starting at 3rd level, you can also cast suggestion with this trait. Once you cast it, you can't do so again until you finish a long rest. Charisma is your spellcasting ability for these spells." },
+            { ab_name: "Magic Resistance", ab_desc: "You have advantage on saving throws against spells and other magical effects." },
+            { ab_name: "Poison Immunity", ab_desc: "You are immune to poison damage and the poisoned condition." },
         ]
     });
 })
