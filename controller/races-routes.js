@@ -319,7 +319,376 @@ router.get('/Dwarf', function (req, res) {
                 ]
             }
         ]
+    });
+})
 
+router.get('/Elf', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Elf",
+        main_title: "Races",
+        sub_races: [
+            {
+                sub_title: "Elf (High)",
+                ab_score: "Dex +2; Int +1",
+                size_desc: "Elves range from under 5 to over 6 feet tall and have slender builds.",
+                size: "Medium",
+                speed: "30 ft.",
+                age: "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
+                alignment: "Elves love freedom, variety, and self-expression, so they lean strongly toward the gentler aspects of chaos. They value and protect others' freedom as well as their own, and they are more often good than not.",
+                language: "You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.",
+                additional_ab: [
+                    { ab_name: "Darkvision", ab_desc: "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+                    { ab_name: "Keen Senses", ab_desc: "You have proficiency in the Perception skill." },
+                    { ab_name: "Fey Ancestry", ab_desc: "ou have advantage on saving throws against being charmed, and magic can't put you to sleep." },
+                    {
+                        ab_name: "Trance", sub_ab: [
+                            {
+                                ab_desc: "Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."
+                            },
+                            {
+                                ab_desc: "If you meditate during a long rest, you finish the rest after only 4 hours. You otherwise obey all the rules for a long rest; only the duration is changed."
+                            }
+                        ]
+                    },
+                    { ab_name: "Elf Weapon Training", ab_desc: "You have proficiency with the longsword, shortsword, shortbow, and longbow." },
+                    { ab_name: "Cantrip", ab_desc: "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it." },
+                    { ab_name: "Extra Language", ab_desc: "You can speak, read, and write one extra language of your choosing." },
+                ]
+            },
+            {
+                sub_title: "Elf (Drow)",
+                ab_score: "Dex +2; Cha +1",
+                size_desc: "Elves range from under 5 to over 6 feet tall and have slender builds.",
+                size: "Medium",
+                speed: "30 ft.",
+                age: "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
+                alignment: "Elves love freedom, variety, and self-expression, so they lean strongly toward the gentler aspects of chaos. They value and protect others' freedom as well as their own, and they are more often good than not.",
+                language: "You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.",
+                additional_ab: [
+                    { ab_name: "Superior Darkvision", ab_desc: "Accustomed to the depths of the Underdark, you have superior vision in dark and dim conditions. You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+                    { ab_name: "Keen Senses", ab_desc: "You have proficiency in the Perception skill." },
+                    { ab_name: "Fey Ancestry", ab_desc: "ou have advantage on saving throws against being charmed, and magic can't put you to sleep." },
+                    {
+                        ab_name: "Trance", sub_ab: [
+                            {
+                                ab_desc: "Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."
+                            },
+                            {
+                                ab_desc: "If you meditate during a long rest, you finish the rest after only 4 hours. You otherwise obey all the rules for a long rest; only the duration is changed."
+                            }
+                        ]
+                    },
+                    { ab_name: "Sunlight Sensitivity", ab_desc: "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight." },
+                    { ab_name: "Drow Magic", ab_desc: "You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once per day; you must finish a long rest in order to cast the spell again using this trait. When you reach 5th level, you can also cast the darkness spell once per day; you must finish a long rest in order to cast the spell again using this trait. Charisma is your spellcasting ability for these spells." },
+                    { ab_name: "Drow Weapon Training", ab_desc: "You have proficiency with rapiers, shortswords, and hand crossbows." },
+                ]
+            },
+            {
+                sub_title: "Elf (Sea)",
+                ab_score: "Dex +2; Con +1",
+                size_desc: "Elves range from under 5 to over 6 feet tall and have slender builds.",
+                size: "Medium",
+                speed: "30 ft., swim 30 ft.",
+                age: "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
+                alignment: "Elves love freedom, variety, and self-expression, so they lean strongly toward the gentler aspects of chaos. They value and protect others' freedom as well as their own, and they are more often good than not.",
+                language: "You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.",
+                additional_ab: [
+                    { ab_name: "Darkvision", ab_desc: "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+                    { ab_name: "Keen Senses", ab_desc: "You have proficiency in the Perception skill." },
+                    { ab_name: "Fey Ancestry", ab_desc: "ou have advantage on saving throws against being charmed, and magic can't put you to sleep." },
+                    {
+                        ab_name: "Trance", sub_ab: [
+                            {
+                                ab_desc: "Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."
+                            },
+                            {
+                                ab_desc: "If you meditate during a long rest, you finish the rest after only 4 hours. You otherwise obey all the rules for a long rest; only the duration is changed."
+                            }
+                        ]
+                    },
+                    { ab_name: "Sea Elf Training", ab_desc: "You have proficiency with the spear, trident, light crossbow, and net." },
+                    { ab_name: "Child of the Sea", ab_desc: "You have a swimming speed of 30 feet, and you can breathe air and water." },
+                    { ab_name: "Friend of the Sea", ab_desc: "Using gestures and sounds, you can communicate simple ideas with any beast that has an innate swimming speed." },
+                    { ab_name: "Extra Language", ab_desc: "You can speak, read, and write Aquan." },
+                ]
+            },
+            {
+                sub_title: "Elf (Wood)",
+                ab_score: "Dex +2; Wis +1",
+                size_desc: "Elves range from under 5 to over 6 feet tall and have slender builds.",
+                size: "Medium",
+                speed: "35 ft.",
+                age: "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
+                alignment: "Elves love freedom, variety, and self-expression, so they lean strongly toward the gentler aspects of chaos. They value and protect others' freedom as well as their own, and they are more often good than not.",
+                language: "You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.",
+                additional_ab: [
+                    { ab_name: "Darkvision", ab_desc: "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+                    { ab_name: "Keen Senses", ab_desc: "You have proficiency in the Perception skill." },
+                    { ab_name: "Fey Ancestry", ab_desc: "ou have advantage on saving throws against being charmed, and magic can't put you to sleep." },
+                    {
+                        ab_name: "Trance", sub_ab: [
+                            {
+                                ab_desc: "Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."
+                            },
+                            {
+                                ab_desc: "If you meditate during a long rest, you finish the rest after only 4 hours. You otherwise obey all the rules for a long rest; only the duration is changed."
+                            }
+                        ]
+                    },
+                    { ab_name: "Elf Weapon Training", ab_desc: "You have proficiency with the longsword, shortsword, shortbow, and longbow." },
+                    { ab_name: "Fleet of Foot", ab_desc: "Your base walking speed increases to 35 feet." },
+                    { ab_name: "Mask of the Wild", ab_desc: "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena." },
+                ]
+            },
+            {
+                sub_title: "Elf (Ash)",
+                ab_score: "Dex +2; Con +1",
+                size_desc: "Elves range from under 5 to over 6 feet tall and have slender builds.",
+                size: "Medium",
+                speed: "30 ft.",
+                age: "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
+                alignment: "Elves love freedom, variety, and self-expression, so they lean strongly toward the gentler aspects of chaos. They value and protect others' freedom as well as their own, and they are more often good than not.",
+                language: "You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.",
+                additional_ab: [
+                    { ab_name: "Darkvision", ab_desc: "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+                    { ab_name: "Keen Senses", ab_desc: "You have proficiency in the Perception skill." },
+                    { ab_name: "Fey Ancestry", ab_desc: "ou have advantage on saving throws against being charmed, and magic can't put you to sleep." },
+                    {
+                        ab_name: "Trance", sub_ab: [
+                            {
+                                ab_desc: "Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."
+                            },
+                            {
+                                ab_desc: "If you meditate during a long rest, you finish the rest after only 4 hours. You otherwise obey all the rules for a long rest; only the duration is changed."
+                            }
+                        ]
+                    },
+                    { ab_name: "Necrotic Resistance", ab_desc: "You have resistance to necrotic damage." },
+                    {
+                        ab_name: "Blessing of the First Shadow",
+                        sub_ab: [
+                            {
+                                ab_desc: "As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest."
+                            },
+                            {
+                                ab_desc: "Starting at 3rd level, you also gain resistance to all damage when you teleport using this trait. The resistance lasts until the start of your next turn. During that time, you appear ghostly and translucent."
+                            },
+                        ]
+                    }
+                ]
+            }
+        ]
+    });
+})
+
+router.get('/Firbolg', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Firbolg",
+        main_title: "Races",
+        sub_title: "Firbolg",
+        ab_score: "Wis +2; Str +1",
+        size_desc: "Firbolg are between 7 and 8 feet tall and weigh between 240 and 300 pounds.",
+        size: "Medium",
+        speed: "30 ft.",
+        age: "As humanoids related to the fey, firbolg have long lifespans. A firbolg reaches adulthood around 30, and the oldest of them can live for 500 years.",
+        alignment: "As people who follow the rhythm of nature and see themselves as its caretakers, firbolg are typically neutral good. Evil firbolg are rare and are usually the sworn enemies of the rest of their kind.",
+        language: "You can speak, read, and write Common, Elvish, and Giant.",
+        additional_ab: [
+            { ab_name: "Firbolg Magic", ab_desc: "You can cast detect magic and disguise self with this trait, using Wisdom as your spellcasting ability for them. Once you cast either spell, you can't cast it again with this trait until you finish a short or long rest. When you use this version of disguise self, you can seem up to 3 feet shorter than normal, allowing you to more easily blend in with humans and elves." },
+            { ab_name: "Hidden Step", ab_desc: "As a bonus action, you can magically turn invisible until the start of your next turn or until you attack, make a damage roll, or force someone to make a saving throw. Once you use this trait, you can't use it again until you finish a short or long rest." },
+            { ab_name: "Powerful Build", ab_desc: "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift." },
+            { ab_name: "Speech of Beast and Leaf", ab_desc: "You have the ability to communicate in a limited manner with beasts and plants. They can understand the meaning of your words, though you have no special ability to understand them in return. You have advantage on all Charisma checks you make to influence them." }
+        ]
+    });
+})
+
+router.get('/Genasi', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Genasi",
+        main_title: "Races",
+        sub_races: [
+            {
+                sub_title: "Air Genasi",
+                ab_score: "Con +2; Dex +1",
+                size_desc: "Genasi are as varied as their mortal parents but are generally built like humans, standing anywhere from 5 feet to over 6 feet tall.",
+                size: "Medium",
+                speed: "30 ft.",
+                age: "Genasi mature at about the same rate as humans and reach adulthood in their late teens. They live somewhat longer than humans do, up to 120 years.",
+                alignment: "Independent and self-reliant, genasi tend toward a neutral alignment.",
+                language: "You can speak, read, and write Common and Primordial. Primordial is a guttural language, filled with harsh syllables and hard consonants.",
+                additional_ab: [
+                    { ab_name: "Unending Breath", ab_desc: "You can hold your breath indefinitely while you're not incapacitated." },
+                    { ab_name: "Mingle with the Wind", ab_desc: "You can cast the levitate spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell." },
+                ]
+            },
+            {
+                sub_title: "Water Genasi",
+                ab_score: "Con +2; Dex +1",
+                size_desc: "Genasi are as varied as their mortal parents but are generally built like humans, standing anywhere from 5 feet to over 6 feet tall.",
+                size: "Medium",
+                speed: "30 ft., swim 30 ft.",
+                age: "Genasi mature at about the same rate as humans and reach adulthood in their late teens. They live somewhat longer than humans do, up to 120 years.",
+                alignment: "Independent and self-reliant, genasi tend toward a neutral alignment.",
+                language: "You can speak, read, and write Common and Primordial. Primordial is a guttural language, filled with harsh syllables and hard consonants.",
+                additional_ab: [
+                    { ab_name: "Acid Resistance", ab_desc: "You have resistance to acid damage." },
+                    { ab_name: "Amphibious", ab_desc: "You can breathe air and water." },
+                    { ab_name: "Swim", ab_desc: "You have a swimming speed of 30 feet." },
+                    { ab_name: "Call to the Wave", ab_desc: "ou know the shape water cantrip. When you reach 3rd level, you can cast the create or destroy water spell as a 2nd-level spell once with this trait, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for these spells." },
+                ]
+            },
+            {
+                sub_title: "Earth Genasi",
+                ab_score: "Con +2; Str +1",
+                size_desc: "Genasi are as varied as their mortal parents but are generally built like humans, standing anywhere from 5 feet to over 6 feet tall.",
+                size: "Medium",
+                speed: "30 ft., swim 30 ft.",
+                age: "Genasi mature at about the same rate as humans and reach adulthood in their late teens. They live somewhat longer than humans do, up to 120 years.",
+                alignment: "Independent and self-reliant, genasi tend toward a neutral alignment.",
+                language: "You can speak, read, and write Common and Primordial. Primordial is a guttural language, filled with harsh syllables and hard consonants.",
+                additional_ab: [
+                    { ab_name: "Earth Walk", ab_desc: "You can move across difficult terrain made of earth or stone without expending extra movement." },
+                    { ab_name: "Merge with Stone", ab_desc: "You can cast the pass without trace spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell." },
+                ]
+            },
+            {
+                sub_title: "Fire Genasi",
+                ab_score: "Con +2; Int +1",
+                size_desc: "Genasi are as varied as their mortal parents but are generally built like humans, standing anywhere from 5 feet to over 6 feet tall.",
+                size: "Medium",
+                speed: "30 ft., swim 30 ft.",
+                age: "Genasi mature at about the same rate as humans and reach adulthood in their late teens. They live somewhat longer than humans do, up to 120 years.",
+                alignment: "Independent and self-reliant, genasi tend toward a neutral alignment.",
+                language: "You can speak, read, and write Common and Primordial. Primordial is a guttural language, filled with harsh syllables and hard consonants.",
+                additional_ab: [
+                    { ab_name: "Darkvision", ab_desc: "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. Your ties to the Elemental Plane of Fire make your darkvision unusual: everything you see in darkness is in a shade of red." },
+                    { ab_name: "Fire Resistance", ab_desc: "You have resistance to fire damage." },
+                    { ab_name: "Reach to the Blaze", ab_desc: "You know the produce flame cantrip. Once you reach 3rd level, you can cast the burning hands spell once with this trait as a 1st-level spell, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for these spells." },
+                ]
+            }
+        ]
+    });
+})
+
+router.get('/Gnome', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Gnome",
+        main_title: "Races",
+        sub_races: [
+            {
+                sub_title: "Gnome (Rock)",
+                ab_score: "Int +2; Con +1",
+                size_desc: "Gnomes are between 3 and 4 feet tall and average about 40 pounds.",
+                size: "Small",
+                speed: "25 ft.",
+                age: "Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.",
+                alignment: "Gnomes are most often good. Those who tend toward law are sages, engineers, researchers, scholars, investigators, or inventors. Those who tend toward chaos are minstrels, tricksters, wanderers, or fanciful jewelers. Gnomes are good-hearted, and even the tricksters among them are more playful than vicious.",
+                language: "You can speak, read, and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world.",
+                additional_ab: [
+                    { ab_name: "Darkvision", ab_desc: "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+                    { ab_name: "Gnome Cunning", ab_desc: "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic." },
+                    { ab_name: "Artificer's Lore", ab_desc: "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply." },
+                    {
+                        ab_name: "Tinker",
+                        sub_ab: [
+                            {
+                                ab_desc: "You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time."
+                            },
+                            {
+                                ab_desc: "When you create a device, choose one of the following options:",
+                                sub_ab: [
+                                    {
+                                        ab_name: "Clockwork Toy",
+                                        ab_desc: "This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents."
+                                    },
+                                    {
+                                        ab_name: "Fire Starter",
+                                        ab_desc: "The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action."
+                                    },
+                                    {
+                                        ab_name: "Music Box",
+                                        ab_desc: "When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed."
+                                    },
+                                ]
+                            },
+                        ]
+                    }
+                ]
+            },
+            {
+                sub_title: "Gnome (Forest)",
+                ab_score: "Int +2; Dex +1",
+                size_desc: "Gnomes are between 3 and 4 feet tall and average about 40 pounds.",
+                size: "Small",
+                speed: "25 ft.",
+                age: "Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.",
+                alignment: "Gnomes are most often good. Those who tend toward law are sages, engineers, researchers, scholars, investigators, or inventors. Those who tend toward chaos are minstrels, tricksters, wanderers, or fanciful jewelers. Gnomes are good-hearted, and even the tricksters among them are more playful than vicious.",
+                language: "You can speak, read, and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world.",
+                additional_ab: [
+                    { ab_name: "Darkvision", ab_desc: "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+                    { ab_name: "Gnome Cunning", ab_desc: "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic." },
+                    { ab_name: "Natural Illusionist", ab_desc: "You know the minor illusion cantrip. Intelligence is your spellcasting ability for it." },
+                    { ab_name: "Speak with Small Breasts", ab_desc: "Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts. Forest gnomes love animals and often keep squirrels, badgers, rabbits, moles, woodpeckers, and other creatures as beloved pets." },
+
+                ]
+            },
+            {
+                sub_title: "Gnome (Svirfneblin)",
+                ab_score: "Int +2; Dex +1",
+                size_desc: "A typical svirfneblin stands about 3 to 3½ feet tall and weighs 80 to 120 pounds.",
+                size: "Small",
+                speed: "25 ft.",
+                age: "Deep gnomes are short-lived for gnomes. They mature at the same rate humans do and are considered full-grown adults by 25. They live 200 to 250 years, although hard toil and the dangers of the Underdark often claim them before their time.",
+                alignment: "Svirfneblin believe that survival depends on avoiding entanglements with other creatures and not making enemies, so they favor neutral alignments. They rarely wish others ill, and they are unlikely to take risks on behalf of others.",
+                language: "You can speak, read, and write Common, Gnomish, and Undercommon. The svirfneblin dialect is more guttural than surface Gnomish, and most svirfneblin know only a little bit of Common, but those who deal with outsiders (and that includes you as an adventurer) pick up enough Common to get by in other lands.",
+                additional_ab: [
+                    { ab_name: "Superior Darkvision", ab_desc: "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+                    { ab_name: "Gnome Cunning", ab_desc: "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic." },
+                    { ab_name: "Stone Camouflage", ab_desc: "You have advantage on Dexterity (Stealth) checks to hide in rocky terrain." },
+                ]
+            },
+        ]
+    });
+})
+
+router.get('/Goblin', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Goblin",
+        main_title: "Races",
+        sub_title: "Goblin",
+        ab_score: "Dex +2; Con +1",
+        size_desc: "Goblins are between 3 and 4 feet tall and weigh between 40 and 80 pounds.",
+        size: "Small",
+        speed: "30 ft.",
+        age: "Goblins reach adulthood at age 8 and live up to 60 years.",
+        alignment: "Goblins are typically neutral evil, as they care only for their own needs. A few goblins might tend toward good or neutrality, but only rarely.",
+        language: "You can speak, read, and write Common and Goblin.",
+        additional_ab: [
+            { ab_name: "Darkvision", ab_desc: "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+            { ab_name: "Fury of the Small", ab_desc: "When you damage a creature with an attack or a spell and the creature's size is larger than yours, you can cause the attack or spell to deal extra damage to the creature. The extra damage equals your level. Once you use this trait, you can't use it again until you finish a short or long rest." },
+            { ab_name: "Nimble Escape", ab_desc: "You can take the Disengage or Hide action as a bonus action on each of your turns." },
+        ]
+    });
+})
+
+router.get('/Goliath', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Goliath",
+        main_title: "Races",
+        sub_title: "Goliath",
+        ab_score: "Str +2; Con +1",
+        size_desc: "Goliaths are between 7 and 8 feet tall and weigh between 280 and 340 pounds.",
+        size: "Medium",
+        speed: "30 ft.",
+        age: "Goliaths have lifespans comparable to humans. They enter adulthood in their late teens and usually live less than a century.",
+        alignment: "Goliath society, with its clear roles and tasks, has a strong lawful bent. The goliath sense of fairness, balanced with an emphasis on self sufficiency and personal accountability, pushes them toward neutrality.",
+        language: "You can speak, read, and write Common and Giant.",
+        additional_ab: [
+            { ab_name: "Natural Athlete", ab_desc: "You have proficiency in the Athletics skill." },
+            { ab_name: "Stone's Endurance", ab_desc: "You can focus yourself to occasionally shrug off injury. When you take damage, you can use your reaction to roll a d12. Add your Constitution modifier to the number rolled, and reduce the damage by that total. After you use this trait, you can't use it again until you finish a short or long rest." },
+            { ab_name: "Powerful Build", ab_desc: "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift." },
+            { ab_name: "Mountain Born", ab_desc: "You have resistance to cold damage. You're also acclimated to high altitude, including elevations above 20,000 feet." },
+        ]
     });
 })
 
