@@ -4,6 +4,10 @@ body{
     background-size: cover;
 }
 
+html,body {
+    min-height: 100%;
+}
+
 #main-name{
     font-family: 'Alegreya', serif;
     font-size: 7mm;

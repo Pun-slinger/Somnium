@@ -28,4 +28,44 @@ router.get('/beyond-the-canopy', function (req, res) {
     });
 })
 
+router.get('/close-to-home', function (req, res) {
+    res.render('region-suborigin', {
+        title: "Somnium: Close To Home",
+        main_title: "Ofrye",
+        sub_title: "Close To Home",
+        overview: "You chose to settle among the trees, beneath the canopy of the massive jungle that is Ofrye. Life here is both dangerous yet peaceful. The flora are ever changing and the creatures roaming the jungle are unpredictable and yet, you learn to shift along with them and adapt.",
+        boons: [
+            { boon_name: "Commune with The Flora", boon_desc: "You can cast Speak with Plants once per day without expending a spell slot." },
+            { boon_name: "Expert Tracker", boon_desc: "You have advantage on Survival checks to track a creature." },
+            { boon_name: "Eyes of The Night", boon_desc: "You have disadvantage with Perception checks made in the sunlight." }
+        ]
+    });
+})
+
+router.get('/druid-in-training', function (req, res) {
+    res.render('region-suborigin', {
+        title: "Somnium: Druid in Training",
+        main_title: "Ofrye",
+        sub_title: "Druid in Training",
+        overview: "The Druidic Circle is closely related to the King of Ofrye and it is not uncommon to see druids appearing within Ofrye to take care of the surrounding wildlife but also to train new recruits. To walk the path of a druid is to honor the life that has fallen in order to make way for new life to bloom.",
+        boons: [
+            { boon_name: "Druidic Recruit", boon_desc: "You learn 2 Druid cantrip." },
+            { boon_name: "Animal Companion", boon_desc: "You gain proficiency in Animal Handling." }
+        ]
+    });
+})
+
+router.get('/jungle-scout', function (req, res) {
+    res.render('region-suborigin', {
+        title: "Somnium: Jungle Scout",
+        main_title: "Ofrye",
+        sub_title: "Jungle Scout",
+        overview: "There exists an elite team comprising of Ofrye's best rangers. They are trained to effortlessly maneuver through any harsh terrain and are extremely comfortable with the paths within Ofrye. They work with extreme efficiency and precision in order to detect any possible threat. More often that not, a ranger will also acts as the guide for outsiders traversing through Ofrye.",
+        boons: [
+            { boon_name: "Efficient Movement", boon_desc: "Your movement speed is reduced by 5 ft instead of half in difficult terrain." },
+            { boon_name: "Nothing's Too High", boon_desc: "You have advantage for climbing checks." }
+        ]
+    });
+})
+
 module.exports = router;

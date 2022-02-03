@@ -15,10 +15,10 @@ router.get('/Aprana', function (req, res) {
         region_suborigins: [
             { suborigin_name: "Apranian Noble", link: "/apranian-noble" },
             { suborigin_name: "Church Born", link: "/church-born" },
-            { suborigin_name: "Mana Vein", link: "#" },
-            { suborigin_name: "Merchant In the Skies", link: "#" },
-            { suborigin_name: "Scars of the Terror", link: "#" },
-            { suborigin_name: "All Are Invited", link: "#" },
+            { suborigin_name: "Mana Vein", link: "/mana-vein" },
+            { suborigin_name: "Merchant In the Skies", link: "/merchant-in-the-skies" },
+            { suborigin_name: "Scars of the Terror", link: "/scars-of-the-terror" },
+            { suborigin_name: "All Are Invited", link: "/all-are-invited" },
         ]
     });
 })
@@ -38,11 +38,11 @@ router.get('/Clivania', function (req, res) {
         region_suborigins: [
             { suborigin_name: "Beast Hunter", link: "/beast-hunter" },
             { suborigin_name: "Draconic Legacy", link: "/draconic-legacy" },
-            { suborigin_name: "Forge In Flames", link: "#" },
-            { suborigin_name: "Lowlander", link: "#" },
-            { suborigin_name: "Mountainbound", link: "#" },
-            { suborigin_name: "Scholar In Training", link: "#" },
-            { suborigin_name: "Wyvern Trainer", link: "#" }
+            { suborigin_name: "Forge In Flames", link: "/forge-in-flames" },
+            { suborigin_name: "Lowlander", link: "/lowlander" },
+            { suborigin_name: "Mountainbound", link: "/mountainbound" },
+            { suborigin_name: "Scholar In Training", link: "/scholar-in-training" },
+            { suborigin_name: "Wyvern Trainer", link: "/wyvern-trainer" }
         ]
     });
 })
@@ -62,10 +62,10 @@ router.get('/Dreavan', function (req, res) {
         region_suborigins: [
             { suborigin_name: "Behind The Veil", link: "/behind-the-veil" },
             { suborigin_name: "Gravetender", link: "/gravetender" },
-            { suborigin_name: "Howling Woods", link: "#" },
-            { suborigin_name: "In Plain SIght", link: "#" },
-            { suborigin_name: "Lineage of The Cursed", link: "#" },
-            { suborigin_name: "Void Blessed", link: "#" },
+            { suborigin_name: "Howling Woods", link: "/howling-woods" },
+            { suborigin_name: "In Plain SIght", link: "/in-plain-sight" },
+            { suborigin_name: "Lineage of The Cursed", link: "/lineage-of-the-cursed" },
+            { suborigin_name: "Void Blessed", link: "/void-blessed" },
         ]
     });
 })
@@ -84,10 +84,10 @@ router.get('/Ewhil', function (req, res) {
         region_suborigins: [
             { suborigin_name: "Aprana Exiled", link: "/aprana-exiled" },
             { suborigin_name: "Clivania Exiled", link: "/clivania-exiled" },
-            { suborigin_name: "Dreavan Exiled", link: "#" },
-            { suborigin_name: "Fruaqua Exiled", link: "#" },
-            { suborigin_name: "Ofrye Exiled", link: "#" },
-            { suborigin_name: "Pandora Exiled", link: "#" },
+            { suborigin_name: "Dreavan Exiled", link: "/dreavan-exiled" },
+            { suborigin_name: "Fruaqua Exiled", link: "/fruaqua-exiled" },
+            { suborigin_name: "Ofrye Exiled", link: "/ofrye-exiled" },
+            { suborigin_name: "Pandora Exiled", link: "/pandora-exiled" },
         ]
     });
 })
@@ -107,9 +107,9 @@ router.get('/Fruaqua', function (req, res) {
         region_suborigins: [
             { suborigin_name: "Arcane Student", link: "/arcane-student" },
             { suborigin_name: "Barrier Operator", link: "/barrier-operator" },
-            { suborigin_name: "Eye of The Storm", link: "#" },
-            { suborigin_name: "Maddening Whispers", link: "#" },
-            { suborigin_name: "Wandering In The Rain", link: "#" }
+            { suborigin_name: "Eye of The Storm", link: "/eye-of-the-storm" },
+            { suborigin_name: "Maddening Whispers", link: "/maddening-whispers" },
+            { suborigin_name: "Wandering In The Rain", link: "/wandering-in-the-rain" }
         ]
     });
 })
@@ -129,9 +129,9 @@ router.get('/Ofrye', function (req, res) {
         region_suborigins: [
             { suborigin_name: "Apothecary", link: "/apothecary" },
             { suborigin_name: "Beyond The Canopy", link: "/beyond-the-canopy" },
-            { suborigin_name: "Close To Home", link: "#" },
-            { suborigin_name: "Druid in Training", link: "#" },
-            { suborigin_name: "Jungle Scout", link: "#" }
+            { suborigin_name: "Close To Home", link: "/close-to-home" },
+            { suborigin_name: "Druid in Training", link: "/druid-in-training" },
+            { suborigin_name: "Jungle Scout", link: "/jungle-scout" }
         ]
     });
 })
@@ -150,10 +150,10 @@ router.get('/Pandora', function (req, res) {
         region_suborigins: [
             { suborigin_name: "Brass Eagles", link: "/brass-eagles" },
             { suborigin_name: "Brotherhood of Thunder", link: "/brotherhood-of-thunder" },
-            { suborigin_name: "Cobalt Lions", link: "#" },
-            { suborigin_name: "Gangless", link: "#" },
-            { suborigin_name: "Jade Serpents", link: "#" },
-            { suborigin_name: "Violet Whisperers", link: "#" }
+            { suborigin_name: "Cobalt Lions", link: "/cobalt-lions" },
+            { suborigin_name: "Gangless", link: "/gangless" },
+            { suborigin_name: "Jade Serpents", link: "/jade-serpents" },
+            { suborigin_name: "Violet Whisperers", link: "/violet-whisperers" }
         ]
     });
 })
@@ -173,9 +173,9 @@ router.get('/The-Boundless-Ocean', function (req, res) {
         region_suborigins: [
             { suborigin_name: "Calling of The Coin", link: "/calling-of-the-coin" },
             { suborigin_name: "Mist Strider", link: "/mist-strider" },
-            { suborigin_name: "Navigator", link: "#" },
-            { suborigin_name: "Ship Born", link: "#" },
-            { suborigin_name: "Shipwreck Isle", link: "#" }
+            { suborigin_name: "Navigator", link: "/navigator" },
+            { suborigin_name: "Ship Born", link: "/ship-born" },
+            { suborigin_name: "Shipwreck Isle", link: "/shipwreck-isle" }
         ]
     });
 })

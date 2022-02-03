@@ -534,7 +534,7 @@ router.get('/Genasi', function (req, res) {
                     { ab_name: "Acid Resistance", ab_desc: "You have resistance to acid damage." },
                     { ab_name: "Amphibious", ab_desc: "You can breathe air and water." },
                     { ab_name: "Swim", ab_desc: "You have a swimming speed of 30 feet." },
-                    { ab_name: "Call to the Wave", ab_desc: "ou know the shape water cantrip. When you reach 3rd level, you can cast the create or destroy water spell as a 2nd-level spell once with this trait, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for these spells." },
+                    { ab_name: "Call to the Wave", ab_desc: "You know the shape water cantrip. When you reach 3rd level, you can cast the create or destroy water spell as a 2nd-level spell once with this trait, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for these spells." },
                 ]
             },
             {
@@ -953,7 +953,7 @@ router.get('/Kobold', function (req, res) {
         alignment: "Kobolds are fundamentally selfish, making them evil, but their reliance on the strength of their group makes them trend toward law.",
         language: "You can speak, read, and write Common and Draconic.",
         additional_ab: [
-            { ab_name: "Darkvision", ab_desc: "ou can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+            { ab_name: "Darkvision", ab_desc: "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
             { ab_name: "Grovel, Cower, and Beg", ab_desc: "As an action on your turn, you can cower pathetically to distract nearby foes. Until the end of your next turn, your allies gain advantage on attack rolls against enemies within 10 feet of you that you can see. Once you use this trait, you can't use it again until you finish a short or long rest." },
             { ab_name: "Pack Tactics", ab_desc: "You have advantage on an attack roll against a creature if at least one of your allies is within 5 feet of the creature and the ally isn't incapacitated." },
             { ab_name: "Sunlight Sensitivity", ab_desc: "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight." },

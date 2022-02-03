@@ -28,4 +28,56 @@ router.get('/clivania-exiled', function (req, res) {
     });
 })
 
+router.get('/dreavan-exiled', function (req, res) {
+    res.render('region-suborigin', {
+        title: "Somnium: Dreavan Exiled",
+        main_title: "Ewhil",
+        sub_title: "Dreavan Exiled",
+        overview: "Let me tell you something, getting kicked out of the region where dark magic is a common occurrence takes some actual skill. Nevertheless, being exiled from the land of the cursed means that the chance of you being accepted in other places are unlikely so, welcome to Ewhil.",
+        boons: [
+            { boon_name: "A Little Something From Home", boon_desc: "Increase the spell DC for Necromancy spells casted by you by 1." },
+            { boon_name: "Can't Let My Guard Down", boon_desc: "You gain a +2 to your passive Perception." }
+        ]
+    });
+})
+
+router.get('/fruaqua-exiled', function (req, res) {
+    res.render('region-suborigin', {
+        title: "Somnium: Fruaqua Exiled",
+        main_title: "Ewhil",
+        sub_title: "Fruaqua Exiled",
+        overview: "Selfishness. Your goal for walking in the path of a magic wielder is no longer for the benefit and safety of the innocent. Your own selfish desires have led you astray and all you crave is power and even more power. Fruaqua no longer welcomes you!",
+        boons: [
+            { boon_name: "All Mine!", boon_desc: "Spell effects that last for more than 1 round last twice as long when casted on you." },
+            { boon_name: "Arcane Eye", boon_desc: "You gain proficiency in Arcana." }
+        ]
+    });
+})
+
+router.get('/ofrye-exiled', function (req, res) {
+    res.render('region-suborigin', {
+        title: "Somnium: Ofrye Exiled",
+        main_title: "Ewhil",
+        sub_title: "Ofrye Exiled",
+        overview: "Ofrye is a quite simple and peaceful place to live in. However, you unfortunately broke its one rule and revealed information about Ofrye to outsiders. You are therefore, exiled and that is considered lucky as the worst punishment could have been death.",
+        boons: [
+            { boon_name: "On The Run", boon_desc: "You gain a +10ft to your base movement speed." },
+            { boon_name: "Cover-up", boon_desc: "You gain proficiency in Persuasion." }
+        ]
+    });
+})
+
+router.get('/pandora-exiled', function (req, res) {
+    res.render('region-suborigin', {
+        title: "Somnium: Pandora Exiled",
+        main_title: "Ewhil",
+        sub_title: "Pandora Exiled",
+        overview: "You broke a tenet of the gang you once belonged and the result was banishment from Pandora as no other gang would take in an exiled. Your choices are either die among the elements or bring your shame with you to Exiled Land.",
+        boons: [
+            { boon_name: "I Will Survive", boon_desc: "You gain a +2 to all saving throws." },
+            { boon_name: "Not Down Just Yet", boon_desc: "When you roll a 1 on an attack or saving throw, you heal for 3 HP." }
+        ]
+    });
+})
+
 module.exports = router;
