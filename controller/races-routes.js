@@ -339,7 +339,7 @@ router.get('/Elf', function (req, res) {
                 additional_ab: [
                     { ab_name: "Darkvision", ab_desc: "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
                     { ab_name: "Keen Senses", ab_desc: "You have proficiency in the Perception skill." },
-                    { ab_name: "Fey Ancestry", ab_desc: "ou have advantage on saving throws against being charmed, and magic can't put you to sleep." },
+                    { ab_name: "Fey Ancestry", ab_desc: "You have advantage on saving throws against being charmed, and magic can't put you to sleep." },
                     {
                         ab_name: "Trance", sub_ab: [
                             {
@@ -367,7 +367,7 @@ router.get('/Elf', function (req, res) {
                 additional_ab: [
                     { ab_name: "Superior Darkvision", ab_desc: "Accustomed to the depths of the Underdark, you have superior vision in dark and dim conditions. You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
                     { ab_name: "Keen Senses", ab_desc: "You have proficiency in the Perception skill." },
-                    { ab_name: "Fey Ancestry", ab_desc: "ou have advantage on saving throws against being charmed, and magic can't put you to sleep." },
+                    { ab_name: "Fey Ancestry", ab_desc: "You have advantage on saving throws against being charmed, and magic can't put you to sleep." },
                     {
                         ab_name: "Trance", sub_ab: [
                             {
@@ -395,7 +395,7 @@ router.get('/Elf', function (req, res) {
                 additional_ab: [
                     { ab_name: "Darkvision", ab_desc: "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
                     { ab_name: "Keen Senses", ab_desc: "You have proficiency in the Perception skill." },
-                    { ab_name: "Fey Ancestry", ab_desc: "ou have advantage on saving throws against being charmed, and magic can't put you to sleep." },
+                    { ab_name: "Fey Ancestry", ab_desc: "You have advantage on saving throws against being charmed, and magic can't put you to sleep." },
                     {
                         ab_name: "Trance", sub_ab: [
                             {
@@ -424,7 +424,7 @@ router.get('/Elf', function (req, res) {
                 additional_ab: [
                     { ab_name: "Darkvision", ab_desc: "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
                     { ab_name: "Keen Senses", ab_desc: "You have proficiency in the Perception skill." },
-                    { ab_name: "Fey Ancestry", ab_desc: "ou have advantage on saving throws against being charmed, and magic can't put you to sleep." },
+                    { ab_name: "Fey Ancestry", ab_desc: "You have advantage on saving throws against being charmed, and magic can't put you to sleep." },
                     {
                         ab_name: "Trance", sub_ab: [
                             {
@@ -452,7 +452,7 @@ router.get('/Elf', function (req, res) {
                 additional_ab: [
                     { ab_name: "Darkvision", ab_desc: "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
                     { ab_name: "Keen Senses", ab_desc: "You have proficiency in the Perception skill." },
-                    { ab_name: "Fey Ancestry", ab_desc: "ou have advantage on saving throws against being charmed, and magic can't put you to sleep." },
+                    { ab_name: "Fey Ancestry", ab_desc: "You have advantage on saving throws against being charmed, and magic can't put you to sleep." },
                     {
                         ab_name: "Trance", sub_ab: [
                             {
@@ -688,6 +688,214 @@ router.get('/Goliath', function (req, res) {
             { ab_name: "Stone's Endurance", ab_desc: "You can focus yourself to occasionally shrug off injury. When you take damage, you can use your reaction to roll a d12. Add your Constitution modifier to the number rolled, and reduce the damage by that total. After you use this trait, you can't use it again until you finish a short or long rest." },
             { ab_name: "Powerful Build", ab_desc: "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift." },
             { ab_name: "Mountain Born", ab_desc: "You have resistance to cold damage. You're also acclimated to high altitude, including elevations above 20,000 feet." },
+        ]
+    });
+})
+
+router.get('/Half-elf', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Half-elf",
+        main_title: "Races",
+        sub_races: [
+            {
+                sub_title: "Half-elf (Aquatic)",
+                ab_score: "Cha +2; Choose any other two unique +1",
+                size_desc: "Half-elves are about the same size as humans, ranging from 5 to 6 feet tall.",
+                size: "Medium",
+                speed: "30 ft.",
+                age: "Half-elves mature at the same rate humans do and reach adulthood around the age of 20. They live much longer than humans, however, often exceeding 180 years.",
+                alignment: "Half-elves share the chaotic bent of their elven heritage. They value both personal freedom and creative expression, demonstrating neither love of leaders nor desire for followers. They chafe at rules, resent others' demands, and sometimes prove unreliable, or at least unpredictable.",
+                language: "You can speak, read, and write Common, Elvish, and one extra language of your choice.",
+                additional_ab: [
+                    { ab_name: "Darkvision", ab_desc: "Thanks to your elf blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+                    { ab_name: "Fey Ancestry", ab_desc: "You have advantage on saving throws against being charmed, and magic can't put you to sleep." },
+                    { ab_name: "Swim", ab_desc: "You gain a swimming speed of 30 ft." },
+                ]
+            },
+            {
+                sub_title: "Half-elf (Drow)",
+                ab_score: "Cha +2; Choose any other two unique +1",
+                size_desc: "Half-elves are about the same size as humans, ranging from 5 to 6 feet tall.",
+                size: "Medium",
+                speed: "30 ft.",
+                age: "Half-elves mature at the same rate humans do and reach adulthood around the age of 20. They live much longer than humans, however, often exceeding 180 years.",
+                alignment: "Half-elves share the chaotic bent of their elven heritage. They value both personal freedom and creative expression, demonstrating neither love of leaders nor desire for followers. They chafe at rules, resent others' demands, and sometimes prove unreliable, or at least unpredictable.",
+                language: "You can speak, read, and write Common, Elvish, and one extra language of your choice.",
+                additional_ab: [
+                    { ab_name: "Darkvision", ab_desc: "Thanks to your elf blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+                    { ab_name: "Fey Ancestry", ab_desc: "You have advantage on saving throws against being charmed, and magic can't put you to sleep." },
+                    { ab_name: "Drow Magic", ab_desc: "You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once per day; you must finish a long rest in order to cast the spell again using this trait. When you reach 5th level, you can also cast the darkness spell once per day; you must finish a long rest in order to cast the spell again using this trait. Charisma is your spellcasting ability for these spells." },
+                ]
+            },
+            {
+                sub_title: "Half-elf (Wood)",
+                ab_score: "Cha +2; Choose any other two unique +1",
+                size_desc: "Half-elves are about the same size as humans, ranging from 5 to 6 feet tall.",
+                size: "Medium",
+                speed: "30 ft.",
+                age: "Half-elves mature at the same rate humans do and reach adulthood around the age of 20. They live much longer than humans, however, often exceeding 180 years.",
+                alignment: "Half-elves share the chaotic bent of their elven heritage. They value both personal freedom and creative expression, demonstrating neither love of leaders nor desire for followers. They chafe at rules, resent others' demands, and sometimes prove unreliable, or at least unpredictable.",
+                language: "You can speak, read, and write Common, Elvish, and one extra language of your choice.",
+                additional_ab: [
+                    { ab_name: "Darkvision", ab_desc: "Thanks to your elf blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+                    { ab_name: "Fey Ancestry", ab_desc: "You have advantage on saving throws against being charmed, and magic can't put you to sleep." },
+                    {
+                        ab_name: "Variant Feature (Choose 1)", sub_ab: [
+                            {
+                                ab_name: "Elf Weapon Training",
+                                ab_desc: "You have proficiency with the longsword, shortsword, shortbow, and longbow."
+                            },
+                            {
+                                ab_name: "Fleet of Foot",
+                                ab_desc: "Your base walking speed increases to 35 feet."
+                            },
+                            {
+                                ab_name: "Mask of the Wild",
+                                ab_desc: "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+                            }
+                        ]
+                    },
+                ]
+            },
+            {
+                sub_title: "Half-elf (High)",
+                ab_score: "Cha +2; Choose any other two unique +1",
+                size_desc: "Half-elves are about the same size as humans, ranging from 5 to 6 feet tall.",
+                size: "Medium",
+                speed: "30 ft.",
+                age: "Half-elves mature at the same rate humans do and reach adulthood around the age of 20. They live much longer than humans, however, often exceeding 180 years.",
+                alignment: "Half-elves share the chaotic bent of their elven heritage. They value both personal freedom and creative expression, demonstrating neither love of leaders nor desire for followers. They chafe at rules, resent others' demands, and sometimes prove unreliable, or at least unpredictable.",
+                language: "You can speak, read, and write Common, Elvish, and one extra language of your choice.",
+                additional_ab: [
+                    { ab_name: "Darkvision", ab_desc: "Thanks to your elf blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+                    { ab_name: "Fey Ancestry", ab_desc: "You have advantage on saving throws against being charmed, and magic can't put you to sleep." },
+                    {
+                        ab_name: "Variant Feature (Choose 1)", sub_ab: [
+                            {
+                                ab_name: "Elf Weapon Training",
+                                ab_desc: "You have proficiency with the longsword, shortsword, shortbow, and longbow."
+                            },
+                            {
+                                ab_name: "Cantrip",
+                                ab_desc: "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it."
+                            }
+                        ]
+                    },
+                ]
+            }
+        ]
+    });
+})
+
+router.get('/Half-orc', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Half-orc",
+        main_title: "Races",
+        sub_title: "Half-orc",
+        ab_score: "Str +2; Con +1",
+        size_desc: "Half-orcs are somewhat larger and bulkier than humans, and they range from 5 to well over 6 feet tall.",
+        size: "Medium",
+        speed: "30 ft.",
+        age: "Half-orcs mature a little faster than humans, reaching adulthood around age 14. They age noticeably faster and rarely live longer than 75 years.",
+        alignment: "Half-orcs inherit a tendency toward chaos from their orc parents and are not strongly inclined toward good. Half-orcs raised among orcs and willing to live out their lives among them are usually evil.",
+        language: "You can speak, read, and write Common and Orcish. Orcish is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.",
+        additional_ab: [
+            { ab_name: "Darkvision", ab_desc: "Thanks to your orc blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray." },
+            { ab_name: "Menacing", ab_desc: "You gain proficiency in the Intimidation skill." },
+            { ab_name: "Relentless Endurance", ab_desc: "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest." },
+            { ab_name: "Savage Attacks", ab_desc: "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit." },
+        ]
+    });
+})
+
+router.get('/Halfling', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Halfling",
+        main_title: "Races",
+        sub_races: [
+            {
+                sub_title: "Halfling (Lightfoot)",
+                ab_score: "Dex +2; Cha +1",
+                size_desc: "Halflings average about 3 feet tall and weigh about 40 pounds.",
+                size: "Small",
+                speed: "25 ft.",
+                age: "A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century.",
+                alignment: "Most halflings are lawful good. As a rule, they are good-hearted and kind, hate to see others in pain, and have no tolerance for oppression. They are also very orderly and traditional, leaning heavily on the support of their community and the comfort of their old ways.",
+                language: "You can speak, read, and write Common and Halfling. The Halfling language isn't secret, but halflings are loath to share it with others. They write very little, so they don't have a rich body of literature. Their oral tradition, however, is very strong. Almost all halflings speak Common to converse with the people in whose lands they dwell or through which they are traveling.",
+                additional_ab: [
+                    { ab_name: "Lucky", ab_desc: "When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll." },
+                    { ab_name: "Brave", ab_desc: "You have advantage on saving throws against being frightened." },
+                    { ab_name: "Halfling Nimbleness", ab_desc: "You can move through the space of any creature that is of a size larger than yours." },
+                    { ab_name: "Naturally Stealthy", ab_desc: "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you." },
+                ]
+            },
+            {
+                sub_title: "Halfling (Stout)",
+                ab_score: "Dex +2; Con +1",
+                size_desc: "Halflings average about 3 feet tall and weigh about 40 pounds.",
+                size: "Small",
+                speed: "25 ft.",
+                age: "A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century.",
+                alignment: "Most halflings are lawful good. As a rule, they are good-hearted and kind, hate to see others in pain, and have no tolerance for oppression. They are also very orderly and traditional, leaning heavily on the support of their community and the comfort of their old ways.",
+                language: "You can speak, read, and write Common and Halfling. The Halfling language isn't secret, but halflings are loath to share it with others. They write very little, so they don't have a rich body of literature. Their oral tradition, however, is very strong. Almost all halflings speak Common to converse with the people in whose lands they dwell or through which they are traveling.",
+                additional_ab: [
+                    { ab_name: "Lucky", ab_desc: "When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll." },
+                    { ab_name: "Brave", ab_desc: "You have advantage on saving throws against being frightened." },
+                    { ab_name: "Halfling Nimbleness", ab_desc: "You can move through the space of any creature that is of a size larger than yours." },
+                    { ab_name: "Stout Resilience", ab_desc: "You have advantage on saving throws against poison, and you have resistance against poison damage." },
+                ]
+            },
+            {
+                sub_title: "Halfling (Ghostwise)",
+                ab_score: "Dex +2; Con +1",
+                size_desc: "Halflings average about 3 feet tall and weigh about 40 pounds.",
+                size: "Small",
+                speed: "25 ft.",
+                age: "A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century.",
+                alignment: "Most halflings are lawful good. As a rule, they are good-hearted and kind, hate to see others in pain, and have no tolerance for oppression. They are also very orderly and traditional, leaning heavily on the support of their community and the comfort of their old ways.",
+                language: "You can speak, read, and write Common and Halfling. The Halfling language isn't secret, but halflings are loath to share it with others. They write very little, so they don't have a rich body of literature. Their oral tradition, however, is very strong. Almost all halflings speak Common to converse with the people in whose lands they dwell or through which they are traveling.",
+                additional_ab: [
+                    { ab_name: "Lucky", ab_desc: "When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll." },
+                    { ab_name: "Brave", ab_desc: "You have advantage on saving throws against being frightened." },
+                    { ab_name: "Halfling Nimbleness", ab_desc: "You can move through the space of any creature that is of a size larger than yours." },
+                    { ab_name: "Silent Speech", ab_desc: "You can speak telepathically to any creature within 30 feet of you. The creature understands you only if the two of you share a language. You can speak telepathically in this way to one creature at a time." },
+                ]
+            }
+        ]
+    });
+})
+
+router.get('/Human', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Human",
+        main_title: "Races",
+        sub_title: "Human",
+        ab_score: "Str +1; Dex +1; Con +1; Int +1; Wis +1; Cha +1",
+        size_desc: "Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range,",
+        size: "Medium",
+        speed: "30 ft.",
+        age: "Humans reach adulthood in their late teens and live less than a century.",
+        alignment: "Humans tend toward no particular alignment. The best and the worst are found among them.",
+        language: "You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.",
+    });
+})
+
+router.get('/Kenku', function (req, res) {
+    res.render('race', {
+        title: "Somnium: Kenku",
+        main_title: "Races",
+        sub_title: "Kenku",
+        ab_score: "Dex +2; Wis +1",
+        size_desc: "Kenku are around 5 feet tall and weigh between 90 and 120 pounds.",
+        size: "Medium",
+        speed: "30 ft.",
+        age: "Kenku have shorter lifespans than humans. They reach maturity at about 12 years old and can live to 60.",
+        alignment: "Kenku are chaotic creatures, rarely making enduring commitments, and they care mostly for preserving their own hides. They are generally chaotic neutral in outlook.",
+        language: "You can read and write Common and Auran, but you can only speak using your Mimicry trait.",
+        additional_ab: [
+            { ab_name: "Expert Forgery", ab_desc: "You can duplicate other creatures' handwriting and craftwork. You have advantage on all checks made to produce forgeries or duplicates of existing objects." },
+            { ab_name: "Kenku Training", ab_desc: "You are proficient in your choice of two of the following skills: Acrobatics, Deception, Stealth, and Sleight of Hand." },
+            { ab_name: "Mimicry", ab_desc: "You can mimic sounds you have heard, including voices. A creature that hears the sounds can tell they are imitations with a successful Wisdom (Insight) check opposed by your Charisma (Deception) check." },
         ]
     });
 })

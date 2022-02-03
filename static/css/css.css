@@ -91,7 +91,7 @@ body{
     width: 275px;
 }
 
-#subclasses div a, #races a, #region-names a{
+#subclasses div a, #races a, #region-names a, #region-specific-origin a{
     display: block;
     color: darkred;
 }
