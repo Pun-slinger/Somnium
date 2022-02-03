@@ -3,36 +3,7 @@
 <h2 id="cc-subtitle" class="text-center mb-5">Races</h2>
 
 <div id="races" class="d-flex align-content-around flex-wrap justify-content-center text-center">
-    <a href="/races/aarakocra">Aarakocra</a>
-    <a>Aasimar</a>
-    <a>Centaur</a>
-    <a>Changeling</a>
-    <a>Dhampir</a>
-    <a>Dragonborn</a>
-    <a>Dwarf</a>
-    <a>Elf</a>
-    <a>Firbolg</a>
-    <a>Genasi</a>
-    <a>Gnome</a>
-    <a>Goblin</a>
-    <a>Goliath</a>
-    <a>Half-elf</a>
-    <a>Half-orc</a>
-    <a>Halfing</a>
-    <a>Human</a>
-    <a>Kenku</a>
-    <a>Kitsune</a>
-    <a>Kobold</a>
-    <a>Lizardfolk</a>
-    <a>Minotaur</a>
-    <a>Orc</a>
-    <a>Satyr</a>
-    <a>Sprite</a>
-    <a>Tabaxi</a>
-    <a>Tiefling</a>
-    <a>Tortle</a>
-    <a>Triton</a>
-    <a>Warforced</a>
-    <a href="/races/werewolf">Werewolf</a>
-    <a>Yuan-ti</a>
+    {{#each races}}
+    <a href="/races/{{this}}">{{this}}</a>
+    {{/each}}
 </div>
