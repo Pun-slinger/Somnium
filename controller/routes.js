@@ -29,7 +29,7 @@ router.get('/races', function (req, res) {
             "Goliath",
             "Half-elf",
             "Half-orc",
-            "Halfing",
+            "Halfling",
             "Human",
             "Kenku",
             "Kitsune",
@@ -43,7 +43,7 @@ router.get('/races', function (req, res) {
             "Tiefling",
             "Tortle",
             "Triton",
-            "Warforced",
+            "Warforged",
             "Werewolf",
             "Yuan-ti",
         ]
