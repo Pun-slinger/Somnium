@@ -54,7 +54,7 @@ html,body {
     color: rgb(88, 25, 25);
 }
 
-#boons, #race-info, #overview-text, #ability-text, #subclass-overview-text, th, td{
+#boons, #race-info, #overview-text, #ability-text, #subclass-overview-text, th, td, #patron-info{
     color: rgb(88, 25, 25);
 }
 
@@ -96,7 +96,7 @@ html,body {
     color: darkred;
 }
 
-#race-info{
+#race-info, #patron-info{
     background-color: #f1efea9d;
     border-color: darkred;
     border-style: groove;
@@ -122,6 +122,10 @@ table, th, td{
     width: auto;
 }
 
+#patron-img{
+    width: 75%;
+}
+
 @media screen and (min-width: 400px) {
     #index-isox-map{
         width: 100%;
@@ -135,7 +139,6 @@ table, th, td{
         margin-left: -30px;
         width: 200px;
     }
-
 }
   
   @media screen and (min-width: 800px) {
@@ -151,4 +154,10 @@ table, th, td{
         margin-left: 0;
         width: 265px;
     }
+
+    #patron-main{
+        display: flex;
+        align-items: flex-start;
+    }
 }
+

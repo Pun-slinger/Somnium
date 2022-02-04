@@ -1,0 +1,21 @@
+<h1 id="cc-title" class="text-center">Patrons</h1>
+
+<h2 id="cc-subtitle" class="text-center mb-5">{{name}}</h2>
+
+<div id="patron-main" class="mx-5 mb-2">
+    <div id="patron-info" class="mx-4 mb-5 px-2 pt-2 rounded">
+        <b class="ml-1">Overview</b>
+        <p class="ml-1">{{overview}}</p>
+
+        <b class="ml-1">Those that follows this patron, may be affected by the following outlooks</b>
+        <ul>
+            {{#each outlooks}}
+            <li>
+                <p class="ml-1">{{this}}</p>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <img id="patron-img" src="/img/arts/patrons/{{image_filename}}" class="img-fluid mx-auto d-block" alt="Patron Image">
+</div>
