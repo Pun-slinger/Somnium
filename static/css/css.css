@@ -8,6 +8,22 @@ html,body {
     min-height: 100%;
 }
 
+.dropdown-menu {
+    background-color: darkred;
+    padding: 0rem;
+}
+
+.dropdown-item {
+    color: white;
+    transition: 300ms ease-in;
+    padding: 1rem;
+}
+
+.dropdown-item:hover {
+    color: white;
+    background-color: rgb(110, 2, 2);
+}
+
 #main-name{
     font-family: 'Alegreya', serif;
     font-size: 7mm;
