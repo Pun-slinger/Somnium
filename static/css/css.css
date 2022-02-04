@@ -11,12 +11,18 @@ html,body {
 .dropdown-menu {
     background-color: darkred;
     padding: 0rem;
+    border: rgba(0, 0, 0, 0.336);
+    border-style: groove;
+    border-width: 1px;
 }
 
 .dropdown-item {
     color: white;
     transition: 300ms ease-in;
     padding: 1rem;
+    border: rgba(0, 0, 0, 0.336);
+    border-style: groove;
+    border-width: 1px;
 }
 
 .dropdown-item:hover {
