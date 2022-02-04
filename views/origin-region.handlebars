@@ -23,9 +23,9 @@
     {{#each region_suborigins}}
 
     {{#if ../parent_link}}
-    <a href="/origins/{{../parent_link}}{{link}}">{{suborigin_name}}</a>
+    <a class="rounded" href="/origins/{{../parent_link}}{{link}}">{{suborigin_name}}</a>
     {{else}}
-    <a href="/origins/{{../sub_title}}{{link}}">{{suborigin_name}}</a>   
+    <a class="rounded" href="/origins/{{../sub_title}}{{link}}">{{suborigin_name}}</a>   
     {{/if}}
 
     {{/each}}

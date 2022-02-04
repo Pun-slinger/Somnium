@@ -4,6 +4,10 @@ body{
     background-size: cover;
 }
 
+html,body {
+    min-height: 100%;
+}
+
 #main-name{
     font-family: 'Alegreya', serif;
     font-size: 7mm;
@@ -35,10 +39,6 @@ body{
 
 #region-hr{
     height: 2px;
-}
-
-#region-div{
-    width: 265px;
 }
 
 #region-list{
@@ -91,7 +91,7 @@ body{
     width: 275px;
 }
 
-#subclasses div a{
+#subclasses div a, #races a, #region-names a, #region-specific-origin a{
     display: block;
     color: darkred;
 }
@@ -116,4 +116,39 @@ table, th, td{
     border-style: groove;
     border-width: 2px;
     padding: 5px;
+}
+
+#region-icons{
+    width: auto;
+}
+
+@media screen and (min-width: 400px) {
+    #index-isox-map{
+        width: 100%;
+    }
+
+    #origin-isox-map{
+        width: 70%;
+    }
+
+    #region-div{
+        margin-left: -30px;
+        width: 200px;
+    }
+
+}
+  
+  @media screen and (min-width: 800px) {
+    #index-isox-map{
+        width: 75%;
+    }
+
+    #origin-isox-map{
+        width: 75%;
+        
+    }
+    #region-div{
+        margin-left: 0;
+        width: 265px;
+    }
 }

@@ -69,11 +69,14 @@ html,body {
 #region-specific-origin a{
     font-size: 20px;
     align-self: center;
-    background-color: #f1efea;
+    background-color: #f1efeabe;
     margin-bottom: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
     width: 400px;
+    border-color: darkred;
+    border-style: groove;
+    border-width: 1px;
 }
 
 #races a{
@@ -85,6 +88,9 @@ html,body {
     padding-top: 5px;
     padding-bottom: 5px;
     width: 200px;
+    border-color: darkred;
+    border-style: groove;
+    border-width: 2px;
 }
 
 #subclasses div{
@@ -120,4 +126,39 @@ table, th, td{
     border-style: groove;
     border-width: 2px;
     padding: 5px;
+}
+
+#region-icons{
+    width: auto;
+}
+
+@media screen and (min-width: 400px) {
+    #index-isox-map{
+        width: 100%;
+    }
+
+    #origin-isox-map{
+        width: 70%;
+    }
+
+    #region-div{
+        margin-left: -30px;
+        width: 200px;
+    }
+
+}
+  
+  @media screen and (min-width: 800px) {
+    #index-isox-map{
+        width: 75%;
+    }
+
+    #origin-isox-map{
+        width: 75%;
+        
+    }
+    #region-div{
+        margin-left: 0;
+        width: 265px;
+    }
 }
