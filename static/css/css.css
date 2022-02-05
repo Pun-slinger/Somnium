@@ -74,7 +74,7 @@ html,body {
     color: rgb(88, 25, 25);
 }
 
-#overview-title, #boon-title, #region-specific-origin, #races, #subclasses div h2, #ability-title {
+#overview-title, #boon-title, #region-specific-origin, #races, #subclasses div h2, #ability-title, #patrons-list-div {
     font-family: 'Alegreya', serif;
     font-weight: bold;
     color: rgb(88, 25, 25);
@@ -115,6 +115,19 @@ html,body {
     border-width: 2px;
 }
 
+#patrons-list-div a{
+    font-size: 25px;
+    background-color: #f1efea93;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 200px;
+    border-color: darkred;
+    border-style: groove;
+    border-width: 2px;
+}
+
 #subclasses div{
     border-color: darkred;
     border-style: groove;
@@ -123,7 +136,7 @@ html,body {
     width: 275px;
 }
 
-#subclasses div a, #races a, #region-names a, #region-specific-origin a{
+#subclasses div a, #races a, #region-names a, #region-specific-origin a, #patrons-list-div a{
     display: block;
     color: darkred;
 }
@@ -157,6 +170,10 @@ table, th, td{
 #patron-img{
     width: 75%;
 }   
+
+#patron-info{
+    max-width: 1200px;
+}
 
 @media screen and (min-width: 400px) {
     #index-isox-map{
@@ -192,4 +209,8 @@ table, th, td{
         display: flex;
         align-items: flex-start;
     } 
+
+    #patron-info{
+        width: 1200px;
+    }
 }

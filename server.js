@@ -7,6 +7,7 @@ const races_routes = require("./controller/races-routes");
 const origins_routes = require("./controller/origins-routes");
 const subclasses_routes = require("./controller/subclasses-routes");
 const patrons_routes = require("./controller/patrons-routes");
+const divinity_routes = require("./controller/divinity-routes");
 
 const origins_aprana_routes = require("./controller/origins/origins-aprana-routes");
 const origins_clivania_routes = require("./controller/origins/origins-clivania-routes");    
@@ -29,6 +30,7 @@ app.use("/races", races_routes);
 app.use("/origins", origins_routes);
 app.use("/subclasses", subclasses_routes);
 app.use("/patrons", patrons_routes);
+app.use("/divinity", divinity_routes);
 
 app.use("/origins/Aprana", origins_aprana_routes);
 app.use("/origins/Clivania", origins_clivania_routes);
