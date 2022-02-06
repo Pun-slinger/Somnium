@@ -18,6 +18,13 @@ const origins_ofrye_routes = require("./controller/origins/origins-ofrye-routes"
 const origins_pandora_routes = require("./controller/origins/origins-pandora-routes");
 const origins_ocean_routes = require("./controller/origins/origins-ocean-routes");
 
+const divinity_radiance_routes = require("./controller/divinity/divinity-radiance-routes");
+const divinity_shroud_routes = require("./controller/divinity/divinity-shroud-routes");
+const divinity_masked_routes = require("./controller/divinity/divinity-masked-routes");
+const divinity_viridi_routes = require("./controller/divinity/divinity-viridi-routes");
+const divinity_prismatic_routes = require("./controller/divinity/divinity-prismatic-routes");
+const divinity_grey_routes = require("./controller/divinity/divinity-grey-routes");
+
 //tell server how to handle html files using handlebars
 app.engine('.handlebars', exphbs.engine({ defaultLayout: 'main',extname: '.handlebars' }));
 app.set('view engine', '.handlebars');
@@ -40,6 +47,13 @@ app.use("/origins/Fruaqua", origins_fruaqua_routes);
 app.use("/origins/Ofrye", origins_ofrye_routes);
 app.use("/origins/Pandora", origins_pandora_routes);
 app.use("/origins/The-Boundless-Ocean", origins_ocean_routes);
+
+app.use("/divinity/Radiance-pantheon", divinity_radiance_routes);
+app.use("/divinity/Shroud-pantheon", divinity_shroud_routes);
+app.use("/divinity/Masked-pantheon", divinity_masked_routes);
+app.use("/divinity/Viridi-pantheon", divinity_viridi_routes);
+app.use("/divinity/Prismatic-pantheon", divinity_prismatic_routes);
+app.use("/divinity/Grey-pantheon", divinity_grey_routes);
 
 app.use(/*missing route*/(req, res) => {    //use as a catch all routes
     res.status(404).send("<h3 style='color:red'>Page Not Found</h3>");

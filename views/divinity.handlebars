@@ -1,0 +1,50 @@
+<h1 id="cc-title" class="text-center">{{pantheon}}</h1>
+
+<h2 id="cc-subtitle" class="text-center mb-5">{{name}}</h2>
+
+<div id="divinity-main" class="mx-5 mb-2">
+    <div id="divinity-info" class="mx-4 mb-4 px-2 pt-2 pb-2 rounded">
+        <b class="ml-1">Overview</b>
+        <p class="ml-1">{{overview}}</p>
+
+        <div class="mb-3">
+            <b class="ml-1">Domains</b>
+            {{#each domains}}
+            <p class="ml-1 mb-0">{{this}}</p>
+            {{/each}}
+        </div>
+
+        <b class="ml-1">Holy symbol</b>
+        <p class="ml-1">{{symbol}}</p>
+
+        <b class="ml-1">Boons</b>
+        <p class="ml-1">{{boons}}</p>
+
+        <b class="ml-1">Lip service</b>
+        <p class="ml-1">{{lip}}</p>
+
+        <b class="ml-1">Cleric alignment</b>
+        {{#each cleric_aligns}}
+        <p class="ml-1 mb-0">{{this}}</p>
+        {{/each}}
+    </div>
+
+    <div id="divinity-sub">
+        <img id="divinity-img" src="{{imagelink}}" class="img-fluid mx-auto d-block mb-4"
+            alt="Divinity Image">
+
+        <div id="divinity-sub-info" class="mb-4 p-2 rounded">
+            <b>Pantheon</b>
+            <p>{{pantheon}}</p>
+
+            <b>Alignment</b>
+            <p>{{alignment}}</p>
+
+            <b>Titles</b>
+            {{#each titles}}
+            <p class="mb-0">{{this}}</p>
+            {{/each}}
+        </div>
+
+    </div>
+</div>

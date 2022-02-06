@@ -74,13 +74,13 @@ html,body {
     color: rgb(88, 25, 25);
 }
 
-#overview-title, #boon-title, #region-specific-origin, #races, #subclasses div h2, #ability-title, #patrons-list-div {
+#overview-title, #boon-title, #region-specific-origin, #races, #subclasses div h2, #ability-title, #patrons-list-div, #divinity-list-div {
     font-family: 'Alegreya', serif;
     font-weight: bold;
     color: rgb(88, 25, 25);
 }
 
-#boons, #race-info, #overview-text, #ability-text, #subclass-overview-text, th, td, #patron-info{
+#boons, #race-info, #overview-text, #ability-text, #subclass-overview-text, th, td, #patron-info, #divinity-info, #divinity-sub-info, #patheon-info{
     color: rgb(88, 25, 25);
 }
 
@@ -115,7 +115,7 @@ html,body {
     border-width: 2px;
 }
 
-#patrons-list-div a{
+#patrons-list-div a, #divinity-list-div a{
     font-size: 25px;
     background-color: #f1efea93;
     margin-bottom: 40px;
@@ -136,12 +136,12 @@ html,body {
     width: 275px;
 }
 
-#subclasses div a, #races a, #region-names a, #region-specific-origin a, #patrons-list-div a{
+#subclasses div a, #races a, #region-names a, #region-specific-origin a, #patrons-list-div a, #divinity-list-div a{
     display: block;
     color: darkred;
 }
 
-#race-info, #patron-info{
+#race-info, #patron-info, #divinity-info, #divinity-sub-info, #patheon-info{
     background-color: #f1efea9d;
     border-color: darkred;
     border-style: groove;
@@ -167,12 +167,12 @@ table, th, td{
     width: auto;
 }
 
-#patron-img{
-    width: 75%;
-}   
-
-#patron-info{
+#patron-info, #patheon-info{
     max-width: 1200px;
+}
+
+#divinity-sub, #divinity-img{ 
+    width: 100%;
 }
 
 @media screen and (min-width: 400px) {
@@ -189,6 +189,9 @@ table, th, td{
         width: 200px;
     }
 
+    #patron-img{
+        width: 75%;
+    }
 }
   
   @media screen and (min-width: 800px) {
@@ -205,12 +208,20 @@ table, th, td{
         width: 265px;
     }
 
-    #patron-main{
+    #patron-main, #divinity-main, #patheon-main{
         display: flex;
         align-items: flex-start;
     } 
 
-    #patron-info{
+    #patron-info, #patheon-info{
         width: 1200px;
+    }
+
+    #patron-img{
+        width: 40%;
+    }
+
+    #divinity-sub, #divinity-img{
+        max-width: 400px;
     }
 }

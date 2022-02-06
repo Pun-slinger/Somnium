@@ -54,7 +54,7 @@ html,body {
     color: rgb(88, 25, 25);
 }
 
-#boons, #race-info, #overview-text, #ability-text, #subclass-overview-text, th, td, #patron-info{
+#boons, #race-info, #overview-text, #ability-text, #subclass-overview-text, th, td, #patron-info, #divinity-info, #divinity-sub-info{
     color: rgb(88, 25, 25);
 }
 
@@ -109,7 +109,7 @@ html,body {
     color: darkred;
 }
 
-#race-info, #patron-info{
+#race-info, #patron-info, #divinity-info, #divinity-sub-info{
     background-color: #f1efea9d;
     border-color: darkred;
     border-style: groove;
@@ -135,8 +135,16 @@ table, th, td{
     width: auto;
 }
 
-#patron-img{
+#patron-img {
     width: 75%;
+}
+
+#divinity-img{
+    width: 100%;
+}
+
+#divinity-sub{
+    width: 100%;
 }
 
 @media screen and (min-width: 400px) {
@@ -169,6 +177,11 @@ table, th, td{
     }
 
     #patron-main{
+        display: flex;
+        align-items: flex-start;
+    }
+
+    #divinity-main{
         display: flex;
         align-items: flex-start;
     }
