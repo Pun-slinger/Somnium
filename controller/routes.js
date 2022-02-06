@@ -87,7 +87,7 @@ router.get('/subclasses', function (req, res) {
             },
             {
                 name: "Wizard",
-                subclasses: [{ name: "School of Chorosurgy", link: "subclasses/" }]
+                subclasses: [{ name: "School of Chorosurgy", link: "subclasses/school-of-chorosurgy" }]
             }
         ]
     });

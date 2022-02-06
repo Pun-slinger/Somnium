@@ -43,4 +43,8 @@ router.get('/demonic-bloodline', function (req, res) {
     res.render('subclasses/Sorcerer/demonic-bloodline', { title: "Somnium: Demonic Bloodline" });
 })
 
+router.get('/school-of-chorosurgy', function (req, res) {
+    res.render('subclasses/Wizard/school-of-chorosurgy', { title: "Somnium: School of Chorosurgy" });
+})
+
 module.exports = router;

@@ -213,7 +213,7 @@ table, th, td{
         align-items: flex-start;
     } 
 
-    #patron-info, #patheon-info{
+    #patron-info, #patheon-info, #divinity-info{
         width: 1200px;
     }
 
