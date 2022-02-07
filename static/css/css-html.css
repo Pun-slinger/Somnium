@@ -160,6 +160,10 @@ table, th, td{
         margin-left: -30px;
         width: 200px;
     }
+
+    #race-img{
+        width: 75%;
+    }
 }
   
   @media screen and (min-width: 800px) {
@@ -176,7 +180,7 @@ table, th, td{
         width: 265px;
     }
 
-    #patron-main{
+    #patron-main, #race-main{
         display: flex;
         align-items: flex-start;
     }
@@ -184,6 +188,10 @@ table, th, td{
     #divinity-main{
         display: flex;
         align-items: flex-start;
+    }
+
+    #race-img{
+        width: 40%;
     }
 }
 

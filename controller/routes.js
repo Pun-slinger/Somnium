@@ -8,12 +8,57 @@ router.get('/', function (req, res) {
 })
 
 router.get('/origins', function (req, res) {
-    res.render('origin-list', { title: "Somnium: Origins" });
+    res.render('origin-list', { 
+        title: "Somnium: Origins", 
+        regions: [
+            {
+                name: "Aprana",
+                link: "/Aprana",
+                icon: "<i class=\"fas fa-coins\"></i>"
+            },
+            {
+                name: "Clivania",
+                link: "/Clivania",
+                icon: "<i class=\"fas fa-mountain\"></i>"
+            },
+            {
+                name: "Dreavan",
+                link: "/Dreavan",
+                icon: "<i class=\"fas fa-book-dead\"></i>"
+            },
+            {
+                name: "Ewhil",
+                link: "/Ewhil",
+                icon: "<i class=\"fas fa-book-dead\"></i>"
+            },
+            {
+                name: "Fruaqua",
+                link: "/Fruaqua",
+                icon: "<i class=\"fas fa-hat-wizard\"></i>"
+            },
+            {
+                name: "Ofrye",
+                link: "/Ofrye",
+                icon: "<i class=\"fas fa-tree\"></i>"
+            },
+            {
+                name: "Pandora",
+                link: "/Pandora",
+                icon: "<i class=\"fas fa-biohazard\"></i>"
+            },
+            {
+                name: "The Boundless Ocean",
+                link: "/The-Boundless-Ocean",
+                icon: "<i class=\"fas fa-anchor\"></i>"
+            },
+        ]
+    });
 })
 
 router.get('/races', function (req, res) {
     res.render('race-list', {
-        title: "Somnium: Races", races: [
+        title: "Somnium: Races", 
+        races: [
             "Aarakocra",
             "Aasimar",
             "Centaur",
@@ -55,39 +100,39 @@ router.get('/subclasses', function (req, res) {
         title: "Somnium: Subclasses", classes: [
             {
                 name: "Barbarian",
-                subclasses: [{ name: "Path of Anti Magic", link: "subclasses/path-of-anti-magic" }]
+                subclasses: [{ name: "Path of Anti Magic", link: "/path-of-anti-magic" }]
             },
             {
                 name: "Bard",
-                subclasses: [{ name: "College of Symphony", link: "subclasses/college-of-symphony" }]
+                subclasses: [{ name: "College of Symphony", link: "/college-of-symphony" }]
             },
             {
                 name: "Cleric",
-                subclasses: [{ name: "Emotion Domain", link: "subclasses/emotion-domain" }]
+                subclasses: [{ name: "Emotion Domain", link: "/emotion-domain" }]
             },
             {
                 name: "Fighter",
-                subclasses: [{ name: "Starglade Blood Battle Style", link: "subclasses/starglade-blood-battle-style" }, { name: "Shapeless Style", link: "subclasses/shapeless-style" }]
+                subclasses: [{ name: "Starglade Blood Battle Style", link: "/starglade-blood-battle-style" }, { name: "Shapeless Style", link: "subclasses/shapeless-style" }]
             },
             {
                 name: "Monk",
-                subclasses: [{ name: "Way of the Silver Wing", link: "subclasses/way-of-the-destruction-style" }, { name: "Way of the Destruction Style", link: "subclasses/way-of-the-silver-wing" }]
+                subclasses: [{ name: "Way of the Silver Wing", link: "/way-of-the-destruction-style" }, { name: "Way of the Destruction Style", link: "subclasses/way-of-the-silver-wing" }]
             },
             {
                 name: "Paladin",
-                subclasses: [{ name: "Oath of The Void", link: "subclasses/oath-of-the-void" }]
+                subclasses: [{ name: "Oath of The Void", link: "/oath-of-the-void" }]
             },
             {
                 name: "Rouge",
-                subclasses: [{ name: "Pirate", link: "subclasses/pirate" }]
+                subclasses: [{ name: "Pirate", link: "/pirate" }]
             },
             {
                 name: "Sorcerer",
-                subclasses: [{ name: "Demonic Bloodline", link: "subclasses/demonic-bloodline" }]
+                subclasses: [{ name: "Demonic Bloodline", link: "/demonic-bloodline" }]
             },
             {
                 name: "Wizard",
-                subclasses: [{ name: "School of Chorosurgy", link: "subclasses/school-of-chorosurgy" }]
+                subclasses: [{ name: "School of Chorosurgy", link: "/school-of-chorosurgy" }]
             }
         ]
     });

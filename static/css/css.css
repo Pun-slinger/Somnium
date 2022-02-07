@@ -202,6 +202,10 @@ table, th, td{
     #origin-isox-map{
         display: block;
     }
+
+    #race-img{
+        width: 75%;
+    }
 }
   
   @media screen and (min-width: 800px) {
@@ -218,7 +222,7 @@ table, th, td{
         width: 265px;
     }
 
-    #patron-main, #divinity-main, #patheon-main{
+    #patron-main, #divinity-main, #patheon-main, #race-main{
         display: flex;
         align-items: flex-start;
     } 
@@ -241,5 +245,9 @@ table, th, td{
 
     #origin-isox-map{
         display: block;
+    }
+
+    #race-img{
+        width: 40%;
     }
 }

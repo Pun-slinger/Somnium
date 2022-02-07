@@ -9,57 +9,19 @@
         <div id="region-list" class="container ml-2">
             <div class="row no-gutters">
                 <div id="region-icons" class="col-md-auto mr-1">
+                    {{#each regions}}
                     <div class="mb-2">
-                        <i class="fas fa-coins"></i>
+                        {{{icon}}}
                     </div>
-                    <div class="mb-2">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="mb-2">
-                        <i class="fas fa-book-dead"></i>
-                    </div>
-                    <div class="mb-2">
-                        <i class="fas fa-book-dead"></i>
-                    </div>
-                    <div class="mb-2">
-                        <i class="fas fa-hat-wizard"></i>
-                    </div>
-                    <div class="mb-2">
-                        <i class="fas fa-tree"></i>
-                    </div>
-                    <div class="mb-2">
-                        <i class="fas fa-biohazard"></i>
-                    </div>
-                    <div class="mb-2">
-                        <i class="fas fa-anchor"></i>
-                    </div>
+                    {{/each}}
                 </div>
 
                 <div id="region-names" class="col">
+                    {{#each regions}}
                     <div class="mb-2">
-                        <a href="/origins/Aprana">Aprana</a>
+                        <a href="/origins{{{link}}}">{{name}}</a>
                     </div>
-                    <div class="mb-2">
-                        <a href="/origins/Clivania">Clivania</a>
-                    </div>
-                    <div class="mb-2">
-                        <a href="/origins/Dreavan">Dreavan</a>
-                    </div>
-                    <div class="mb-2">
-                        <a href="/origins/Ewhil">Ewhil</a>
-                    </div>
-                    <div class="mb-2">
-                        <a href="/origins/Fruaqua">Fruaqua</a>
-                    </div>
-                    <div class="mb-2">
-                        <a href="/origins/Ofrye">Ofrye</a>
-                    </div>
-                    <div class="mb-2">
-                        <a href="/origins/Pandora">Pandora</a>
-                    </div>
-                    <div class="mb-2">
-                        <a href="/origins/The-Boundless-Ocean">The Boundless Ocean</a>
-                    </div>
+                    {{/each}}
                 </div>
             </div>
         </div>

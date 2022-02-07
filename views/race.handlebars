@@ -1,3 +1,4 @@
+{{!-- With sub race --}}
 <h1 id="cc-title" class="text-center">{{main_title}}</h1>
 
 {{#if sub_races}}
@@ -6,223 +7,235 @@
 
 <h2 id="cc-subtitle" class="text-center mb-5">{{sub_title}}</h2>
 
-<div id="race-info" class="m-5 px-2 pt-2 rounded">
+<div id="race-main" class="mx-5 mb-2">
+    
+    <img id="race-img" src="{{img_link}}" class="img-fluid mx-auto d-block mb-4 px-4">
 
-    <p class="ml-1"><b>Ability Scores</b>: {{ab_score}}</p>
+    <div id="race-info" class="mx-4 mb-5 px-2 pt-2 rounded">
 
-    <p class="ml-1"><b>Size</b>: {{size_desc}} Your size is <b>{{size}}</b>.</p>
+        <p class="ml-1"><b>Ability Scores</b>: {{ab_score}}</p>
 
-    <p class="ml-1"><b>Speed</b>: {{speed}}</p>
+        <p class="ml-1"><b>Size</b>: {{size_desc}} Your size is <b>{{size}}</b>.</p>
 
-    <p class="ml-1"><b>Age</b>: {{age}}</p>
+        <p class="ml-1"><b>Speed</b>: {{speed}}</p>
 
-    <p class="ml-1"><b>Alignment</b>: {{alignment}}</p>
+        <p class="ml-1"><b>Age</b>: {{age}}</p>
 
-    <p class="ml-1"><b>Language</b>: {{language}}</p>
+        <p class="ml-1"><b>Alignment</b>: {{alignment}}</p>
 
-    <hr class="mx-5">
+        <p class="ml-1"><b>Language</b>: {{language}}</p>
 
-    {{#each additional_ab}}
+        <hr class="mx-5">
 
-    <p class="ml-1"><b>{{ab_name}}</b>:
-        {{#if ab_desc}}
-        {{ab_desc}}
+        {{#each additional_ab}}
+
+        <p class="ml-1"><b>{{ab_name}}</b>:
+            {{#if ab_desc}}
+            {{ab_desc}}
+            {{/if}}
+        </p>
+        {{#if table}}
+        <table class="mx-5 mb-5">
+            <tr>
+                {{#each table/headers}}
+                <th class="p-1">{{this}}</th>
+                {{/each}}
+            </tr>
+            {{#each table/row}}
+            <tr>
+                {{#each this}}
+                <td>{{this}}</td>
+                {{/each}}
+            </tr>
+            {{/each}}
+        </table>
         {{/if}}
-    </p>
-    {{#if table}}
-    <table class="mx-5 mb-5">
-        <tr>
-            {{#each table/headers}}
-            <th class="p-1">{{this}}</th>
-            {{/each}}
-        </tr>
-        {{#each table/row}}
-        <tr>
-            {{#each this}}
-            <td>{{this}}</td>
-            {{/each}}
-        </tr>
-        {{/each}}
-    </table>
-    {{/if}}
 
-    {{#if sub_ab}}
-    <ul>
-        {{#each sub_ab}}
-        <li>
-            {{#if ab_name}}
-            <p class="ml-1"><b>{{ab_name}}</b>: {{ab_desc}}</p>
-            {{else}}
-            <p class="ml-1">{{ab_desc}}</p>
-            {{/if}}
+        {{#if sub_ab}}
+        <ul>
+            {{#each sub_ab}}
+            <li>
+                {{#if ab_name}}
+                <p class="ml-1"><b>{{ab_name}}</b>: {{ab_desc}}</p>
+                {{else}}
+                <p class="ml-1">{{ab_desc}}</p>
+                {{/if}}
 
-            {{#if table}}
-            <table class="mx-5 mb-5">
-                <tr>
-                    {{#each table/headers}}
-                    <th class="p-1">{{this}}</th>
-                    {{/each}}
-                </tr>
-                {{#each table/row}}
-                <tr>
-                    {{#each this}}
-                    <td>{{this}}</td>
-                    {{/each}}
-                </tr>
-                {{/each}}
-            </table>
-            {{/if}}
-
-            {{#if sub_ab}}
-            <ul>
-                {{#each sub_ab}}
-                <li>
-                    {{#if ab_name}}
-                    <p class="ml-1"><b>{{ab_name}}</b>: {{ab_desc}}</p>
-                    {{else}}
-                    <p class="ml-1">{{ab_desc}}</p>
-                    {{/if}}
-
-                    {{#if table}}
-                    <table class="mx-5 mb-5">
-                        <tr>
-                            {{#each table/headers}}
-                            <th class="p-1">{{this}}</th>
-                            {{/each}}
-                        </tr>
-                        {{#each table/row}}
-                        <tr>
-                            {{#each this}}
-                            <td>{{this}}</td>
-                            {{/each}}
-                        </tr>
+                {{#if table}}
+                <table class="mx-5 mb-5">
+                    <tr>
+                        {{#each table/headers}}
+                        <th class="p-1">{{this}}</th>
                         {{/each}}
-                    </table>
-                    {{/if}}
+                    </tr>
+                    {{#each table/row}}
+                    <tr>
+                        {{#each this}}
+                        <td>{{this}}</td>
+                        {{/each}}
+                    </tr>
+                    {{/each}}
+                </table>
+                {{/if}}
 
-                </li>
-                {{/each}}
-            </ul>
-            {{/if}}
+                {{#if sub_ab}}
+                <ul>
+                    {{#each sub_ab}}
+                    <li>
+                        {{#if ab_name}}
+                        <p class="ml-1"><b>{{ab_name}}</b>: {{ab_desc}}</p>
+                        {{else}}
+                        <p class="ml-1">{{ab_desc}}</p>
+                        {{/if}}
 
-        </li>
+                        {{#if table}}
+                        <table class="mx-5 mb-5">
+                            <tr>
+                                {{#each table/headers}}
+                                <th class="p-1">{{this}}</th>
+                                {{/each}}
+                            </tr>
+                            {{#each table/row}}
+                            <tr>
+                                {{#each this}}
+                                <td>{{this}}</td>
+                                {{/each}}
+                            </tr>
+                            {{/each}}
+                        </table>
+                        {{/if}}
+
+                    </li>
+                    {{/each}}
+                </ul>
+                {{/if}}
+
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
         {{/each}}
-    </ul>
-    {{/if}}
-    {{/each}}
+    </div>
 </div>
 
 <hr class="mx-5 mb-5">
 
 {{/each}}
 
+{{!-- Without sub race --}}
+
 {{else}}
 
 <h2 id="cc-subtitle" class="text-center mb-5">{{sub_title}}</h2>
 
-<div id="race-info" class="m-5 px-2 pt-2 rounded">
+<div id="race-main" class="mx-5 mb-2">
 
-    <p class="ml-1"><b>Ability Scores</b>: {{ab_score}}</p>
+    <img id="race-img" src="{{img_link}}" class="img-fluid mx-auto d-block mb-4 px-4">
 
-    <p class="ml-1"><b>Size</b>: {{size_desc}} Your size is <b>{{size}}</b>.</p>
+    <div id="race-info" class="mx-4 mb-5 px-2 pt-2 rounded">
 
-    <p class="ml-1"><b>Speed</b>: {{speed}}</p>
+        <p class="ml-1"><b>Ability Scores</b>: {{ab_score}}</p>
 
-    <p class="ml-1"><b>Age</b>: {{age}}</p>
+        <p class="ml-1"><b>Size</b>: {{size_desc}} Your size is <b>{{size}}</b>.</p>
 
-    <p class="ml-1"><b>Alignment</b>: {{alignment}}</p>
+        <p class="ml-1"><b>Speed</b>: {{speed}}</p>
 
-    <p class="ml-1"><b>Language</b>: {{language}}</p>
+        <p class="ml-1"><b>Age</b>: {{age}}</p>
 
-    <hr class="mx-5">
+        <p class="ml-1"><b>Alignment</b>: {{alignment}}</p>
 
-    {{#each additional_ab}}
-    <p class="ml-1"><b>{{ab_name}}</b>:
-        {{#if ab_desc}}
-        {{ab_desc}}
+        <p class="ml-1"><b>Language</b>: {{language}}</p>
+
+        <hr class="mx-5">
+
+        {{#each additional_ab}}
+        <p class="ml-1"><b>{{ab_name}}</b>:
+            {{#if ab_desc}}
+            {{ab_desc}}
+            {{/if}}
+        </p>
+        {{#if table}}
+        <table class="mx-5 mb-5">
+            <tr>
+                {{#each table/headers}}
+                <th class="p-1">{{this}}</th>
+                {{/each}}
+            </tr>
+            {{#each table/row}}
+            <tr>
+                {{#each this}}
+                <td>{{this}}</td>
+                {{/each}}
+            </tr>
+            {{/each}}
+        </table>
         {{/if}}
-    </p>
-    {{#if table}}
-    <table class="mx-5 mb-5">
-        <tr>
-            {{#each table/headers}}
-            <th class="p-1">{{this}}</th>
-            {{/each}}
-        </tr>
-        {{#each table/row}}
-        <tr>
-            {{#each this}}
-            <td>{{this}}</td>
-            {{/each}}
-        </tr>
-        {{/each}}
-    </table>
-    {{/if}}
 
-    {{#if sub_ab}}
-    <ul>
-        {{#each sub_ab}}
-        <li>
-            {{#if ab_name}}
-            <p class="ml-1"><b>{{ab_name}}</b>: {{ab_desc}}</p>
-            {{else}}
-            <p class="ml-1">{{ab_desc}}</p>
-            {{/if}}
+        {{#if sub_ab}}
+        <ul>
+            {{#each sub_ab}}
+            <li>
+                {{#if ab_name}}
+                <p class="ml-1"><b>{{ab_name}}</b>: {{ab_desc}}</p>
+                {{else}}
+                <p class="ml-1">{{ab_desc}}</p>
+                {{/if}}
 
-            {{#if table}}
-            <table class="mx-5 mb-5">
-                <tr>
-                    {{#each table/headers}}
-                    <th class="p-1">{{this}}</th>
-                    {{/each}}
-                </tr>
-                {{#each table/row}}
-                <tr>
-                    {{#each this}}
-                    <td>{{this}}</td>
-                    {{/each}}
-                </tr>
-                {{/each}}
-            </table>
-            {{/if}}
-
-            {{#if sub_ab}}
-            <ul>
-                {{#each sub_ab}}
-                <li>
-                    {{#if ab_name}}
-                    <p class="ml-1"><b>{{ab_name}}</b>: {{ab_desc}}</p>
-                    {{else}}
-                    <p class="ml-1">{{ab_desc}}</p>
-                    {{/if}}
-
-                    {{#if table}}
-                    <table class="mx-5 mb-5">
-                        <tr>
-                            {{#each table/headers}}
-                            <th class="p-1">{{this}}</th>
-                            {{/each}}
-                        </tr>
-                        {{#each table/row}}
-                        <tr>
-                            {{#each this}}
-                            <td>{{this}}</td>
-                            {{/each}}
-                        </tr>
+                {{#if table}}
+                <table class="mx-5 mb-5">
+                    <tr>
+                        {{#each table/headers}}
+                        <th class="p-1">{{this}}</th>
                         {{/each}}
-                    </table>
-                    {{/if}}
+                    </tr>
+                    {{#each table/row}}
+                    <tr>
+                        {{#each this}}
+                        <td>{{this}}</td>
+                        {{/each}}
+                    </tr>
+                    {{/each}}
+                </table>
+                {{/if}}
 
-                </li>
-                {{/each}}
-            </ul>
-            {{/if}}
+                {{#if sub_ab}}
+                <ul>
+                    {{#each sub_ab}}
+                    <li>
+                        {{#if ab_name}}
+                        <p class="ml-1"><b>{{ab_name}}</b>: {{ab_desc}}</p>
+                        {{else}}
+                        <p class="ml-1">{{ab_desc}}</p>
+                        {{/if}}
 
-        </li>
+                        {{#if table}}
+                        <table class="mx-5 mb-5">
+                            <tr>
+                                {{#each table/headers}}
+                                <th class="p-1">{{this}}</th>
+                                {{/each}}
+                            </tr>
+                            {{#each table/row}}
+                            <tr>
+                                {{#each this}}
+                                <td>{{this}}</td>
+                                {{/each}}
+                            </tr>
+                            {{/each}}
+                        </table>
+                        {{/if}}
+
+                    </li>
+                    {{/each}}
+                </ul>
+                {{/if}}
+
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
         {{/each}}
-    </ul>
-    {{/if}}
-    {{/each}}
+    </div>
 </div>
 
 {{/if}}
