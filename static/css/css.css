@@ -175,7 +175,13 @@ table, th, td{
     width: 100%;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 200px) {
+    #origin-isox-map{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 650px) {
     #index-isox-map{
         width: 100%;
     }
@@ -191,6 +197,10 @@ table, th, td{
 
     #patron-img{
         width: 75%;
+    }
+
+    #origin-isox-map{
+        display: block;
     }
 }
   
@@ -223,5 +233,13 @@ table, th, td{
 
     #divinity-sub, #divinity-img{
         max-width: 400px;
+    }
+
+    #divinity-list-div{
+        margin-left: 100px;
+    }
+
+    #origin-isox-map{
+        display: block;
     }
 }
