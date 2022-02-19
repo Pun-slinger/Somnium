@@ -29,6 +29,11 @@ const divinity_grey_routes = require("./controller/divinity/divinity-grey-routes
 app.engine('.handlebars', exphbs.engine({ defaultLayout: 'main',extname: '.handlebars' }));
 app.set('view engine', '.handlebars');
 
+var hbs = exphbs.create({});
+// register new function
+hbs.handlebars.registerHelper('json', function(obj) {
+    return JSON.stringify(obj);
+})
 
 app.use(express.static("static"));
 

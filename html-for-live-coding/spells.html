@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/css/css-html.css">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+
+  <title>Somnium: Spells</title>
+</head>
+
+<body onload="loadFunctions()">
+  <main>
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light mb-4">
+      <a id="main-name" class="navbar-brand text-white" href="#">Somnium</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Divinity
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Radiance Pantheon</a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">Shroud Pantheon</a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">Masked Pantheon</a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">Viridi Pantheon</a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">Prismatic Pantheon</a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">Grey Pantheon</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active text-white" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Patrons
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">00 - The Grand Designer</a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">Azimohz – The Abyssal Cacophony</a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">Hanako - The Great Tales</a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">Immienth – The Corrupting Calamity</a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">The Dragon Collective</a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">The Mad Prophet</a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">The Silent Jester</a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">Xahaydiel - The Scouring Terror</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Character Creation
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Origins</a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">Races</a>
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item" href="#">Subclass</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <h1 id="cc-title" class="text-center">Somnium</h1>
+
+    <h2 id="cc-subtitle" class="text-center mb-5">Spells</h2>
+
+    <div id="divinity-main" class="mx-5 mb-5">
+
+      <div id="spell-table-div" class="table-responsive mr-5 mb-4 rounded">
+
+        <table id="spell-table" class="table-sm table-hover">
+          <thead class="text-center">
+            <tr>
+              <th onclick="sortTable(0)">Name</th>
+              <th onclick="sortLevel(1)">Level</th>
+              <th onclick="sortTime(2)">Time</th>
+              <th onclick="sortRange(3)">Range</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Abi-Dalzim's Horrid Wilting</td>
+              <td class="text-center">Cantrip</td>
+              <td class="text-center">Action</td>
+              <td class="text-center">Unlimited</td>
+            </tr>
+            <tr>
+              <td>Antimagic Field</td>
+              <td class="text-center">Cantrip</td>
+              <td class="text-center">Bonus</td>
+              <td class="text-center">Self</td>
+            </tr>
+            <tr>
+              <td>Tsunami</td>
+              <td class="text-center">Cantrip</td>
+              <td class="text-center">Bonus</td>
+              <td class="text-center">1 mile</td>
+            </tr>
+            <tr>
+              <td>Bones of the Earth</td>
+              <td class="text-center">Cantrip</td>
+              <td class="text-center">Bonus</td>
+              <td class="text-center">Self (5-mile radius)</td>
+            </tr>
+            <tr>
+              <td>Dust Devil</td>
+              <td class="text-center">Cantrip</td>
+              <td class="text-center">1 Hr</td>
+              <td class="text-center">500 feet</td>
+            </tr>
+            <tr>
+              <td>Spell #1</td>
+              <td class="text-center">9th</td>
+              <td class="text-center">2 Min</td>
+              <td class="text-center">Touch</td>
+            </tr>
+            <tr>
+              <td>Antilife Shell</td>
+              <td class="text-center">Cantrip</td>
+              <td class="text-center">Action</td>
+              <td class="text-center">60 feet</td>
+            </tr>
+            <tr>
+              <td>Wish</td>
+              <td class="text-center">1st</td>
+              <td class="text-center">24 Hr</td>
+              <td class="text-center">Sight</td>
+            </tr>
+            <tr>
+              <td>Dragon's Breath</td>
+              <td class="text-center">9th</td>
+              <td class="text-center">Bonus</td>
+              <td class="text-center">Self (15-foot cone)</td>
+            </tr>
+            <tr>
+              <td>Identify</td>
+              <td class="text-center">Cantrip</td>
+              <td class="text-center">Bonus</td>
+              <td class="text-center">Self (15-foot radius)</td>
+            </tr>
+            <tr>
+              <td>Branding Smite</td>
+              <td class="text-center">Cantrip</td>
+              <td class="text-center">1 Min</td>
+              <td class="text-center">Self (5-foot radius)</td>
+            </tr>
+            <tr>
+              <td>Spell #1</td>
+              <td class="text-center">2nd</td>
+              <td class="text-center">Bonus</td>
+              <td class="text-center">Self (15-foot cube)</td>
+            </tr>
+            <tr>
+              <td>Spell #1</td>
+              <td class="text-center">1st</td>
+              <td class="text-center">Action</td>
+              <td class="text-center">Self (15-foot line)</td>
+            </tr>
+            <tr>
+              <td>Spell #1</td>
+              <td class="text-center">3rd</td>
+              <td class="text-center">12 Hr</td>
+              <td class="text-center">Special</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <div id="spell-sub" class="mr-4 mb-4 p-2 rounded table-responsive">
+        <h2 id="spell-title">Spell #1</h2>
+        <p class="mb-0"><i>Cantrip</i></p>
+        <p class="mb-0"><b>Class</b>: Paladin, Wizard, Fighter</p>
+        <p class="mb-0"><b>Subclasses</b>: Arcana Cleric, Arcane Trickster Rogue, Eldritch Knight Fighter</p>
+        <p class="mb-0"><b>Casting Time</b>: 2 actions</p>
+        <p class="mb-0"><b>Range</b>: 120 feet</p>
+        <p class="mb-0"><b>Duration</b>: 5 rounds</p>
+
+        <hr>
+        <p>You hurl a ball of air. Choose one creature you can see within range, or choose two creatures you can see
+          within range that are within 10 feet of each other. A target must succeed on a Dexterity saving throw or take
+          100d6 acid damage.</p>
+          <ul>
+            <li>
+              Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score.
+            </li>
+            <li>
+              While cursed, the target has disadvantage on attack rolls against you.
+            </li>
+          </ul>
+        <p>You hurl a ball of air. Choose one creature you can see within range, or choose two creatures you can see
+          within range that are within 10 feet of each other. A target must succeed on a Dexterity saving throw or take
+          100d6 acid damage.</p>
+        <p><b><i>At Higher Levels.</i></b>When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.</p>
+      </div>
+    </div>
+
+    <script>
+      function loadFunctions() {
+        sortTable(0);
+        convertToLevel(1);
+        convertTimeToSecond(2);
+        convertRangeToFeet(3);
+      }
+    </script>
+
+    <script>
+      function sortTable(n) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        table = document.getElementById("spell-table");
+        switching = true;
+        //Set the sorting direction to ascending:
+        dir = "asc";
+        /*Make a loop that will continue until
+        no switching has been done:*/
+        while (switching) {
+          //start by saying: no switching is done:
+          switching = false;
+          rows = table.rows;
+          /*Loop through all table rows (except the
+          first, which contains table headers):*/
+          for (i = 1; i < (rows.length - 1); i++) {
+            //start by saying there should be no switching:
+            shouldSwitch = false;
+            /*Get the two elements you want to compare,
+            one from current row and one from the next:*/
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
+            /*check if the two rows should switch place,
+            based on the direction, asc or desc:*/
+            if (dir == "asc") {
+              if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                //if so, mark as a switch and break the loop:
+                shouldSwitch = true;
+                break;
+              }
+            } else if (dir == "desc") {
+              if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                //if so, mark as a switch and break the loop:
+                shouldSwitch = true;
+                break;
+              }
+            }
+          }
+          if (shouldSwitch) {
+            /*If a switch has been marked, make the switch
+            and mark that a switch has been done:*/
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            //Each time a switch is done, increase this count by 1:
+            switchcount++;
+          } else {
+            /*If no switching has been done AND the direction is "asc",
+            set the direction to "desc" and run the while loop again.*/
+            if (switchcount == 0 && dir == "asc") {
+              dir = "desc";
+              switching = true;
+            }
+          }
+        }
+      }
+    </script>
+
+    <script>
+      function sortLevel(n) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        table = document.getElementById("spell-table");
+        switching = true;
+        //Set the sorting direction to ascending:
+        dir = "asc";
+        /*Make a loop that will continue until
+        no switching has been done:*/
+        while (switching) {
+          //start by saying: no switching is done:
+          switching = false;
+          rows = table.rows;
+          /*Loop through all table rows (except the
+          first, which contains table headers):*/
+          for (i = 1; i < (rows.length - 1); i++) {
+            //start by saying there should be no switching:
+            shouldSwitch = false;
+            /*Get the two elements you want to compare,
+            one from current row and one from the next:*/
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
+            /*check if the two rows should switch place,
+            based on the direction, asc or desc:*/
+            if (dir == "asc") {
+              if (Number(x.getAttribute("data-level")) > Number(y.getAttribute("data-level"))) {
+                shouldSwitch = true;
+                break;
+              }
+
+            } else if (dir == "desc") {
+              if (Number(x.getAttribute("data-level")) < Number(y.getAttribute("data-level"))) {
+                shouldSwitch = true;
+                break;
+              }
+
+            }
+          }
+          if (shouldSwitch) {
+            /*If a switch has been marked, make the switch
+            and mark that a switch has been done:*/
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            //Each time a switch is done, increase this count by 1:
+            switchcount++;
+          } else {
+            /*If no switching has been done AND the direction is "asc",
+            set the direction to "desc" and run the while loop again.*/
+            if (switchcount == 0 && dir == "asc") {
+              dir = "desc";
+              switching = true;
+            }
+          }
+        }
+      }
+    </script>
+
+    <script>
+      function sortTime(n) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        table = document.getElementById("spell-table");
+        switching = true;
+        //Set the sorting direction to ascending:
+        dir = "asc";
+        /*Make a loop that will continue until
+        no switching has been done:*/
+        while (switching) {
+          //start by saying: no switching is done:
+          switching = false;
+          rows = table.rows;
+          /*Loop through all table rows (except the
+          first, which contains table headers):*/
+          for (i = 1; i < (rows.length - 1); i++) {
+            //start by saying there should be no switching:
+            shouldSwitch = false;
+            /*Get the two elements you want to compare,
+            one from current row and one from the next:*/
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
+            /*check if the two rows should switch place,
+            based on the direction, asc or desc:*/
+            if (dir == "asc") {
+              if (Number(x.getAttribute("data-time-second")) > Number(y.getAttribute("data-time-second"))) {
+                shouldSwitch = true;
+                break;
+              }
+
+            } else if (dir == "desc") {
+              if (Number(x.getAttribute("data-time-second")) < Number(y.getAttribute("data-time-second"))) {
+                shouldSwitch = true;
+                break;
+              }
+
+            }
+          }
+          if (shouldSwitch) {
+            /*If a switch has been marked, make the switch
+            and mark that a switch has been done:*/
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            //Each time a switch is done, increase this count by 1:
+            switchcount++;
+          } else {
+            /*If no switching has been done AND the direction is "asc",
+            set the direction to "desc" and run the while loop again.*/
+            if (switchcount == 0 && dir == "asc") {
+              dir = "desc";
+              switching = true;
+            }
+          }
+        }
+      }
+    </script>
+
+    <script>
+      function sortRange(n) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        table = document.getElementById("spell-table");
+        switching = true;
+        //Set the sorting direction to ascending:
+        dir = "asc";
+        /*Make a loop that will continue until
+        no switching has been done:*/
+        while (switching) {
+          //start by saying: no switching is done:
+          switching = false;
+          rows = table.rows;
+          /*Loop through all table rows (except the
+          first, which contains table headers):*/
+          for (i = 1; i < (rows.length - 1); i++) {
+            //start by saying there should be no switching:
+            shouldSwitch = false;
+            /*Get the two elements you want to compare,
+            one from current row and one from the next:*/
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
+            /*check if the two rows should switch place,
+            based on the direction, asc or desc:*/
+            if (dir == "asc") {
+              if (Number(x.getAttribute("data-range-feet")) > Number(y.getAttribute("data-range-feet"))) {
+                shouldSwitch = true;
+                break;
+              }
+
+            } else if (dir == "desc") {
+              if (Number(x.getAttribute("data-range-feet")) < Number(y.getAttribute("data-range-feet"))) {
+                shouldSwitch = true;
+                break;
+              }
+
+            }
+          }
+          if (shouldSwitch) {
+            /*If a switch has been marked, make the switch
+            and mark that a switch has been done:*/
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            //Each time a switch is done, increase this count by 1:
+            switchcount++;
+          } else {
+            /*If no switching has been done AND the direction is "asc",
+            set the direction to "desc" and run the while loop again.*/
+            if (switchcount == 0 && dir == "asc") {
+              dir = "desc";
+              switching = true;
+            }
+          }
+        }
+      }
+    </script>
+
+    <script>
+      function convertTimeToSecond(n) {
+        var table, rows, i, singleRow;
+        table = document.getElementById("spell-table");
+        rows = table.rows;
+
+        for (i = 1; i < rows.length; i++) {
+          singleRow = rows[i].getElementsByTagName("TD")[n];
+
+          if (singleRow.innerHTML.toLowerCase()[0].search(/[abr]+/) != -1) {
+            singleRow.setAttribute("data-time-second", Number(singleRow.innerHTML.toLowerCase().charCodeAt(0)) - 96);
+          }
+
+          if (singleRow.innerHTML.toLowerCase().search(/min/) != -1) {
+            singleRow.setAttribute("data-time-second", Number(singleRow.innerHTML.substring(0, 2).trim()) * 60);
+          }
+
+          if (singleRow.innerHTML.toLowerCase().search(/hr/) != -1) {
+            singleRow.setAttribute("data-time-second", Number(singleRow.innerHTML.substring(0, 2).trim()) * 60 * 60);
+          }
+        }
+      }
+    </script>
+
+    <script>
+      function convertRangeToFeet(n) {
+        var table, rows, i, singleRow;
+        table = document.getElementById("spell-table");
+        rows = table.rows;
+
+        for (i = 1; i < rows.length; i++) {
+          singleRow = rows[i].getElementsByTagName("TD")[n];
+
+          if (singleRow.innerHTML.toLowerCase().search(/self/) != -1) {
+            if (singleRow.innerHTML.toLowerCase().search(/foot/) == -1) {
+              singleRow.setAttribute("data-range-feet", 0);
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/mile/) == -1) {
+              singleRow.setAttribute("data-range-feet", 0);
+            }
+          }
+
+          if (singleRow.innerHTML.toLowerCase().search(/touch/) != -1) {
+            singleRow.setAttribute("data-range-feet", 2.25);
+          }
+
+          if (singleRow.innerHTML.toLowerCase().search(/feet/) != -1) {
+            singleRow.setAttribute("data-range-feet", Number(singleRow.innerHTML.substring(0, singleRow.innerHTML.toLowerCase().search(/feet/)).trim()));
+          }
+
+          if (singleRow.innerHTML.toLowerCase().search(/foot/) != -1) {
+            var range = Number(singleRow.innerHTML.substring(singleRow.innerHTML.toLowerCase().search(/\(/) + 1, singleRow.innerHTML.toLowerCase().search(/\-/)).trim())
+
+            if (singleRow.innerHTML.toLowerCase().search(/line/) != -1) {
+              range += 1;
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/cone/) != -1) {
+              range += 2;
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/radius/) != -1) {
+              range += 3;
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/cube/) != -1) {
+              range += 4;
+            }
+
+            singleRow.setAttribute("data-range-feet", range);
+          }
+
+          if (singleRow.innerHTML.toLowerCase().search(/mile/) != -1) {
+            if (singleRow.innerHTML.toLowerCase().search(/\(/) != -1) {
+              var range = Number(singleRow.innerHTML.substring(singleRow.innerHTML.toLowerCase().search(/\(/) + 1, singleRow.innerHTML.toLowerCase().search(/\-/)).trim()) * 5280;
+            }
+            else {
+              var range = Number(singleRow.innerHTML.substring(0, singleRow.innerHTML.toLowerCase().search(/mile/)).trim()) * 5280;
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/line/) != -1) {
+              range += 1;
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/cone/) != -1) {
+              range += 2;
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/radius/) != -1) {
+              range += 3;
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/cube/) != -1) {
+              range += 4;
+            }
+
+            singleRow.setAttribute("data-range-feet", range);
+          }
+
+          if (singleRow.innerHTML.toLowerCase().search(/sight/) != -1) {
+            singleRow.setAttribute("data-range-feet", 10000);
+          }
+
+          if (singleRow.innerHTML.toLowerCase().search(/unlimited/) != -1) {
+            singleRow.setAttribute("data-range-feet", 10000 * 5280);
+          }
+
+          if (singleRow.innerHTML.toLowerCase().search(/special/) != -1) {
+            singleRow.setAttribute("data-range-feet", 10000 * 10000 * 5280);
+          }
+        }
+      }
+    </script>
+
+    <script>
+      function convertToLevel(n) {
+        var table, rows, i, singleRow;
+        table = document.getElementById("spell-table");
+        rows = table.rows;
+
+        for (i = 1; i < rows.length; i++) {
+          singleRow = rows[i].getElementsByTagName("TD")[n];
+
+          if (singleRow.innerHTML.toLowerCase()[0].search("c") != -1) {
+            singleRow.setAttribute("data-level", 0);
+          }
+          else {
+            singleRow.setAttribute("data-level", singleRow.innerHTML[0]);
+          }
+        }
+
+      }
+    </script>
+
+    <script>
+      function displaySpellInfo(n) {
+        var index = n.rowIndex;
+      }
+    </script>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

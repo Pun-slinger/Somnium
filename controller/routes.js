@@ -2,14 +2,19 @@ const express = require("express");
 const router = express.Router();
 const { request, response } = require('express');
 
+const spells_info = require("../static/text/spells-info.js");
+const classes = require("../static/text/class.js");
+const casting_time = require("../static/text/casting-time.js");
+const spells_schools = require("../static/text/spells-school.js");
+
 //layout: false or express will start looking for layout with main.handlebars by default
 router.get('/', function (req, res) {
     res.render('index', { title: "Home Page of Somnium" });
 })
 
 router.get('/origins', function (req, res) {
-    res.render('origin-list', { 
-        title: "Somnium: Origins", 
+    res.render('origin-list', {
+        title: "Somnium: Origins",
         regions: [
             {
                 name: "Aprana",
@@ -57,7 +62,7 @@ router.get('/origins', function (req, res) {
 
 router.get('/races', function (req, res) {
     res.render('race-list', {
-        title: "Somnium: Races", 
+        title: "Somnium: Races",
         races: [
             "Aarakocra",
             "Aasimar",
@@ -134,6 +139,70 @@ router.get('/subclasses', function (req, res) {
                 name: "Wizard",
                 subclasses: [{ name: "School of Chorosurgy", link: "/school-of-chorosurgy" }]
             }
+        ]
+    });
+})
+
+router.get('/spells', function (req, res) {
+    res.render('spells', {
+        title: "Somnium: Spells", spells: [
+            {
+                name: "Absorb Elements",
+                class: [classes.wizard, classes.druid, classes.ranger, classes.sorcerer, classes.artificer],
+                subclass: [`Something something ${classes.wizard}`, `Timely Whimey ${classes.warlock}`],
+                level: spells_info.cantrip,
+                school: spells_schools.abj,
+                time: casting_time.react,
+                time_desc: "which you take when you take acid, cold, fire, lightning, or thunder damage",
+                range: spells_info.self,
+                duration: "1 round",
+                spell_desc: [
+                    {
+                        name: "",
+                        main: "The spell captures some of the incoming energy, lessening its effect on you and storing it for your next melee attack. You have resistance to the triggering damage type until the start of your next turn. Also, the first time you hit with a melee attack on your next turn, the target takes an extra 1d6 damage of the triggering type, and the spell ends.",
+                        sub: []
+                    },
+                    {
+                        name: "At Higher Levels",
+                        main: "When you cast this spell using a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each slot level above 1st.",
+                        sub: []
+                    }
+                ],
+            },
+            {
+                name: "Draconic Transformation",
+                class: [classes.druid, classes.sorcerer, classes.wizard],
+                subclass: [`Random random ${classes.druid}`, `Spacey Wacey ${classes.sorcerer}`],
+                level: "7th",
+                school: spells_schools.trans,
+                time: casting_time.bonus,
+                time_desc: "",
+                range: spells_info.self_foot_cone(60),
+                duration: "Concentration, up to 1 minute",
+                spell_desc: [
+                    {
+                        name: "",
+                        main: "With a roar, you draw on the magic of dragons to transform yourself, taking on draconic features. You gain the following benefits until the spell ends:",
+                        sub: []
+                    },
+                    {
+                        name: "Blindsight",
+                        main: "You have blindsight with a range of 30 feet. Within that range, you can effectively see anything that isn't behind total cover, even if you're blinded or in darkness. Moreover, you can see an invisible creature, unless the creature successfully hides from you.",
+                        sub: []
+                    },
+                    {
+                        name: "Breath Weapon",
+                        main: "When you cast this spell, and as a bonus action on subsequent turns for the duration, you can exhale shimmering energy in a 60-foot cone. Each creature in that area must make a Dexterity saving throw, taking 6d8 force damage on a failed save, or half as much damage on a successful one.",
+                        sub: []
+                    },
+                    {
+                        name: "Wings",
+                        main: "Incorporeal wings sprout from your back, giving you a flying speed of 60 feet.",
+                        sub: []
+                    },
+                ],
+            },
+
         ]
     });
 })

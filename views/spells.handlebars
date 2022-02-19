@@ -1,0 +1,491 @@
+<h1 id="cc-title" class="text-center">Somnium</h1>
+
+<h2 id="cc-subtitle" class="text-center mb-5">Spells</h2>
+
+<div id="divinity-main" class="mx-5 mb-5">
+
+    <div id="spell-table-div" class="table-responsive mr-5 mb-4 rounded">
+
+        <table id="spell-table" class="table-sm table-hover">
+            <thead class="text-center">
+                <tr>
+                    <th onclick="sortTable(0)">Name</th>
+                    <th onclick="sortLevel(1)">Level</th>
+                    <th onclick="sortTime(2)">Time</th>
+                    <th onclick="sortRange(3)">Range</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each spells}}
+                <tr onclick="displaySpellInfo({{json this}})">
+                    <td>{{name}}</td>
+                    <td class="text-center">{{level}}</td>
+                    <td class="text-center">{{time}}</td>
+                    <td class="text-center">{{range}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+    </div>
+
+    <div id="spell-sub" class="mr-4 mb-4 p-2 rounded table-responsive">
+        <h2 id="spell-title"></h2>
+        <p id="spell-level" class="mb-0"><i></i></p>
+        <p id="spell-classes" class="mb-0"><b>Class</b>: <span></span></p>
+        <p id="spell-subclasses" class="mb-0"><b>Subclasses</b>: <span></span></p>
+        <p id="spell-casting-time" class="mb-0"><b>Casting Time</b>: <span></span></p>
+        <p id="spell-range" class="mb-0"><b>Range</b>: <span></span></p>
+        <p id="spell-duration" class="mb-0"><b>Duration</b>: <span></span></p>
+
+        <hr>
+        <div id="spell-desc">
+            
+        </div>
+    </div>
+</div>
+
+<script>
+    function loadFunctions() {
+        sortTable(0);
+        convertToLevel(1);
+        convertTimeToSecond(2);
+        convertRangeToFeet(3);
+    }
+</script>
+
+<script>
+    function sortTable(n) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        table = document.getElementById("spell-table");
+        switching = true;
+        //Set the sorting direction to ascending:
+        dir = "asc";
+        /*Make a loop that will continue until
+        no switching has been done:*/
+        while (switching) {
+            //start by saying: no switching is done:
+            switching = false;
+            rows = table.rows;
+            /*Loop through all table rows (except the
+            first, which contains table headers):*/
+            for (i = 1; i < (rows.length - 1); i++) {
+                //start by saying there should be no switching:
+                shouldSwitch = false;
+                /*Get the two elements you want to compare,
+                one from current row and one from the next:*/
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+                /*check if the two rows should switch place,
+                based on the direction, asc or desc:*/
+                if (dir == "asc") {
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        //if so, mark as a switch and break the loop:
+                        shouldSwitch = true;
+                        break;
+                    }
+                } else if (dir == "desc") {
+                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                        //if so, mark as a switch and break the loop:
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+            }
+            if (shouldSwitch) {
+                /*If a switch has been marked, make the switch
+                and mark that a switch has been done:*/
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                //Each time a switch is done, increase this count by 1:
+                switchcount++;
+            } else {
+                /*If no switching has been done AND the direction is "asc",
+                set the direction to "desc" and run the while loop again.*/
+                if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+    }
+</script>
+
+<script>
+    function sortLevel(n) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        table = document.getElementById("spell-table");
+        switching = true;
+        //Set the sorting direction to ascending:
+        dir = "asc";
+        /*Make a loop that will continue until
+        no switching has been done:*/
+        while (switching) {
+            //start by saying: no switching is done:
+            switching = false;
+            rows = table.rows;
+            /*Loop through all table rows (except the
+            first, which contains table headers):*/
+            for (i = 1; i < (rows.length - 1); i++) {
+                //start by saying there should be no switching:
+                shouldSwitch = false;
+                /*Get the two elements you want to compare,
+                one from current row and one from the next:*/
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+                /*check if the two rows should switch place,
+                based on the direction, asc or desc:*/
+                if (dir == "asc") {
+                    if (Number(x.getAttribute("data-level")) > Number(y.getAttribute("data-level"))) {
+                        shouldSwitch = true;
+                        break;
+                    }
+
+                } else if (dir == "desc") {
+                    if (Number(x.getAttribute("data-level")) < Number(y.getAttribute("data-level"))) {
+                        shouldSwitch = true;
+                        break;
+                    }
+
+                }
+            }
+            if (shouldSwitch) {
+                /*If a switch has been marked, make the switch
+                and mark that a switch has been done:*/
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                //Each time a switch is done, increase this count by 1:
+                switchcount++;
+            } else {
+                /*If no switching has been done AND the direction is "asc",
+                set the direction to "desc" and run the while loop again.*/
+                if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+    }
+</script>
+
+<script>
+    function sortTime(n) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        table = document.getElementById("spell-table");
+        switching = true;
+        //Set the sorting direction to ascending:
+        dir = "asc";
+        /*Make a loop that will continue until
+        no switching has been done:*/
+        while (switching) {
+            //start by saying: no switching is done:
+            switching = false;
+            rows = table.rows;
+            /*Loop through all table rows (except the
+            first, which contains table headers):*/
+            for (i = 1; i < (rows.length - 1); i++) {
+                //start by saying there should be no switching:
+                shouldSwitch = false;
+                /*Get the two elements you want to compare,
+                one from current row and one from the next:*/
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+                /*check if the two rows should switch place,
+                based on the direction, asc or desc:*/
+                if (dir == "asc") {
+                    if (Number(x.getAttribute("data-time-second")) > Number(y.getAttribute("data-time-second"))) {
+                        shouldSwitch = true;
+                        break;
+                    }
+
+                } else if (dir == "desc") {
+                    if (Number(x.getAttribute("data-time-second")) < Number(y.getAttribute("data-time-second"))) {
+                        shouldSwitch = true;
+                        break;
+                    }
+
+                }
+            }
+            if (shouldSwitch) {
+                /*If a switch has been marked, make the switch
+                and mark that a switch has been done:*/
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                //Each time a switch is done, increase this count by 1:
+                switchcount++;
+            } else {
+                /*If no switching has been done AND the direction is "asc",
+                set the direction to "desc" and run the while loop again.*/
+                if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+    }
+</script>
+
+<script>
+    function sortRange(n) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        table = document.getElementById("spell-table");
+        switching = true;
+        //Set the sorting direction to ascending:
+        dir = "asc";
+        /*Make a loop that will continue until
+        no switching has been done:*/
+        while (switching) {
+            //start by saying: no switching is done:
+            switching = false;
+            rows = table.rows;
+            /*Loop through all table rows (except the
+            first, which contains table headers):*/
+            for (i = 1; i < (rows.length - 1); i++) {
+                //start by saying there should be no switching:
+                shouldSwitch = false;
+                /*Get the two elements you want to compare,
+                one from current row and one from the next:*/
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+                /*check if the two rows should switch place,
+                based on the direction, asc or desc:*/
+                if (dir == "asc") {
+                    if (Number(x.getAttribute("data-range-feet")) > Number(y.getAttribute("data-range-feet"))) {
+                        shouldSwitch = true;
+                        break;
+                    }
+
+                } else if (dir == "desc") {
+                    if (Number(x.getAttribute("data-range-feet")) < Number(y.getAttribute("data-range-feet"))) {
+                        shouldSwitch = true;
+                        break;
+                    }
+
+                }
+            }
+            if (shouldSwitch) {
+                /*If a switch has been marked, make the switch
+                and mark that a switch has been done:*/
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                //Each time a switch is done, increase this count by 1:
+                switchcount++;
+            } else {
+                /*If no switching has been done AND the direction is "asc",
+                set the direction to "desc" and run the while loop again.*/
+                if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+    }
+</script>
+
+<script>
+    function convertTimeToSecond(n) {
+        var table, rows, i, singleRow;
+        table = document.getElementById("spell-table");
+        rows = table.rows;
+
+        for (i = 1; i < rows.length; i++) {
+            singleRow = rows[i].getElementsByTagName("TD")[n];
+
+            if (singleRow.innerHTML.toLowerCase()[0].search(/[abr]+/) != -1) {
+                singleRow.setAttribute("data-time-second", Number(singleRow.innerHTML.toLowerCase().charCodeAt(0)) - 96);
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/min/) != -1) {
+                singleRow.setAttribute("data-time-second", Number(singleRow.innerHTML.substring(0, 2).trim()) * 60);
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/hr/) != -1) {
+                singleRow.setAttribute("data-time-second", Number(singleRow.innerHTML.substring(0, 2).trim()) * 60 * 60);
+            }
+        }
+    }
+</script>
+
+<script>
+    function convertRangeToFeet(n) {
+        var table, rows, i, singleRow;
+        table = document.getElementById("spell-table");
+        rows = table.rows;
+
+        for (i = 1; i < rows.length; i++) {
+            singleRow = rows[i].getElementsByTagName("TD")[n];
+
+            if (singleRow.innerHTML.toLowerCase().search(/self/) != -1) {
+                if (singleRow.innerHTML.toLowerCase().search(/foot/) == -1) {
+                    singleRow.setAttribute("data-range-feet", 0);
+                }
+
+                if (singleRow.innerHTML.toLowerCase().search(/mile/) == -1) {
+                    singleRow.setAttribute("data-range-feet", 0);
+                }
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/touch/) != -1) {
+                singleRow.setAttribute("data-range-feet", 2.25);
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/feet/) != -1) {
+                singleRow.setAttribute("data-range-feet", Number(singleRow.innerHTML.substring(0, singleRow.innerHTML.toLowerCase().search(/feet/)).trim()));
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/foot/) != -1) {
+                var range = Number(singleRow.innerHTML.substring(singleRow.innerHTML.toLowerCase().search(/\(/) + 1, singleRow.innerHTML.toLowerCase().search(/\-/)).trim())
+
+                if (singleRow.innerHTML.toLowerCase().search(/line/) != -1) {
+                    range += 1;
+                }
+
+                if (singleRow.innerHTML.toLowerCase().search(/cone/) != -1) {
+                    range += 2;
+                }
+
+                if (singleRow.innerHTML.toLowerCase().search(/radius/) != -1) {
+                    range += 3;
+                }
+
+                if (singleRow.innerHTML.toLowerCase().search(/cube/) != -1) {
+                    range += 4;
+                }
+
+                singleRow.setAttribute("data-range-feet", range);
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/mile/) != -1) {
+                if (singleRow.innerHTML.toLowerCase().search(/\(/) != -1) {
+                    var range = Number(singleRow.innerHTML.substring(singleRow.innerHTML.toLowerCase().search(/\(/) + 1, singleRow.innerHTML.toLowerCase().search(/\-/)).trim()) * 5280;
+                }
+                else {
+                    var range = Number(singleRow.innerHTML.substring(0, singleRow.innerHTML.toLowerCase().search(/mile/)).trim()) * 5280;
+                }
+
+                if (singleRow.innerHTML.toLowerCase().search(/line/) != -1) {
+                    range += 1;
+                }
+
+                if (singleRow.innerHTML.toLowerCase().search(/cone/) != -1) {
+                    range += 2;
+                }
+
+                if (singleRow.innerHTML.toLowerCase().search(/radius/) != -1) {
+                    range += 3;
+                }
+
+                if (singleRow.innerHTML.toLowerCase().search(/cube/) != -1) {
+                    range += 4;
+                }
+
+                singleRow.setAttribute("data-range-feet", range);
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/sight/) != -1) {
+                singleRow.setAttribute("data-range-feet", 10000);
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/unlimited/) != -1) {
+                singleRow.setAttribute("data-range-feet", 10000 * 5280);
+            }
+
+            if (singleRow.innerHTML.toLowerCase().search(/special/) != -1) {
+                singleRow.setAttribute("data-range-feet", 10000 * 10000 * 5280);
+            }
+        }
+    }
+</script>
+
+<script>
+    function convertToLevel(n) {
+        var table, rows, i, singleRow;
+        table = document.getElementById("spell-table");
+        rows = table.rows;
+
+        for (i = 1; i < rows.length; i++) {
+            singleRow = rows[i].getElementsByTagName("TD")[n];
+
+            if (singleRow.innerHTML.toLowerCase()[0].search("c") != -1) {
+                singleRow.setAttribute("data-level", 0);
+            }
+            else {
+                singleRow.setAttribute("data-level", singleRow.innerHTML[0]);
+            }
+        }
+
+    }
+</script>
+
+<script>
+    function displaySpellInfo(spell) {
+        document.getElementById("spell-sub").style.visibility = "visible";
+
+        //basic info
+        document.getElementById("spell-title").innerHTML = spell.name;
+
+        var level_text;
+        if(spell.level.toLowerCase().substring(0,1) == "c"){
+            level_text = `${spell.school} ${spell.level}`;
+        }
+        else{
+            level_text = `${spell.level}-level ${spell.school}`;
+        }
+        document.getElementById("spell-level").getElementsByTagName("i")[0].innerHTML = level_text;
+
+        document.getElementById("spell-classes").getElementsByTagName("span")[0].innerHTML = spell.class.join(", ");
+
+        if (spell.subclass.length == 0) {
+            document.getElementById("spell-subclasses").getElementsByTagName("span")[0].innerHTML = "Any"
+        }
+        else {
+            document.getElementById("spell-subclasses").getElementsByTagName("span")[0].innerHTML = spell.subclass.join(", ");
+        }
+
+        var casting_time_text;
+        if(spell.time_desc.length != 0){
+            casting_time_text = `${spell.time}, ${spell.time_desc}`;
+        }
+        else{
+            casting_time_text = spell.time;
+        }
+        document.getElementById("spell-casting-time").getElementsByTagName("span")[0].innerHTML = casting_time_text;
+        
+        document.getElementById("spell-range").getElementsByTagName("span")[0].innerHTML = spell.range;
+        document.getElementById("spell-duration").getElementsByTagName("span")[0].innerHTML = spell.duration;
+
+        //desc
+        var spell_desc_div = document.getElementById("spell-desc");
+        spell_desc_div.innerHTML = "";
+
+        for(var i = 0; i < spell.spell_desc.length; i++){
+            var spell_desc_node = document.createElement("p");
+
+            if(spell.spell_desc[i].name.length != 0){
+                var spell_desc_name_bold = document.createElement("b");
+                var spell_desc_name_italic = document.createElement("i");
+                spell_desc_name_italic.innerText = `${spell.spell_desc[i].name}. `;
+
+                spell_desc_name_bold.appendChild(spell_desc_name_italic);
+                spell_desc_node.appendChild(spell_desc_name_bold);
+            }
+
+            var spell_desc_text_node = document.createTextNode(spell.spell_desc[i].main);
+            spell_desc_node.appendChild(spell_desc_text_node);  
+
+            spell_desc_div.appendChild(spell_desc_node);
+
+            if(spell.spell_desc[i].sub.length != 0){
+                var spell_desc_sub_ul = document.createElement("ul");
+
+                for(var y = 0; y < spell.spell_desc[i].sub.length; y++){
+                    var spell_desc_sub_li = document.createElement("li");
+                    spell_desc_sub_li.innerText = spell.spell_desc[i].sub[y];
+                    spell_desc_sub_ul.appendChild(spell_desc_sub_li);
+                }   
+
+                spell_desc_div.appendChild(spell_desc_sub_ul);
+            }
+        }
+    }
+</script>

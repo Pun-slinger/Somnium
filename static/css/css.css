@@ -46,7 +46,7 @@ html,body {
     color: rgb(88, 25, 25); 
 }
 
-#cc-subtitle{
+#cc-subtitle, #spell-title{
     font-family: 'Alegreya', serif;
     font-weight: bold;
     color: darkred;
@@ -80,7 +80,7 @@ html,body {
     color: rgb(88, 25, 25);
 }
 
-#boons, #race-info, #overview-text, #ability-text, #subclass-overview-text, th, td, #patron-info, #divinity-info, #divinity-sub-info, #patheon-info{
+#boons, #race-info, #overview-text, #ability-text, #subclass-overview-text, th, td, #patron-info, #divinity-info, #divinity-sub-info, #patheon-info, #spell-table-div, #spell-sub{
     color: rgb(88, 25, 25);
 }
 
@@ -141,7 +141,7 @@ html,body {
     color: darkred;
 }
 
-#race-info, #patron-info, #divinity-info, #divinity-sub-info, #patheon-info{
+#race-info, #patron-info, #divinity-info, #divinity-sub-info, #patheon-info, #spell-table-div, #spell-sub{
     background-color: #f1efea9d;
     border-color: darkred;
     border-style: groove;
@@ -155,7 +155,6 @@ html,body {
 }
 
 table, th, td{
-    border: 1px solid black;
     background-color: #f1efea9d;
     border-color: darkred;
     border-style: groove;
@@ -171,8 +170,54 @@ table, th, td{
     max-width: 1200px;
 }
 
-#divinity-sub, #divinity-img{ 
+#divinity-sub, #divinity-img, #spell-table, #spell-sub{ 
     width: 100%;
+}
+
+#spell-table-div{
+    height: 400px;
+    border-right-width: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+}
+
+#spell-title{
+    color: darkgoldenrod;
+}
+
+#spell-table th, #spell-table td, #spell-table{
+    border-bottom-width: 0;
+
+    border-left-width: 1px;
+    border-right-width: 0;
+}
+
+#spell-table, #spell-table th{
+    border-top-width: 0;
+}
+
+#spell-table td{
+    cursor: pointer;
+}
+
+#spell-table th:nth-child(1){
+    width: 50%;
+}
+
+#spell-table td:nth-child(1){
+    padding-left: 10px;
+}
+
+#spell-table th{
+    background-color: #f1efea;
+    position: sticky;
+    top: 0;
+    border-bottom-width: 4px;
+    cursor: pointer;
+}
+
+#spell-sub{
+    visibility: hidden;
 }
 
 @media screen and (min-width: 200px) {
@@ -235,7 +280,7 @@ table, th, td{
         width: 40%;
     }
 
-    #divinity-sub, #divinity-img{
+    #divinity-sub, #divinity-img, #spell-sub{
         max-width: 400px;
     }
 
@@ -249,5 +294,9 @@ table, th, td{
 
     #race-img{
         width: 40%;
+    }
+
+    #spell-sub{
+        max-height: 400px;
     }
 }
