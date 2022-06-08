@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/css-html.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+
+    <title>Somnium: Puppeteer</title>
+</head>
+
+<body>
+    <main>
+        <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light mb-4">
+            <a id="main-name" class="navbar-brand text-white" href="#">Somnium</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Divinity
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Radiance Pantheon</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">Shroud Pantheon</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">Masked Pantheon</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">Viridi Pantheon</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">Prismatic Pantheon</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">Grey Pantheon</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active text-white" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Patrons
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">00 - The Grand Designer</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">Azimohz – The Abyssal Cacophony</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">Hanako - The Great Tales</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">Immienth – The Corrupting Calamity</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">The Dragon Collective</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">The Mad Prophet</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">The Silent Jester</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">Xahaydiel - The Scouring Terror</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Character Creation
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Origins</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">Races</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">Subclass</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <h1 id="cc-title" class="text-center">Warlock</h1>
+
+        <h2 id="cc-subtitle" class="text-center mb-5">Puppeteer</h2>
+
+        <p id="subclass-overview-text" class="text-left mx-5 mb-5 p-2 rounded">
+            <i></i>
+        </p>
+
+        <h1 id="ability-title" class="text-left ml-5">Spatial Subtraction</h1>
+        <p id="ability-text" class="text-left mx-5 mb-5">At 2nd level, as an action, you pull on the space between yourself and a creature within 30ft of you that you can see and either shift yourself up to 30ft closer to the creature or shift it up to 30 ft closer to you. You can use this ability twice per long rest.</p>
+
+        <hr class="mx-5 mb-5">
+
+        <h1 id="ability-title" class="text-left ml-5">Pocketcache</h1>
+        <p id="ability-text" class="text-left mx-5 mb-5">At 6th level, as an action, you can touch an object that weights no more than 30 pounds. You can send the object to an extradimensional space, where it remains for up to 1 hour. Until the end of the duration, you can use your bonus action to summon the object in your hand or in any space within 30 ft of you. The space can only hold 1 object and any attempts to put a different object into it while the dimension is occupied, the stored object will be ejected at your feet and will be replaced by the newer object.</p>
+        
+        <hr class="mx-5 mb-5">
+
+        <h1 id="ability-title" class="text-left ml-5">Dimensional Passage</h1>
+        <p id="ability-text" class="text-left mx-5 mb-3">At 10th level, as an action you create a portal in an unoccupied space next to you and as a bonus action, you can create a second portal in an unoccupied space within 60 ft of you that you can see. The portals are connected and can be used both ways. After both portals are summoned, designate a number of creatures (excluding yourself) equal to your Intelligence modifier, only those creatures can use the portals.</p>
+        <p id="ability-text" class="text-left mx-5 mb-3">When both portals are active, you can move a portal with a bonus action to a different unoccupied space within 60 ft of you. There can only be a maximum of 2 portals present on the field at a time. In addition, the portals can not be destroyed and can only be remove with dispel effects.</p>
+        <p id="ability-text" class="text-left mx-5 mb-5">You can spend a bonus action to dispel a portal, if not dispelled, the portals will last up to 10 minutes with no concentration required.</p>
+
+        <hr class="mx-5 mb-5">
+
+        <h1 id="ability-title" class="text-left ml-5">Nucleus</h1>
+        <p id="ability-text" class="text-left mx-5 mb-5">At 14th level, as an action, you create a black sphere in your hand and release it up to 60 ft from you. The sphere then expands into a 15 ft radius spherical space. As an action, you can then compress the space in the sphere, aiming to erase anything within it. Creatures in the sphere must succeed on a Constitution saving throw or take 7d10+30 Force damage and if a creature’s HP is reduced to 0 from this damage, it is rendered to nothingness. All items within the sphere’s radius that are non magical are also destroyed and erased. You can only use this feature once per long rest.</p>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

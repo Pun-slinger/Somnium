@@ -116,16 +116,29 @@ router.get('/subclasses', function (req, res) {
                 subclasses: [{ name: "Emotion Domain", link: "/emotion-domain" }]
             },
             {
+                name: "Druid",
+                subclasses: [{ name: "Circle of Decay", link: "/circle-of-decay" }]
+            },
+            {
                 name: "Fighter",
-                subclasses: [{ name: "Starglade Blood Battle Style", link: "/starglade-blood-battle-style" }, { name: "Shapeless Style", link: "subclasses/shapeless-style" }]
+                subclasses: [{ name: "Starglade Blood Battle Style", link: "/starglade-blood-battle-style" }, 
+                             { name: "Shapeless Style", link: "/shapeless-style" }]
             },
             {
                 name: "Monk",
-                subclasses: [{ name: "Way of the Silver Wing", link: "/way-of-the-destruction-style" }, { name: "Way of the Destruction Style", link: "subclasses/way-of-the-silver-wing" }]
+                subclasses: [{ name: "Way of the Destruction Style", link: "/way-of-the-destruction-style" }, 
+                             { name: "Way of the Silver Wing", link: "/way-of-the-silver-wing" }, 
+                             { name: "Way of the Tactician", link: "/way-of-the-tactician" }]
             },
             {
                 name: "Paladin",
-                subclasses: [{ name: "Oath of The Void", link: "/oath-of-the-void" }]
+                subclasses: [{ name: "Oath of Sacrifice", link: "/oath-of-sacrifice" }, 
+                             { name: "Oath of The Void", link: "/oath-of-the-void" }]
+            },
+            {
+                name: "Ranger",
+                subclasses: [{ name: "Planetary Observer", link: "/planetary-observer" },
+                             { name: "Serpent Whisperer", link: "/serpent-whisperer" }]
             },
             {
                 name: "Rouge",
@@ -134,6 +147,10 @@ router.get('/subclasses', function (req, res) {
             {
                 name: "Sorcerer",
                 subclasses: [{ name: "Demonic Bloodline", link: "/demonic-bloodline" }]
+            },
+            {
+                name: "Warlock",
+                subclasses: [{ name: "Marionettist", link: "/marionettist" }]
             },
             {
                 name: "Wizard",
