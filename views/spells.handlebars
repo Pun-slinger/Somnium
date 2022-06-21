@@ -36,6 +36,7 @@
         <p id="spell-subclasses" class="mb-0"><b>Subclasses</b>: <span></span></p>
         <p id="spell-casting-time" class="mb-0"><b>Casting Time</b>: <span></span></p>
         <p id="spell-range" class="mb-0"><b>Range</b>: <span></span></p>
+        <p id="spell-component" class="mb-0"><b>Component</b>: <span></span></p>
         <p id="spell-duration" class="mb-0"><b>Duration</b>: <span></span></p>
 
         <hr>
@@ -453,6 +454,7 @@
         
         document.getElementById("spell-range").getElementsByTagName("span")[0].innerHTML = spell.range;
         document.getElementById("spell-duration").getElementsByTagName("span")[0].innerHTML = spell.duration;
+        document.getElementById("spell-component").getElementsByTagName("span")[0].innerHTML = spell.component;
 
         //desc
         var spell_desc_div = document.getElementById("spell-desc");

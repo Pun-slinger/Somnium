@@ -1,6 +1,3 @@
-// Level
-var cantrip = "Cantrip";
-
 var concen = "Concentration";
 
 // Duration
@@ -69,7 +66,7 @@ function self_mile_line(range){
 }
 
 module.exports = {
-    cantrip, concen, instant,
+    concen, instant,
     self,touch,sight,unlimited,special,feet,mile,
     self_foot_cone,self_foot_cube,self_foot_line,self_foot_radius,
     self_mile_cone,self_mile_cube,self_mile_line,self_mile_radius
