@@ -12,8 +12,8 @@
                     <th onclick="sortTable(0)">Name</th>
                     <th onclick="sortLevel(1)">Level</th>
                     <th onclick="sortTime(2)">Time</th>
-                    <th onclick="sortRange(3)">Range</th>
-                    <th onclick="sortTable(4)">School</th>
+                    {{!-- <th onclick="sortRang(3)">Range</th> --}}
+                    <th onclick="sortTable(3)">School</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,7 +22,7 @@
                     <td>{{name}}</td>
                     <td class="text-center">{{level}}</td>
                     <td class="text-center">{{time}}</td>
-                    <td class="text-center">{{range}}</td>
+                    {{!-- <td class="text-center">{{range}}</td> --}}
                     <td class="text-center">{{school}}</td>
                 </tr>
                 {{/each}}
@@ -53,7 +53,6 @@
         sortTable(0);
         convertToLevel(1);
         convertTimeToSecond(2);
-        convertRangeToFeet(3);
     }
 </script>
 

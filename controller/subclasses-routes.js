@@ -47,4 +47,12 @@ router.get('/school-of-chorosurgy', function (req, res) {
     res.render('subclasses/Wizard/school-of-chorosurgy', { title: "Somnium: School of Chorosurgy" });
 })
 
+router.get('/planetary-observer', function (req, res) {
+    res.render('subclasses/Ranger/planetary-observer', { title: "Somnium: Planetary Observer" });
+})
+
+router.get('/marionettist', function (req, res) {
+    res.render('subclasses/Warlock/marionettist', { title: "Somnium: Marionettist" });
+})
+
 module.exports = router;
