@@ -8,8 +8,8 @@ const { all } = require("express/lib/application");
 
 var erasing_edge = {
     name: "Erasing Edge",
-    class: [classes.wizard],
-    subclass: [`Chorosurgy ${classes.wizard}`],
+    class: [classes.wizard.name],
+    subclass: [`<a href="/subclasses${classes.wizard.subclasses.chorosurgy.link}">Chorosurgy ${classes.wizard.name}</a>`],
     level: "1st",
     school: "Chorosurgy",
     time: casting_time.bonus,
@@ -32,8 +32,8 @@ var erasing_edge = {
 
 var echo_recall = {
     name: "Echo Recall",
-    class: [classes.wizard],
-    subclass: [`Chorosurgy ${classes.wizard}`],
+    class: [classes.wizard.name],
+    subclass: [`<a href="/subclasses${classes.wizard.subclasses.chorosurgy.link}">Chorosurgy ${classes.wizard.name}</a>`],
     level: "1st",
     school: "Chorosurgy",
     time: casting_time.action,
@@ -61,8 +61,8 @@ var echo_recall = {
 
 var repulse = {
     name: "Repulse",
-    class: [classes.wizard],
-    subclass: [`Chorosurgy ${classes.wizard}`],
+    class: [classes.wizard.name],
+    subclass: [`<a href="/subclasses${classes.wizard.subclasses.chorosurgy.link}">Chorosurgy ${classes.wizard.name}</a>`],
     level: "2nd",
     school: "Chorosurgy",
     time: casting_time.bonus,
@@ -86,8 +86,8 @@ var repulse = {
 
 var planar_anchor = {
     name: "Planar Anchor",
-    class: [classes.wizard],
-    subclass: [`Chorosurgy ${classes.wizard}`],
+    class: [classes.wizard.name],
+    subclass: [`<a href="/subclasses${classes.wizard.subclasses.chorosurgy.link}">Chorosurgy ${classes.wizard.name}</a>`],
     level: "2nd",
     school: "Chorosurgy",
     time: casting_time.react,
@@ -111,8 +111,8 @@ var planar_anchor = {
 
 var reflect = {
     name: "Reflect",
-    class: [classes.wizard],
-    subclass: [`Chorosurgy ${classes.wizard}`],
+    class: [classes.wizard.name],
+    subclass: [`<a href="/subclasses${classes.wizard.subclasses.chorosurgy.link}">Chorosurgy ${classes.wizard.name}</a>`],
     level: "2nd",
     school: "Chorosurgy",
     time: casting_time.react,
@@ -131,8 +131,8 @@ var reflect = {
 
 var spatial_subtraction = {
     name: "Spatial Subtraction",
-    class: [classes.wizard],
-    subclass: [`Chorosurgy ${classes.wizard}`],
+    class: [classes.wizard.name],
+    subclass: [`<a href="/subclasses${classes.wizard.subclasses.chorosurgy.link}">Chorosurgy ${classes.wizard.name}</a>`],
     level: "3rd",
     school: "Chorosurgy",
     time: casting_time.action,
@@ -151,8 +151,8 @@ var spatial_subtraction = {
 
 var pocketcache = {
     name: "Pocketcache",
-    class: [classes.wizard],
-    subclass: [`Chorosurgy ${classes.wizard}`],
+    class: [classes.wizard.name],
+    subclass: [`<a href="/subclasses${classes.wizard.subclasses.chorosurgy.link}">Chorosurgy ${classes.wizard.name}</a>`],
     level: "3rd",
     school: "Chorosurgy",
     time: casting_time.action,
@@ -171,8 +171,8 @@ var pocketcache = {
 
 var dimensional_prison = {
     name: "Dimensional Prison",
-    class: [classes.wizard],
-    subclass: [`Chorosurgy ${classes.wizard}`],
+    class: [classes.wizard.name],
+    subclass: [`<a href="/subclasses${classes.wizard.subclasses.chorosurgy.link}">Chorosurgy ${classes.wizard.name}</a>`],
     level: "4th",
     school: "Chorosurgy",
     time: casting_time.action,
@@ -191,8 +191,8 @@ var dimensional_prison = {
 
 var reality_vault = {
     name: "Reality Vault",
-    class: [classes.wizard],
-    subclass: [`Chorosurgy ${classes.wizard}`],
+    class: [classes.wizard.name],
+    subclass: [`<a href="/subclasses${classes.wizard.subclasses.chorosurgy.link}">Chorosurgy ${classes.wizard.name}</a>`],
     level: "4th",
     school: "Chorosurgy (ritual)",
     time: casting_time.minute(1),
@@ -211,8 +211,8 @@ var reality_vault = {
 
 var pulsar = {
     name: "Pulsar",
-    class: [classes.wizard],
-    subclass: [`Chorosurgy ${classes.wizard}`],
+    class: [classes.wizard.name],
+    subclass: [`<a href="/subclasses${classes.wizard.subclasses.chorosurgy.link}">Chorosurgy ${classes.wizard.name}</a>`],
     level: "6th",
     school: "Chorosurgy",
     time: casting_time.action,
@@ -241,8 +241,8 @@ var pulsar = {
 
 var vacuum = {
     name: "Vacuum",
-    class: [classes.wizard],
-    subclass: [`Chorosurgy ${classes.wizard}`],
+    class: [classes.wizard.name],
+    subclass: [`<a href="/subclasses${classes.wizard.subclasses.chorosurgy.link}">Chorosurgy ${classes.wizard.name}</a>`],
     level: "6th",
     school: "Chorosurgy",
     time: casting_time.action,
@@ -271,8 +271,8 @@ var vacuum = {
 
 var spacial_rend = {
     name: "Spatial Rend",
-    class: [classes.wizard],
-    subclass: [`Chorosurgy ${classes.wizard}`],
+    class: [classes.wizard.name],
+    subclass: [`<a href="/subclasses${classes.wizard.subclasses.chorosurgy.link}">Chorosurgy ${classes.wizard.name}</a>`],
     level: "7th",
     school: "Chorosurgy",
     time: casting_time.action,
@@ -296,8 +296,8 @@ var spacial_rend = {
 
 var nucleus = {
     name: "Nucleus",
-    class: [classes.wizard],
-    subclass: [`Chorosurgy ${classes.wizard}`],
+    class: [classes.wizard.name],
+    subclass: [`<a href="/subclasses${classes.wizard.subclasses.chorosurgy.link}">Chorosurgy ${classes.wizard.name}</a>`],
     level: "8th",
     school: "Chorosurgy",
     time: casting_time.action,

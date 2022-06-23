@@ -154,6 +154,34 @@ html,body {
     border-width: 2px;
 }
 
+#subclass-emotion-red{
+    color: red;
+}
+
+#subclass-emotion-orange{
+    color: orange;
+}
+
+#subclass-emotion-yellow{
+    color: gold;
+}
+
+#subclass-emotion-green{
+    color: green;
+}
+
+#subclass-emotion-blue{
+    color: blue;
+}
+
+#subclass-emotion-pink{
+    color: deeppink;
+}
+
+#subclass-emotion-purple{
+    color: darkmagenta;
+}
+
 table, th, td{
     background-color: #f1efea9d;
     border-color: darkred;
