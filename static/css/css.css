@@ -182,6 +182,15 @@ html,body {
     color: darkmagenta;
 }
 
+#interiant-a{
+    color: blue;
+}
+
+.popover{
+    max-width: 50%; /* Max Width of the popover (depending on the container!) */
+    background-color: beige;
+}
+
 table, th, td{
     background-color: #f1efea9d;
     border-color: darkred;

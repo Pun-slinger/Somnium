@@ -55,4 +55,8 @@ router.get('/marionettist', function (req, res) {
     res.render('subclasses/Warlock/marionettist', { title: "Somnium: Marionettist" });
 })
 
+router.get('/circle-of-decay', function (req, res) {
+    res.render('subclasses/Druid/circle-of-decay', { title: "Somnium: Circle of Decay" });
+})
+
 module.exports = router;
