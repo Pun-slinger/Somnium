@@ -59,4 +59,8 @@ router.get('/circle-of-decay', function (req, res) {
     res.render('subclasses/Druid/circle-of-decay', { title: "Somnium: Circle of Decay" });
 })
 
+router.get('/serpent-whisperer', function (req, res) {
+    res.render('subclasses/Ranger/serpent-whisperer', { title: "Somnium: Serpent Whisperer" });
+})
+
 module.exports = router;
