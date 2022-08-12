@@ -18,7 +18,7 @@ router.get('/Aarakocra', function (req, res) {
             { ab_name: "Flight", ab_desc: "You have a flying speed of 50 feet. To use this speed, you can't be wearing medium or heavy armor." },
             { ab_name: "Talons", ab_desc: "Your talons are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike." }
         ],
-        img_link: "/img/arts/races/Aarakocra.jpg"
+        img_link: "Aarakocra.jpg"
     });
 })
 
@@ -56,7 +56,7 @@ router.get('/Aasimar', function (req, res) {
                         ]
                     }
                 ],
-                img_link: ""
+                img_link: "Aasimar_Fallen.jpg"
             },
             {
                 sub_title: "Aasimar (Protector)",
@@ -87,7 +87,7 @@ router.get('/Aasimar', function (req, res) {
                         ]
                     }
                 ],
-                img_link: ""
+                img_link: "Aasimar_Protector.jpg"
             },
             {
                 sub_title: "Aasimar (Scourge)",
@@ -118,7 +118,7 @@ router.get('/Aasimar', function (req, res) {
                         ]
                     }
                 ],
-                img_link: ""
+                img_link: "Aasimar_Scourge.jpg"
             }
         ]
 
@@ -144,7 +144,7 @@ router.get('/Centaur', function (req, res) {
             { ab_name: "Equine Build", ab_desc: "You count as one size larger when determining your carrying capacity and the weight you can push or drag. In addition, any climb that requires hands and feet is especially difficult for you because of your equine legs. When you make such a climb, each foot of movement costs you 4 extra feet, instead of the normal 1 extra foot." },
             { ab_name: "Survivor", ab_desc: "You have proficiency in one of the following skills of your choice: Animal Handling, Medicine, Nature, or Survival." }
         ],
-        img_link: ""
+        img_link: "Centaur.png"
     });
 })
 
@@ -164,7 +164,7 @@ router.get('/Changeling', function (req, res) {
             { ab_name: "Shapechanger", ab_desc: "As an action, you can change your appearance and your voice. You determine the specifics of the changes, including your coloration, hair length, and sex. You can also adjust your height and weight, but not so much that your size changes. You can make yourself appear as a member of another race, though none of your game statistics change. You can't duplicate the appearance of a creature you've never seen, and you must adopt a form that has the same basic arrangement of limbs that you have. Your clothing and equipment aren't changed by this trait. You stay in the new form until you use an action to revert to your true form or until you die." },
             { ab_name: "Changeling Instincts", ab_desc: "You gain proficiency with two of the following skills of your choice: Deception, Insight, Intimidation, and Persuasion." },
         ],
-        img_link: ""
+        img_link: "Changeling.jpg"
     });
 })
 
@@ -208,7 +208,7 @@ router.get('/Dhampir', function (req, res) {
                 ]
             }
         ],
-        img_link: ""
+        img_link: "Dhampir.png"
     });
 })
 
@@ -262,7 +262,7 @@ router.get('/Dragonborn', function (req, res) {
                 ab_desc: "You have resistance to the damage type associated with your draconic ancestry."
             }
         ],
-        img_link: ""
+        img_link: "Dragonborn.png"
     });
 })
 
@@ -288,7 +288,7 @@ router.get('/Dwarf', function (req, res) {
                     { ab_name: "Stonecunning", ab_desc: "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus." },
                     { ab_name: "Dwarven Armor Training", ab_desc: "You have proficiency with light and medium armor." },
                 ],
-                img_link: ""
+                img_link: "Dwarf_Mountain.jpg"
             },
             {
                 sub_title: "Dwarf (Hill)",
@@ -307,7 +307,7 @@ router.get('/Dwarf', function (req, res) {
                     { ab_name: "Stonecunning", ab_desc: "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus." },
                     { ab_name: "Dwarven Toughness", ab_desc: "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level." },
                 ],
-                img_link: ""
+                img_link: "Dwarf_Hill.png"
             },
             {
                 sub_title: "Dwarf (Duergar)",
@@ -327,7 +327,7 @@ router.get('/Dwarf', function (req, res) {
                     { ab_name: "Duergar Magic", ab_desc: "When you reach 3rd level, you can cast the Enlarge/Reduce spell on yourself once with this trait, using only the spell's enlarge option. When you reach 5th level, you can cast the Invisibility spell on yourself once with this trait. You don't need material components for either spell, and you can't cast them while you're in direct sunlight, although sunlight has no effect on them once cast. You regain the ability to cast these spells with this trait when you finish a long rest. Intelligence is your spellcasting ability for these spells." },
                     { ab_name: "Sunlight Sensitivity", ab_desc: "You have disadvantage on attack rolls and Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight." }
                 ],
-                img_link: ""
+                img_link: "Dwarf_Duergar.jpg"
             }
         ]
     });
@@ -365,7 +365,7 @@ router.get('/Elf', function (req, res) {
                     { ab_name: "Cantrip", ab_desc: "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it." },
                     { ab_name: "Extra Language", ab_desc: "You can speak, read, and write one extra language of your choosing." },
                 ],
-                img_link: ""
+                img_link: "Elf_High.jpg"
             },
             {
                 sub_title: "Elf (Drow)",
@@ -394,7 +394,7 @@ router.get('/Elf', function (req, res) {
                     { ab_name: "Drow Magic", ab_desc: "You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once per day; you must finish a long rest in order to cast the spell again using this trait. When you reach 5th level, you can also cast the darkness spell once per day; you must finish a long rest in order to cast the spell again using this trait. Charisma is your spellcasting ability for these spells." },
                     { ab_name: "Drow Weapon Training", ab_desc: "You have proficiency with rapiers, shortswords, and hand crossbows." },
                 ],
-                img_link: ""
+                img_link: "Elf_Drow.jpg"
             },
             {
                 sub_title: "Elf (Sea)",
@@ -424,7 +424,7 @@ router.get('/Elf', function (req, res) {
                     { ab_name: "Friend of the Sea", ab_desc: "Using gestures and sounds, you can communicate simple ideas with any beast that has an innate swimming speed." },
                     { ab_name: "Extra Language", ab_desc: "You can speak, read, and write Aquan." },
                 ],
-                img_link: ""
+                img_link: "Elf_Sea.jpg"
             },
             {
                 sub_title: "Elf (Wood)",
@@ -453,7 +453,7 @@ router.get('/Elf', function (req, res) {
                     { ab_name: "Fleet of Foot", ab_desc: "Your base walking speed increases to 35 feet." },
                     { ab_name: "Mask of the Wild", ab_desc: "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena." },
                 ],
-                img_link: ""
+                img_link: "Elf_Wood.jpg"
             },
             {
                 sub_title: "Elf (Ash)",
@@ -491,7 +491,7 @@ router.get('/Elf', function (req, res) {
                         ]
                     }
                 ],
-                img_link: ""
+                img_link: "Elf_Ash.jpg"
             }
         ]
     });
@@ -515,7 +515,7 @@ router.get('/Firbolg', function (req, res) {
             { ab_name: "Powerful Build", ab_desc: "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift." },
             { ab_name: "Speech of Beast and Leaf", ab_desc: "You have the ability to communicate in a limited manner with beasts and plants. They can understand the meaning of your words, though you have no special ability to understand them in return. You have advantage on all Charisma checks you make to influence them." }
         ],
-        img_link: ""
+        img_link: "Firbolg.png"
     });
 })
 
@@ -537,7 +537,7 @@ router.get('/Genasi', function (req, res) {
                     { ab_name: "Unending Breath", ab_desc: "You can hold your breath indefinitely while you're not incapacitated." },
                     { ab_name: "Mingle with the Wind", ab_desc: "You can cast the levitate spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell." },
                 ],
-                img_link: ""
+                img_link: "Genasi_Air.jpg"
             },
             {
                 sub_title: "Water Genasi",
@@ -554,7 +554,7 @@ router.get('/Genasi', function (req, res) {
                     { ab_name: "Swim", ab_desc: "You have a swimming speed of 30 feet." },
                     { ab_name: "Call to the Wave", ab_desc: "You know the shape water cantrip. When you reach 3rd level, you can cast the create or destroy water spell as a 2nd-level spell once with this trait, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for these spells." },
                 ],
-                img_link: ""
+                img_link: "Genasi_Water.jpg"
             },
             {
                 sub_title: "Earth Genasi",
@@ -569,7 +569,7 @@ router.get('/Genasi', function (req, res) {
                     { ab_name: "Earth Walk", ab_desc: "You can move across difficult terrain made of earth or stone without expending extra movement." },
                     { ab_name: "Merge with Stone", ab_desc: "You can cast the pass without trace spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell." },
                 ],
-                img_link: ""
+                img_link: "Genasi_Earth.jpg"
             },
             {
                 sub_title: "Fire Genasi",
@@ -585,7 +585,7 @@ router.get('/Genasi', function (req, res) {
                     { ab_name: "Fire Resistance", ab_desc: "You have resistance to fire damage." },
                     { ab_name: "Reach to the Blaze", ab_desc: "You know the produce flame cantrip. Once you reach 3rd level, you can cast the burning hands spell once with this trait as a 1st-level spell, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for these spells." },
                 ],
-                img_link: ""
+                img_link: "Genasi_Fire.jpg"
             }
         ]
     });
@@ -635,7 +635,7 @@ router.get('/Gnome', function (req, res) {
                         ]
                     }
                 ],
-                img_link: ""
+                img_link: "Gnome_Rock.jpg"
             },
             {
                 sub_title: "Gnome (Forest)",
@@ -653,7 +653,7 @@ router.get('/Gnome', function (req, res) {
                     { ab_name: "Speak with Small Breasts", ab_desc: "Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts. Forest gnomes love animals and often keep squirrels, badgers, rabbits, moles, woodpeckers, and other creatures as beloved pets." },
 
                 ],
-                img_link: ""
+                img_link: "Gnome_Forest.jpg"
             },
             {
                 sub_title: "Gnome (Svirfneblin)",
@@ -669,7 +669,7 @@ router.get('/Gnome', function (req, res) {
                     { ab_name: "Gnome Cunning", ab_desc: "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic." },
                     { ab_name: "Stone Camouflage", ab_desc: "You have advantage on Dexterity (Stealth) checks to hide in rocky terrain." },
                 ],
-                img_link: ""
+                img_link: "Gnome_Svirfneblin.jpg"
             },
         ]
     });
@@ -692,7 +692,7 @@ router.get('/Goblin', function (req, res) {
             { ab_name: "Fury of the Small", ab_desc: "When you damage a creature with an attack or a spell and the creature's size is larger than yours, you can cause the attack or spell to deal extra damage to the creature. The extra damage equals your level. Once you use this trait, you can't use it again until you finish a short or long rest." },
             { ab_name: "Nimble Escape", ab_desc: "You can take the Disengage or Hide action as a bonus action on each of your turns." },
         ],
-        img_link: ""
+        img_link: "Goblin.png"
     });
 })
 
@@ -714,7 +714,7 @@ router.get('/Goliath', function (req, res) {
             { ab_name: "Powerful Build", ab_desc: "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift." },
             { ab_name: "Mountain Born", ab_desc: "You have resistance to cold damage. You're also acclimated to high altitude, including elevations above 20,000 feet." },
         ],
-        img_link: ""
+        img_link: "Goliath.png"
     });
 })
 
@@ -737,7 +737,7 @@ router.get('/Half-elf', function (req, res) {
                     { ab_name: "Fey Ancestry", ab_desc: "You have advantage on saving throws against being charmed, and magic can't put you to sleep." },
                     { ab_name: "Swim", ab_desc: "You gain a swimming speed of 30 ft." },
                 ],
-                img_link: ""
+                img_link: "Half-elf_Aquatic.jpg"
             },
             {
                 sub_title: "Half-elf (Drow)",
@@ -753,7 +753,7 @@ router.get('/Half-elf', function (req, res) {
                     { ab_name: "Fey Ancestry", ab_desc: "You have advantage on saving throws against being charmed, and magic can't put you to sleep." },
                     { ab_name: "Drow Magic", ab_desc: "You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once per day; you must finish a long rest in order to cast the spell again using this trait. When you reach 5th level, you can also cast the darkness spell once per day; you must finish a long rest in order to cast the spell again using this trait. Charisma is your spellcasting ability for these spells." },
                 ],
-                img_link: ""
+                img_link: "Half-elf_Drow.jpg"
             },
             {
                 sub_title: "Half-elf (Wood)",
@@ -784,7 +784,7 @@ router.get('/Half-elf', function (req, res) {
                         ]
                     },
                 ],
-                img_link: ""
+                img_link: "Half-elf_Wood.jpg"
             },
             {
                 sub_title: "Half-elf (High)",
@@ -811,7 +811,7 @@ router.get('/Half-elf', function (req, res) {
                         ]
                     },
                 ],
-                img_link: ""
+                img_link: "Half-elf_High.jpg"
             }
         ]
     });
@@ -835,7 +835,7 @@ router.get('/Half-orc', function (req, res) {
             { ab_name: "Relentless Endurance", ab_desc: "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest." },
             { ab_name: "Savage Attacks", ab_desc: "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit." },
         ],
-        img_link: ""
+        img_link: "Half-Orc.png"
     });
 })
 
@@ -859,7 +859,7 @@ router.get('/Halfling', function (req, res) {
                     { ab_name: "Halfling Nimbleness", ab_desc: "You can move through the space of any creature that is of a size larger than yours." },
                     { ab_name: "Naturally Stealthy", ab_desc: "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you." },
                 ],
-                img_link: ""
+                img_link: "Halfling_Lightfoot.png"
             },
             {
                 sub_title: "Halfling (Stout)",
@@ -876,7 +876,7 @@ router.get('/Halfling', function (req, res) {
                     { ab_name: "Halfling Nimbleness", ab_desc: "You can move through the space of any creature that is of a size larger than yours." },
                     { ab_name: "Stout Resilience", ab_desc: "You have advantage on saving throws against poison, and you have resistance against poison damage." },
                 ],
-                img_link: ""
+                img_link: "Halfling_Stout.png"
             },
             {
                 sub_title: "Halfling (Ghostwise)",
@@ -893,7 +893,7 @@ router.get('/Halfling', function (req, res) {
                     { ab_name: "Halfling Nimbleness", ab_desc: "You can move through the space of any creature that is of a size larger than yours." },
                     { ab_name: "Silent Speech", ab_desc: "You can speak telepathically to any creature within 30 feet of you. The creature understands you only if the two of you share a language. You can speak telepathically in this way to one creature at a time." },
                 ],
-                img_link: ""
+                img_link: "Halfling_Ghostwise.jpg"
             }
         ]
     });
@@ -911,7 +911,7 @@ router.get('/Human', function (req, res) {
         age: "Humans reach adulthood in their late teens and live less than a century.",
         alignment: "Humans tend toward no particular alignment. The best and the worst are found among them.",
         language: "You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.",
-        img_link: ""
+        img_link: "Human.jpg"
     });
 })
 
@@ -932,7 +932,7 @@ router.get('/Kenku', function (req, res) {
             { ab_name: "Kenku Training", ab_desc: "You are proficient in your choice of two of the following skills: Acrobatics, Deception, Stealth, and Sleight of Hand." },
             { ab_name: "Mimicry", ab_desc: "You can mimic sounds you have heard, including voices. A creature that hears the sounds can tell they are imitations with a successful Wisdom (Insight) check opposed by your Charisma (Deception) check." },
         ],
-        img_link: ""
+        img_link: "Kenku.jpg"
     });
 })
 
@@ -973,7 +973,7 @@ router.get('/Kitsune', function (req, res) {
             },
             { ab_name: "Among the People", ab_desc: "You can appear as a human and hide that you are a Kitsune. As an action, you can magically hide your ears, fur, and tail(s), and visually replace them with human equivalents. You may drop the illusion as a free action." },
         ],
-        img_link: ""
+        img_link: "Kitsune.png"
     });
 })
 
@@ -995,7 +995,7 @@ router.get('/Kobold', function (req, res) {
             { ab_name: "Pack Tactics", ab_desc: "You have advantage on an attack roll against a creature if at least one of your allies is within 5 feet of the creature and the ally isn't incapacitated." },
             { ab_name: "Sunlight Sensitivity", ab_desc: "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight." },
         ],
-        img_link: ""
+        img_link: "Kobold.jpg"
     });
 })
 
@@ -1020,7 +1020,7 @@ router.get('/Lizardfolk', function (req, res) {
             { ab_name: "Natural Armor", ab_desc: "You have tough, scaly skin. When you aren't wearing armor, your AC is 13 + your Dexterity modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal while you use your natural armor." },
             { ab_name: "Hungry Jaws", ab_desc: "In battle, you can throw yourself into a vicious feeding frenzy. As a bonus action, you can make a special attack with your bite. If the attack hits, it deals its normal damage, and you gain temporary hit points equal to your Constitution modifier (minimum of 1), and you can't use this trait again until you finish a short or long rest." },
         ],
-        img_link: ""
+        img_link: "Lizardfolk.jpg"
     });
 })
 
@@ -1042,7 +1042,7 @@ router.get('/Minotaur', function (req, res) {
             { ab_name: "Hammering Horns", ab_desc: "Immediately after you hit a creature with a melee attack as part of the Attack action on your turn, you can use a bonus action to attempt to shove that target with your horns. The target must be no more than one size larger than you and within 5 feet of you. Unless it succeeds on a Strength saving throw against a DC equal to 8 + your proficiency bonus + your Strength modifier, you push it up to 10 feet away from you." },
             { ab_name: "Imposing Presence", ab_desc: "You have proficiency in one of the following skills of your choice: Intimidation or Persuasion." },
         ],
-        img_link: ""
+        img_link: "Minotaur.jpg"
     });
 })
 
@@ -1064,7 +1064,7 @@ router.get('/Orc', function (req, res) {
             { ab_name: "Primal Intuition", ab_desc: "You have proficiency in two of the following skills of your choice: Animal Handling, Insight, Intimidation, Medicine, Nature, Perception, and Survival." },
             { ab_name: "Powerful Build", ab_desc: "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift." },
         ],
-        img_link: ""
+        img_link: "Orc.jpg"
     });
 })
 
@@ -1087,7 +1087,7 @@ router.get('/Satyr', function (req, res) {
             { ab_name: "Mirthful Leaps", ab_desc: "Whenever you make a long or high jump, you can roll a d8 and add the number rolled to the number of feet you cover, even when making a standing jump. This extra distance costs movement as normal." },
             { ab_name: "Reveler", ab_desc: "You have proficiency in the Performance and Persuasion skills, and you have proficiency with one musical instrument of your choice." },
         ],
-        img_link: ""
+        img_link: "Satyr.png"
     });
 })
 
@@ -1113,7 +1113,7 @@ router.get('/Sprite', function (req, res) {
                     { ab_name: "New Beginnings", ab_desc: "You have proficiency in Nature and Survival." },
                     { ab_name: "First Come First Serve", ab_desc: "Your fly speed increases to 50 ft." },
                 ],
-                img_link: ""
+                img_link: "Sprite_Spring.jpg"
             },
             {
                 sub_title: "Sprite (Summer)",
@@ -1131,7 +1131,7 @@ router.get('/Sprite', function (req, res) {
                     { ab_name: "Hard to Hit", ab_desc: "You can now use the Dodge action as a bonus action." },
                     { ab_name: "Sun Flare", ab_desc: "As an action, you can channel the sunlight that you have been gathering throughout the day and release it. Every creature within 30 ft of you have to make a Con saving throw or be blinded for 1 round." },
                 ],
-                img_link: ""
+                img_link: "Sprite_Summer.jpg"
             },
             {
                 sub_title: "Sprite (Fall)",
@@ -1150,7 +1150,7 @@ router.get('/Sprite', function (req, res) {
                     { ab_name: "Hide and Seek", ab_desc: "You have advantage on stealth checks." },
                     { ab_name: "Blend In", ab_desc: "You gain access to the spell Disguise Self and you can cast it without expending a spell slot. You can cast this once per long rest." },
                 ],
-                img_link: ""
+                img_link: "Sprite_Fall.jpg"
             },
             {
                 sub_title: "Sprite (Winter)",
@@ -1168,7 +1168,7 @@ router.get('/Sprite', function (req, res) {
                     { ab_name: "Iron Wings", ab_desc: "You have proficiency in medium armor and 1 martial weapon of your choice." },
                     { ab_name: "Powerful Build", ab_desc: "You can now carry 1 creature of size Medium or smaller and you move at half your fly speed when carrying." },
                 ],
-                img_link: ""
+                img_link: "Sprite_Winter.png"
             }
         ]
     });
@@ -1192,7 +1192,7 @@ router.get('/Tabaxi', function (req, res) {
             { ab_name: "Cat's Claws", ab_desc: "Because of your claws, you have a climbing speed of 20 feet. In addition, your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike." },
             { ab_name: "Cat's Talents", ab_desc: "You have proficiency in the Perception and Stealth skills." },
         ],
-        img_link: ""
+        img_link: "Tabaxi.jpg"
     });
 })
 
@@ -1213,7 +1213,7 @@ router.get('/Tiefling', function (req, res) {
             { ab_name: "Hellish Resistance", ab_desc: "You have resistance to fire damage." },
             { ab_name: "Infernal Legacy", ab_desc: "You know the thaumaturgy cantrip. Once you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell; you must finish a long rest in order to cast the spell again using this trait. Once you reach 5th level, you can also cast the darkness spell; you must finish a long rest in order to cast the spell again using this trait. Charisma is your spellcasting ability for these spells." },
         ],
-        img_link: ""
+        img_link: "Tiefling.jpg"
     });
 })
 
@@ -1236,7 +1236,7 @@ router.get('/Tortle', function (req, res) {
             { ab_name: "Shell Defense", ab_desc: "You can withdraw into your shell as an action. Until you emerge, you gain a +4 bonus to AC, and you have advantage on Strength and Constitution saving throws. While in your shell, you are prone, your speed is 0 and can't increase, you have disadvantage on Dexterity saving throws, you can't take reactions, and the only action you can take is a bonus action to emerge from your shell." },
             { ab_name: "Survival Instinct", ab_desc: "You gain proficiency in the Survival skill. Tortles have finely honed survival instincts." },
         ],
-        img_link: ""
+        img_link: "Tortle.jpg"
     });
 })
 
@@ -1260,7 +1260,7 @@ router.get('/Triton', function (req, res) {
             { ab_name: "Emissary of the Sea", ab_desc: "Aquatic beasts have an extraordinary affinity with your people. You can communicate simple ideas with beasts that can breathe water. They can understand the meaning of your words, though you have no special ability to understand them in return." },
             { ab_name: "Guardians of the Depths", ab_desc: "Adapted to even the most extreme ocean depths, you have resistance to cold damage." },
         ],
-        img_link: ""
+        img_link: "Triton.jpg"
     });
 })
 
@@ -1313,7 +1313,7 @@ router.get('/Warforged', function (req, res) {
             },
             { ab_name: "Specialized Design", ab_desc: "You gain one skill proficiency and one tool proficiency of your choice." },
         ],
-        img_link: ""
+        img_link: "Warforged.jpg"
     });
 })
 
@@ -1357,7 +1357,7 @@ router.get('/Werewolf', function (req, res) {
                 ab_desc: "You gain proficiency in the Perception and Survival."
             }
         ],
-        img_link: ""
+        img_link: "Werewolf.jpg"
     });
 })
 
@@ -1379,7 +1379,7 @@ router.get('/Yuan-ti', function (req, res) {
             { ab_name: "Magic Resistance", ab_desc: "You have advantage on saving throws against spells and other magical effects." },
             { ab_name: "Poison Immunity", ab_desc: "You are immune to poison damage and the poisoned condition." },
         ],
-        img_link: ""
+        img_link: "Yuan-ti.jpg"
     });
 })
 

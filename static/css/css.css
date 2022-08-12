@@ -288,6 +288,10 @@ table, th, td{
     #race-img{
         width: 75%;
     }
+
+    #race-info{
+        width: 100%;
+    }
 }
   
   @media screen and (min-width: 800px) {
