@@ -117,4 +117,19 @@ router.get('/the-scouring-terror', function (req, res) {
     });
 })
 
+router.get('/the-abandoned', function (req, res) {
+    res.render('patron', { 
+        title: "Somnium: Malery – The Abandoned", 
+        name: "Malery – The Abandoned",
+        overview: "Created by a scientist obssessed with “the perfect being”, Malery was a doll made from the scraps of fallen warforged and given life but she was not what her creator wanted. She was hated beyond belief and seeing that she will not be accepted, Malery wished for a mate from her creator, someone for her to love and loved her as well. The scientist rejected her request and in a feat of rage, she ended his life. Now free from the strings of her creator, Malery searches for those who are willing to love her and stay by her side for all of eternity!",
+        outlooks: [
+            "Kindness do not exist",
+            "Everything has strings attached and I will be the one to pull on them",
+            "No! Don’t leave me behind!",
+            "YOU WILL STAY WITH ME FOREVER!"
+        ],
+        image_filename: "the_abandoned.jpg"
+    });
+})
+
 module.exports = router;

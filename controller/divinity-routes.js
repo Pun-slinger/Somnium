@@ -7,7 +7,7 @@ router.get('/Radiance-pantheon', function (req, res) {
     res.render('divnity-list', {
         title: "Somnium: Radiance Pantheon",
         name: "Radiance",
-        overview: "Created as the first Warforged and once the Divine War was over, 00 was chosen to be a Warforged representative and acts as Nova’s right hand when it comes to matters relating the Warforged and other races. Thus, 00 is the only being other than Nova with the ability to create other Warforged. 00 represents creativity and its limitless potential. This is represented clearly in the Warforged created by 00 as they are much more complex in terms of design and functions.",
+        overview: "This pantheon consists of deities that represents the goodly aspects that govern every mortal creature and also act as the balancing force towards the evil side of the spectrum.",
         gods: [
             "Alan",
             "Cylena",

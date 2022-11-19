@@ -260,8 +260,20 @@
         convertToLevel(1);
         convertTimeToSecond(2);
         convertRangeToFeet(3);
+        clickOnRow(1)
       }
     </script>
+
+<script>
+  function clickOnRow(rowNum) {
+      var table, rows, i, singleRow;
+      table = document.getElementById("spell-table");
+      rows = table.rows;
+
+      singleRow = rows[i].getElementsByTagName("TD")[rowNum];
+      singleRow.click();
+  }
+</script>
 
     <script>
       function sortTable(n) {

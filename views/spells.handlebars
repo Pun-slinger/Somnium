@@ -53,6 +53,7 @@
         sortTable(0);
         convertToLevel(1);
         convertTimeToSecond(2);
+        clickOnRow(1);
     }
 </script>
 
@@ -490,5 +491,16 @@
                 spell_desc_div.appendChild(spell_desc_sub_ul);
             }
         }
+    }
+</script>
+
+<script>
+    function clickOnRow(rowNum) {
+        var table, rows, i, singleRow;
+        table = document.getElementById("spell-table");
+
+        rows = table.rows;
+
+        rows[rowNum].click();
     }
 </script>
