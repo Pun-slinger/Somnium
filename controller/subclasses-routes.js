@@ -31,8 +31,16 @@ router.get('/way-of-the-silver-wing', function (req, res) {
     res.render('subclasses/Monk/way-of-the-silver-wing', { title: "Somnium: Way of the Silver Wing" });
 })
 
+router.get('/way-of-the-tactician', function (req, res) {
+    res.render('subclasses/Monk/way-of-the-tactician', { title: "Somnium: Way of the Tactician" });
+})
+
 router.get('/oath-of-the-void', function (req, res) {
     res.render('subclasses/Paladin/oath-of-the-void', { title: "Somnium: Oath of The Void" });
+})
+
+router.get('/oath-of-sacrifice', function (req, res) {
+    res.render('subclasses/Paladin/oath-of-sacrifice', { title: "Somnium: Oath of Sacrifice" });
 })
 
 router.get('/pirate', function (req, res) {
