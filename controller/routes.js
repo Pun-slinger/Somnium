@@ -36,7 +36,7 @@ router.get('/origins', function (req, res) {
             {
                 name: "Ewhil",
                 link: "/Ewhil",
-                icon: "<i class=\"fas fa-book-dead\"></i>"
+                icon: "<i class=\"fas fa-skull-crossbones\"></i>"
             },
             {
                 name: "Fruaqua",

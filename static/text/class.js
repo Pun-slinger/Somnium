@@ -79,15 +79,16 @@ var paladin = {
 }
 
 var planetary_observer = { name: "Planetary Observer", link: "/planetary-observer" }
-var serpent_whisperer = { name: "Serpent Whisperer", link: "/serpent-whisperer" }
+// var serpent_whisperer = { name: "Serpent Whisperer", link: "/serpent-whisperer" }
 
 var ranger = {
     name: "Ranger",
     subclasses: {
         planetary_observer: planetary_observer,
-        serpent_whisperer: serpent_whisperer
+        // serpent_whisperer: serpent_whisperer
     },
-    subclass_list: [planetary_observer, serpent_whisperer]
+    // subclass_list: [planetary_observer, serpent_whisperer]
+    subclass_list: [planetary_observer]
 }
 
 var pirate = { name: "Pirate", link: "/pirate" }
