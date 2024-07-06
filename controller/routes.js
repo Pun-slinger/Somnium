@@ -114,4 +114,8 @@ router.get('/spells', function (req, res) {
     });
 })
 
+router.get('/homebrew-rules', function (req, res) {
+    res.render('homebrew-rules', { title: "Homebrew Rules" });
+})
+
 module.exports = router;

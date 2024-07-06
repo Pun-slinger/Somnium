@@ -74,13 +74,13 @@ html,body {
     color: rgb(88, 25, 25);
 }
 
-#overview-title, #boon-title, #region-specific-origin, #races, #subclasses div h2, #ability-title, #patrons-list-div, #divinity-list-div {
+#overview-title, #boon-title, #region-specific-origin, #races, #subclasses div h2, #ability-title, #patrons-list-div, #divinity-list-div, #rule-title, #rule-subtitle {
     font-family: 'Alegreya', serif;
     font-weight: bold;
     color: rgb(88, 25, 25);
 }
 
-#boons, #race-info, #overview-text, #ability-text, #subclass-overview-text, th, td, #patron-info, #divinity-info, #divinity-sub-info, #patheon-info, #spell-table-div, #spell-sub{
+#boons, #race-info, #overview-text, #ability-text, #subclass-overview-text, th, td, #patron-info, #divinity-info, #divinity-sub-info, #patheon-info, #spell-table-div, #spell-sub, #rule-text{
     color: rgb(88, 25, 25);
 }
 
