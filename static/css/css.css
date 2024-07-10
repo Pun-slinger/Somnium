@@ -1,10 +1,11 @@
-body{
+body {
     background-image: url("/img/background/parchment_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-html,body {
+html,
+body {
     min-height: 100%;
 }
 
@@ -30,65 +31,91 @@ html,body {
     background-color: rgb(110, 2, 2);
 }
 
-#main-name{
+#main-name {
     font-family: 'Alegreya', serif;
     font-size: 7mm;
 }
 
-#main-navbar, hr{
+#main-navbar,
+hr {
     background-color: darkred;
 }
 
-#main-title, #cc-title{
+#main-title,
+#cc-title {
     font-family: 'Alegreya', serif;
     font-weight: bold;
     font-size: 15mm;
-    color: rgb(88, 25, 25); 
+    color: rgb(88, 25, 25);
 }
 
-#cc-subtitle, #spell-title{
+#cc-subtitle,
+#spell-title, #faction-sub-title {
     font-family: 'Alegreya', serif;
     font-weight: bold;
     color: darkred;
 }
 
-#region-title{
+#region-title, #faction-title {
     font-family: 'Alegreya', serif;
     font-weight: bolder;
     font-size: 10mm;
     color: darkred
 }
 
-#region-hr{
+#region-hr, #faction-hr {
     height: 2px;
 }
 
-#region-div{
+#region-div, #faction-div {
     width: 265px;
 }
 
-#region-list{
+#region-list,
+#faction-menu {
     font-family: 'Alegreya', serif;
     font-weight: bolder;
     font-size: 6mm;
     color: rgb(88, 25, 25);
 }
 
-#overview-title, #boon-title, #region-specific-origin, #races, #subclasses div h2, #ability-title, #patrons-list-div, #divinity-list-div, #rule-title, #rule-subtitle {
+#overview-title,
+#boon-title,
+#region-specific-origin,
+#races,
+#subclasses div h2,
+#ability-title,
+#patrons-list-div,
+#divinity-list-div,
+#rule-title,
+#rule-subtitle {
     font-family: 'Alegreya', serif;
     font-weight: bold;
     color: rgb(88, 25, 25);
 }
 
-#boons, #race-info, #overview-text, #ability-text, #subclass-overview-text, th, td, #patron-info, #divinity-info, #divinity-sub-info, #patheon-info, #spell-table-div, #spell-sub, #rule-text{
+#boons,
+#race-info,
+#overview-text,
+#ability-text,
+#subclass-overview-text,
+th,
+td,
+#patron-info,
+#divinity-info,
+#divinity-sub-info,
+#patheon-info,
+#spell-table-div,
+#spell-sub,
+#rule-text {
     color: rgb(88, 25, 25);
 }
 
-#boons-hr{
+#boons-hr {
     width: 500px;
 }
 
-#region-specific-origin a{
+#region-specific-origin a {
     font-size: 20px;
     align-self: center;
     background-color: #f1efeabe;
@@ -101,7 +128,7 @@ html,body {
     border-width: 1px;
 }
 
-#races a{
+#races a {
     font-size: 25px;
     background-color: #f1efeabb;
     margin-bottom: 40px;
@@ -115,7 +142,8 @@ html,body {
     border-width: 2px;
 }
 
-#patrons-list-div a, #divinity-list-div a{
+#patrons-list-div a,
+#divinity-list-div a {
     font-size: 25px;
     background-color: #f1efea93;
     margin-bottom: 40px;
@@ -128,7 +156,7 @@ html,body {
     border-width: 2px;
 }
 
-#subclasses div{
+#subclasses div {
     border-color: darkred;
     border-style: groove;
     border-width: 2px;
@@ -136,62 +164,77 @@ html,body {
     width: 275px;
 }
 
-#subclasses div a, #races a, #region-names a, #region-specific-origin a, #patrons-list-div a, #divinity-list-div a{
+#subclasses div a,
+#races a,
+#region-names a,
+#region-specific-origin a,
+#patrons-list-div a,
+#divinity-list-div a {
     display: block;
     color: darkred;
 }
 
-#race-info, #patron-info, #divinity-info, #divinity-sub-info, #patheon-info, #spell-table-div, #spell-sub{
+#race-info,
+#patron-info,
+#divinity-info,
+#divinity-sub-info,
+#patheon-info,
+#spell-table-div,
+#spell-sub,
+#faction-sub {
     background-color: #f1efea9d;
     border-color: darkred;
     border-style: groove;
     border-width: 2px;
 }
 
-#subclass-overview-text{
+#subclass-overview-text {
     background-color: #f1efea9d;
     border-style: groove;
     border-width: 2px;
 }
 
-#subclass-emotion-red{
+#subclass-emotion-red {
     color: red;
 }
 
-#subclass-emotion-orange{
+#subclass-emotion-orange {
     color: orange;
 }
 
-#subclass-emotion-yellow{
+#subclass-emotion-yellow {
     color: gold;
 }
 
-#subclass-emotion-green{
+#subclass-emotion-green {
     color: green;
 }
 
-#subclass-emotion-blue{
+#subclass-emotion-blue {
     color: blue;
 }
 
-#subclass-emotion-pink{
+#subclass-emotion-pink {
     color: deeppink;
 }
 
-#subclass-emotion-purple{
+#subclass-emotion-purple {
     color: darkmagenta;
 }
 
-#interiant-a{
+#interiant-a {
     color: blue;
 }
 
-.popover{
-    max-width: 50%; /* Max Width of the popover (depending on the container!) */
+.popover {
+    max-width: 50%;
+    /* Max Width of the popover (depending on the container!) */
     background-color: beige;
 }
 
-table, th, td{
+table,
+th,
+td {
     background-color: #f1efea9d;
     border-color: darkred;
     border-style: groove;
@@ -199,53 +242,61 @@ table, th, td{
     padding: 5px;
 }
 
-#region-icons{
+#region-icons {
     width: auto;
 }
 
-#patron-info, #patheon-info{
+#patron-info,
+#patheon-info {
     max-width: 1200px;
 }
 
-#divinity-sub, #divinity-img, #spell-table, #spell-sub{ 
+#divinity-sub,
+#divinity-img,
+#spell-table,
+#spell-sub,
+#faction-sub {
     width: 100%;
 }
 
-#spell-table-div{
+#spell-table-div {
     height: 400px;
     border-right-width: 3px;
     border-top-width: 3px;
     border-bottom-width: 3px;
 }
 
-#spell-title{
+#spell-title, #faction-sub-title {
     color: darkgoldenrod;
 }
 
-#spell-table th, #spell-table td, #spell-table{
+#spell-table th,
+#spell-table td,
+#spell-table {
     border-bottom-width: 0;
 
     border-left-width: 1px;
     border-right-width: 0;
 }
 
-#spell-table, #spell-table th{
+#spell-table,
+#spell-table th {
     border-top-width: 0;
 }
 
-#spell-table td{
+#spell-table td, #faction-names div p {
     cursor: pointer;
 }
 
-#spell-table th:nth-child(1){
+#spell-table th:nth-child(1) {
     width: 50%;
 }
 
-#spell-table td:nth-child(1){
+#spell-table td:nth-child(1) {
     padding-left: 10px;
 }
 
-#spell-table th{
+#spell-table th {
     background-color: #f1efea;
     position: sticky;
     top: 0;
@@ -253,91 +304,115 @@ table, th, td{
     cursor: pointer;
 }
 
-#spell-sub{
+#spell-sub {
     visibility: hidden;
 }
 
+#faction-sub {
+    height: 67vh;
+}
+
+#faction-menu {
+    height: 58vh;
+    overflow-y: auto;
+}
+
+#faction-names div p:hover {
+    color: rgb(209, 9, 9)  
+}
+
+#faction-sub-overview{
+    font-size: 125%;
+}
+
 @media screen and (min-width: 200px) {
-    #origin-isox-map{
+    #origin-isox-map {
         display: none;
     }
 }
 
 @media screen and (min-width: 650px) {
-    #index-isox-map{
+    #index-isox-map {
         width: 100%;
     }
 
-    #origin-isox-map{
+    #origin-isox-map {
         width: 70%;
     }
 
-    #region-div{
+    #region-div, #faction-div {
         margin-left: -30px;
         width: 200px;
     }
 
-    #patron-img{
+    #patron-img {
         width: 75%;
     }
 
-    #origin-isox-map{
+    #origin-isox-map {
         display: block;
     }
 
-    #race-img{
+    #race-img {
         width: 75%;
     }
 
-    #race-info{
+    #race-info {
         width: 100%;
     }
 }
-  
-  @media screen and (min-width: 800px) {
-    #index-isox-map{
+
+@media screen and (min-width: 800px) {
+    #index-isox-map {
         width: 75%;
     }
 
-    #origin-isox-map{
+    #origin-isox-map {
         width: 75%;
-        
     }
-    #region-div{
+
+    #region-div, #faction-div {
         margin-left: 0;
         width: 265px;
     }
 
-    #patron-main, #divinity-main, #patheon-main, #race-main{
+    #patron-main,
+    #divinity-main,
+    #patheon-main,
+    #race-main {
         display: flex;
         align-items: flex-start;
-    } 
+    }
 
-    #patron-info, #patheon-info, #divinity-info{
+    #patron-info,
+    #patheon-info,
+    #divinity-info {
         width: 1200px;
     }
 
-    #patron-img{
+    #patron-img {
         width: 40%;
     }
 
-    #divinity-sub, #divinity-img, #spell-sub{
+    #divinity-sub,
+    #divinity-img,
+    #spell-sub {
         max-width: 400px;
     }
 
-    #divinity-list-div{
+    #divinity-list-div {
         margin-left: 100px;
     }
 
-    #origin-isox-map{
+    #origin-isox-map {
         display: block;
     }
 
-    #race-img{
+    #race-img {
         width: 40%;
     }
 
-    #spell-sub{
+    #spell-sub {
         max-height: 400px;
     }
 }

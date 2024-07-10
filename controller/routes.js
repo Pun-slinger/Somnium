@@ -9,6 +9,8 @@ const spells = require("../static/text/spells-list.js");
 const classes = require("../static/text/class.js");
 const casting_time = require("../static/text/casting-time.js");
 
+const factions = require("../static/text/faction-list.js")
+
 //layout: false or express will start looking for layout with main.handlebars by default
 router.get('/', function (req, res) {
     res.render('index', { title: "Home Page of Somnium" });
@@ -116,6 +118,12 @@ router.get('/spells', function (req, res) {
 
 router.get('/homebrew-rules', function (req, res) {
     res.render('homebrew-rules', { title: "Homebrew Rules" });
+})
+
+router.get('/factions', function (req, res) {
+    res.render('factions', {
+        title: "Somnium: Factions", factions: factions.all_factions
+    });
 })
 
 module.exports = router;

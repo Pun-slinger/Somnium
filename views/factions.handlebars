@@ -1,0 +1,58 @@
+<h1 id="cc-title" class="text-center mb-5">Factions</h1>
+
+<div class="d-flex flex-row ml-5 mr-5 mb-4">
+    <div id="faction-div">
+        <h2 id="faction-title" class="ml-1">List</h2>
+        <hr id="faction-hr" class="mb-0">
+        <div id="faction-menu" class="container">
+            <div class="row no-gutters">
+                <div id="faction-names">
+                    {{#each factions}}
+                    <div id="{{noSpaceName}}-click" class="mt-3">
+                        <p>{{name}}</p>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="faction-sub" class="ml-5 p-2 rounded table-responsive">
+        <h1 id="faction-sub-title" class="mt-2 ml-2"></h1>
+        
+        <hr class="mx-2 mb-2">
+
+        <div id="faction-sub-overview">
+
+        </div>
+    </div>
+</div>
+
+{{#each factions}}
+<script>
+    document.getElementById(`{{noSpaceName}}-click`).addEventListener("click", {{ noSpaceName }}Click);
+
+    function {{noSpaceName}}Click() {
+        document.getElementById("faction-sub-overview").innerHTML = "",
+
+        document.getElementById("faction-sub-title").innerHTML = "{{name}}";
+
+        {{#each overview}}
+        var paragraph = document.createElement("p")
+        paragraph.className = "mx-2"
+        paragraph.innerHTML = "{{this}}"
+        document.getElementById("faction-sub-overview").appendChild(paragraph);
+        {{/each}}
+    }
+</script>
+{{/each}}
+<script>
+    function loadFunctions() {
+        clickOnFaction(0);
+    }
+
+    function clickOnFaction(factionNum) {
+        var list = document.getElementById("faction-names");
+        list.getElementsByTagName("div")[factionNum].click();
+    }
+</script>
