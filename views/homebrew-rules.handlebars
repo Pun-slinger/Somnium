@@ -1,6 +1,6 @@
 <style>
     .sidenav {
-        height: 100%;
+        height: 92vh;
         width: 160px;
         position: fixed;
         z-index: 1;
@@ -8,8 +8,9 @@
         left: 0;
         background-color: #450202;
         overflow-x: hidden;
-        padding-top: 80px;
+        padding-top: 20px;
         padding-right: 2px;
+        margin-top: 65px;
     }
 
     #main-navbar {
@@ -50,6 +51,7 @@
     <p id="proficiencies-click">Gaining additional proficiencies</p>
     <p id="sorcerer-click">Sorcerer casting</p>
     <p id="information-click">Gaining information during combat</p>
+    <p id="multiclass-click">Multiclassing</p>
 </div>
 
 <div class="homebrew-rule-main">
@@ -300,6 +302,15 @@ will then be prompted to roll a <b>third d20</b> called the “<b>Second Explodi
 
     <p id="rule-text" class="text-left mx-5 mb-5">During combat, each player during their turn can make a <b>“knowledge check”</b> (any appropriate check determined by the DM) to identify specific information about an enemy: weaknesses, intent, abilities, etc…. <b>Note:</b> to specifically learn what an enemy’s ability does, the player <b>must have seen that ability be used</b>.</p>
 
+
+    <hr class="mx-5 mb-5">
+
+    <div id="multiclass-anchor">
+        <h1 id="rule-title" class="text-left ml-5">Multiclassing</h1>
+    </div>
+
+    <p id="rule-text" class="text-left mx-5 mb-3">A minimum value for an ability score will <b>not be required</b> to multiclass into a class.</p>
+    <p id="rule-text" class="text-left mx-5 mb-5">When multiclassing into a class for the first time, you gain all of that class’ starting proficiencies.</p>
 </div>
 
 <script>
@@ -313,6 +324,7 @@ will then be prompted to roll a <b>third d20</b> called the “<b>Second Explodi
     document.getElementById("proficiencies-click").addEventListener("click", proficienciesClick);
     document.getElementById("sorcerer-click").addEventListener("click", sorcererClick);
     document.getElementById("information-click").addEventListener("click", informationClick);
+    document.getElementById("multiclass-click").addEventListener("click", multiclassClick);
 
 
     function explodingClick() {
@@ -362,6 +374,11 @@ will then be prompted to roll a <b>third d20</b> called the “<b>Second Explodi
 
     function informationClick() {
         var top = document.getElementById("information-anchor").offsetTop;
+        window.scrollTo(0, top - 100);
+    }
+
+    function multiclassClick() {
+        var top = document.getElementById("multiclass-anchor").offsetTop;
         window.scrollTo(0, top - 100);
     }
 </script>
