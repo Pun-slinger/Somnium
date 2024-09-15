@@ -101,14 +101,15 @@ var rogue = {
     subclass_list: [pirate]
 }
 
-var demonic_bloodline = { name: "Demonic Bloodline", link: "/demonic-bloodline" }
+//var demonic_bloodline = { name: "Demonic Bloodline", link: "/demonic-bloodline" }
 
 var sorcerer = {
     name: "Sorcerer",
     subclasses: {
-        demonic_bloodline: demonic_bloodline
+        //demonic_bloodline: demonic_bloodline
     },
-    subclass_list: [demonic_bloodline]
+    // subclass_list: [demonic_bloodline]
+    subclass_list: []
 }
 
 var marionettist = { name: "Marionettist", link: "/marionettist" }

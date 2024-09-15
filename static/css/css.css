@@ -128,12 +128,10 @@ td,
     border-width: 1px;
 }
 
-#races a {
+#races a, #divinity-list-div a {
     font-size: 25px;
     background-color: #f1efeabb;
     margin-bottom: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
     width: 200px;
@@ -142,8 +140,17 @@ td,
     border-width: 2px;
 }
 
-#patrons-list-div a,
-#divinity-list-div a {
+#races a{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#divinity-list-div a{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+#patrons-list-div a{
     font-size: 25px;
     background-color: #f1efea93;
     margin-bottom: 40px;
@@ -186,6 +193,10 @@ td,
     border-color: darkred;
     border-style: groove;
     border-width: 2px;
+}
+
+#divinity-info{
+    font-size: x-large;
 }
 
 #subclass-overview-text {
@@ -325,6 +336,8 @@ td {
     font-size: 125%;
 }
 
+
+
 @media screen and (min-width: 200px) {
     #origin-isox-map {
         display: none;
@@ -377,7 +390,6 @@ td {
     }
 
     #patron-main,
-    #divinity-main,
     #patheon-main,
     #race-main {
         display: flex;
@@ -385,8 +397,7 @@ td {
     }
 
     #patron-info,
-    #patheon-info,
-    #divinity-info {
+    #patheon-info{
         width: 1200px;
     }
 
@@ -400,9 +411,9 @@ td {
         max-width: 400px;
     }
 
-    #divinity-list-div {
+    /* #divinity-list-div {
         margin-left: 100px;
-    }
+    } */
 
     #origin-isox-map {
         display: block;
