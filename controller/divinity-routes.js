@@ -9,11 +9,11 @@ router.get('/Radiance-pantheon', function (req, res) {
         name: "Radiance",
         overview: "This pantheon consists of deities that represents the goodly aspects that govern every mortal creature and also act as the balancing force towards the evil side of the spectrum.",
         gods: [
-            "Alan",
+            // "Alan",
             "Cylena",
             "Quieza",
             "Tavlous",
-            "Zinia",
+            // "Zinia",
         ]
     });
 })
@@ -28,7 +28,7 @@ router.get('/Shroud-pantheon', function (req, res) {
             "Ezreus",
             "Omen",
             "Vora",
-            "Wozotz",
+            // "Wozotz",
         ]
     });
 })
@@ -55,8 +55,8 @@ router.get('/Viridi-pantheon', function (req, res) {
         overview: "This pantheon consists of deities that governs the various aspects of nature.",
         gods: [
             "Arsyn",
-            "Durages",
-            "Iana",
+            // "Durages",
+            // "Iana",
             "Myst",
         ]
     });
@@ -88,7 +88,7 @@ router.get('/Grey-pantheon', function (req, res) {
             "Ataris",
             "Ayrveog",
             "Enn",
-            "Oryx",
+            // "Oryx",
             "Vati",
         ]
     });
