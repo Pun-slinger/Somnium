@@ -9,11 +9,9 @@ router.get('/Radiance-pantheon', function (req, res) {
         name: "Radiance",
         overview: "This pantheon consists of deities that represents the goodly aspects that govern every mortal creature and also act as the balancing force towards the evil side of the spectrum.",
         gods: [
-            // "Alan",
             "Cylena",
             "Quieza",
             "Tavlous",
-            // "Zinia",
         ]
     });
 })
@@ -28,7 +26,6 @@ router.get('/Shroud-pantheon', function (req, res) {
             "Ezreus",
             "Omen",
             "Vora",
-            // "Wozotz",
         ]
     });
 })
@@ -44,20 +41,6 @@ router.get('/Masked-pantheon', function (req, res) {
             "Koga",
             "Nova",
             "Vyon",
-        ]
-    });
-})
-
-router.get('/Viridi-pantheon', function (req, res) {
-    res.render('divnity-list', {
-        title: "Somnium: Viridi Pantheon",
-        name: "Viridi",
-        overview: "This pantheon consists of deities that governs the various aspects of nature.",
-        gods: [
-            "Arsyn",
-            // "Durages",
-            // "Iana",
-            "Myst",
         ]
     });
 })
@@ -88,8 +71,9 @@ router.get('/Grey-pantheon', function (req, res) {
             "Ataris",
             "Ayrveog",
             "Enn",
-            // "Oryx",
             "Vati",
+            "Arsyn",
+            "Myst",
         ]
     });
 })

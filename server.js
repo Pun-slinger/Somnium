@@ -21,7 +21,6 @@ const origins_ocean_routes = require("./controller/origins/origins-ocean-routes"
 const divinity_radiance_routes = require("./controller/divinity/divinity-radiance-routes");
 const divinity_shroud_routes = require("./controller/divinity/divinity-shroud-routes");
 const divinity_masked_routes = require("./controller/divinity/divinity-masked-routes");
-const divinity_viridi_routes = require("./controller/divinity/divinity-viridi-routes");
 const divinity_prismatic_routes = require("./controller/divinity/divinity-prismatic-routes");
 const divinity_grey_routes = require("./controller/divinity/divinity-grey-routes");
 
@@ -56,7 +55,6 @@ app.use("/origins/The-Boundless-Ocean", origins_ocean_routes);
 app.use("/divinity/Radiance-pantheon", divinity_radiance_routes);
 app.use("/divinity/Shroud-pantheon", divinity_shroud_routes);
 app.use("/divinity/Masked-pantheon", divinity_masked_routes);
-app.use("/divinity/Viridi-pantheon", divinity_viridi_routes);
 app.use("/divinity/Prismatic-pantheon", divinity_prismatic_routes);
 app.use("/divinity/Grey-pantheon", divinity_grey_routes);
 

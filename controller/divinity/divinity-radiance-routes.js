@@ -2,32 +2,6 @@ const express = require("express");
 const router = express.Router();
 const { request, response } = require('express');
 
-router.get('/Alan', function (req, res) {
-    res.render('divinity', {
-        title: "Somnium: Alan",
-        pantheon: "Radiance Pantheon",
-        name: "Alan",
-        overview: "Another of the few deities that is physically manifested on Isox. At first glance, one could easily mistaken him for a common traveler. Described by those who have talk to him as a surprisingly down to earth deity, Alan travel place to place to share feats achieved through friendship that he has witnessed. In Alan's teachings, nothing is more powerful than a bond forged through friendship and absolute trust. So ask yourself, do you trust those you walk along with?",
-        domains: [
-            "Order",
-            "Peace",
-            "Knowledge"
-        ],
-        symbol: "Alan's holy symbol is a red string bracelet",
-        boons: "+1 Charisma",
-        lip: "Skill proficiency - Perception",
-        cleric_aligns: [
-            "Any"
-        ],
-        alignment: "Lawful Good",
-        titles: [
-            "Iron Heart",
-            "One for All, All for One"
-        ],
-        imagelink: "/img/arts/divinity/radiance/Alan.jpg"
-    });
-})
-
 router.get('/Cylena', function (req, res) {
     res.render('divinity', {
         title: "Somnium: Cylena",
@@ -117,36 +91,6 @@ router.get('/Tavlous', function (req, res) {
             "The White Dove"
         ],
         imagelink: "/img/arts/divinity/radiance/Tavlous.png"
-    });
-})
-
-router.get('/Zinia', function (req, res) {
-    res.render('divinity', {
-        title: "Somnium: Zinia",
-        pantheon: "Radiance Pantheon",
-        name: "Zinia",
-        overview: "Acting as the force holding back evil, Zinia and his followers' task is simple, protect the peace of civilization. Stand for what is right and stand strong! Hold your weapons high with the might of righteousness and bring them down on those that threaten the balance of society!",
-        domains: [
-            "Peace",
-            "Light",
-            "War"
-        ],
-        symbol: "Zinia's holy symbol is a sword with wings on the hilt",
-        boons: "+1 Constitution",
-        lip: "Skill proficiency - Religion",
-        cleric_aligns: [
-            "Lawful Neutral",
-            "Lawful Good",
-            "Neutral Good",
-            "Chaotic Good"
-        ],
-        alignment: "Lawful Good",
-        titles: [
-            "The Sword of Justice",
-            "The Arbiter",
-            "Purity"
-        ],
-        imagelink: "/img/arts/divinity/radiance/Zinia.jpg"
     });
 })
 

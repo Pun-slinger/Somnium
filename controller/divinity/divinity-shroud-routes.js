@@ -121,34 +121,4 @@ router.get('/Vora', function (req, res) {
     });
 })
 
-router.get('/Wozotz', function (req, res) {
-    res.render('divinity', {
-        title: "Somnium: Wozotz",
-        pantheon: "Shroud Pantheon",
-        name: "Wozotz",
-        overview: "When cornered, one would walk down a darker path in order to gain the upper hand. Wozotz takes advantage of this, always watching, listening and whispering. Within madness lies knowledge, within madness lies guidance from the Mad One.",
-        domains: [
-            "Knowledge",
-            "Trickery",
-            "Arcana"
-        ],
-        symbol: "Wozotz's holy symbol is a eyeless face smiling",
-        boons: "+1 Intelligence",
-        lip: "Skill proficiency - Insight",
-        cleric_aligns: [
-            "Chaotic Evil",
-            "Chaotic Neutral",
-            "Neutral",
-            "Lawful Neutral"
-        ],
-        alignment: "Chaotic Evil",
-        titles: [
-            "The Dark Side",
-            "The Mad One",
-            "The Questionable"
-        ],
-        imagelink: "/img/arts/divinity/shroud/Wozotz.jpg"
-    });
-})
-
 module.exports = router;

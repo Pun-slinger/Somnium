@@ -103,6 +103,7 @@ th,
 td,
 #patron-info,
 #divinity-info,
+#divinity-list-info,
 #divinity-sub-info,
 #patheon-info,
 #spell-table-div,
@@ -184,6 +185,7 @@ td,
 #race-info,
 #patron-info,
 #divinity-info,
+#divinity-list-info,
 #divinity-sub-info,
 #patheon-info,
 #spell-table-div,
@@ -195,8 +197,12 @@ td,
     border-width: 2px;
 }
 
-#divinity-info{
+#divinity-list-info{
     font-size: x-large;
+}
+
+#divinity-info{
+    font-size: medium;
 }
 
 #subclass-overview-text {
@@ -391,6 +397,7 @@ td {
 
     #patron-main,
     #patheon-main,
+    #divinity-main,
     #race-main {
         display: flex;
         align-items: flex-start;

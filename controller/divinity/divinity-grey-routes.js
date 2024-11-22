@@ -88,35 +88,6 @@ router.get('/Enn', function (req, res) {
     });
 })
 
-router.get('/Oryx', function (req, res) {
-    res.render('divinity', {
-        title: "Somnium: Oryx",
-        pantheon: "Grey Pantheon",
-        name: "Oryx",
-        overview: "The god of thieves only has one goal on his mind, take from the wealthy and distribute to the poor. A calculating and careful god, always plotting behind the veil. His tenets for his followers are simple: work towards unraveling the inequality in wealth and always show kindness to the poor.",
-        domains: [
-            "Life",
-            "Trickery",
-            "Grave"
-        ],
-        symbol: "Oryx's holy symbol is a gold coin stabbed by a dagger",
-        boons: "+1 Dexterity",
-        lip: "Skill proficiency - Sleight of Hand",
-        cleric_aligns: [
-            "Neutral",
-            "Chaotic Neutral",
-            "Chaotic Good",
-            "Chaotic Evil"
-        ],
-        alignment: "Chaotic Neutral",
-        titles: [
-            "Fortune Thief",
-            "The Hand from the Shadows",
-        ],
-        imagelink: "/img/arts/divinity/grey/Oryx.jpg"
-    });
-})
-
 router.get('/Vati', function (req, res) {
     res.render('divinity', {
         title: "Somnium: Vati",
@@ -141,6 +112,64 @@ router.get('/Vati', function (req, res) {
             "Maiden of Harmony",
         ],
         imagelink: "/img/arts/divinity/grey/Vati.jpg"
+    });
+})
+
+router.get('/Arsyn', function (req, res) {
+    res.render('divinity', {
+        title: "Somnium: Arsyn",
+        pantheon: "Grey Pantheon",
+        name: "Arsyn",
+        overview: "Governing the four seasons is no easy task. Arsyn is constantly at work to maintain the balance of nature. She is a very serious god with only one main focus being her duties. Often she is called out by other gods for being too uptight but who has time for such words when a slight mistake can lead to the fundamental aspects of nature falling apart.",
+        domains: [
+            "Nature",
+            "Order",
+            "Life"
+        ],
+        symbol: "Arsyn's holy symbol is a cloak with the color of the four seasons",
+        boons: "+1 Constitution",
+        lip: "Skill proficiency - Medicine",
+        cleric_aligns: [
+            "Neutral",
+            "Lawful Neutral",
+            "Chaotic Neutral",
+            "Neutral Good",
+            "Lawful Good",
+            "Chaotic Good"
+        ],
+        alignment: "Chaotic Neutral",
+        titles: [
+            "Lady of Four",
+        ],
+        imagelink: "/img/arts/divinity/grey/Arsyn.png"
+    });
+})
+
+router.get('/Myst', function (req, res) {
+    res.render('divinity', {
+        title: "Somnium: Myst",
+        pantheon: "Grey Pantheon",
+        name: "Myst",
+        overview: "The goddess of animals, a caring deity that is always observing the actions of human kind towards her children. Like Iana, Myst finds humanity to be untrustworthy but she does not hate them. The two goddesses work together to maintain balance and constantly evolve and adapt. Those that serve the Protector knows that she is closer than one might think, providing insight via the many animal forms she can take.",
+        domains: [
+            "Nature",
+            "Trickery",
+            "War"
+        ],
+        symbol: "Myst's holy symbol is a wooden eagle mask",
+        boons: "+1 Dexterity",
+        lip: "Skill proficiency - Animal Handling",
+        cleric_aligns: [
+            "Neutral",
+            "Lawful Neutral",
+            "Chaotic Neutral",
+        ],
+        alignment: "Neutral",
+        titles: [
+            "One but Many",
+            "The Protector"
+        ],
+        imagelink: "/img/arts/divinity/grey/Myst.jpg"
     });
 })
 
