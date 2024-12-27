@@ -47,7 +47,7 @@
     <p id="dragon-click">Dragonborn’s Breath Weapon</p>
     <p id="resurrection-click">Resurrection</p>
     <p id="death-click">Death saving throws</p>
-    <p id="stacking-click">Stacking Advantage and Disadvantage</p>
+    {{!-- <p id="stacking-click">Stacking Advantage and Disadvantage</p> --}}
     <p id="proficiencies-click">Gaining additional proficiencies</p>
     <p id="sorcerer-click">Sorcerer casting</p>
     <p id="information-click">Gaining information during combat</p>
@@ -226,7 +226,7 @@ will then be prompted to roll a <b>third d20</b> called the “<b>Second Explodi
 
     <hr class="mx-5 mb-5">
 
-    <div id="stacking-anchor">
+    {{!-- <div id="stacking-anchor">
         <h1 id="rule-title" class="text-left ml-5">Stacking Advantage and Disadvantage</h1>
     </div>
     <p id="rule-text" class="text-left mx-5 mb-5">In a scenario where you already have advantage but
@@ -245,7 +245,7 @@ will then be prompted to roll a <b>third d20</b> called the “<b>Second Explodi
         as well if you deem that it fits into the narrative/scenario by asking the DM.
     </p>
 
-    <hr class="mx-5 mb-5">
+    <hr class="mx-5 mb-5"> --}}
 
     <div id="proficiencies-anchor">
         <h1 id="rule-title" class="text-left ml-5">Gaining additional proficiencies</h1>
@@ -320,7 +320,7 @@ will then be prompted to roll a <b>third d20</b> called the “<b>Second Explodi
     document.getElementById("dragon-click").addEventListener("click", dragonClick);
     document.getElementById("resurrection-click").addEventListener("click", resurrectionClick);
     document.getElementById("death-click").addEventListener("click", deathClick);
-    document.getElementById("stacking-click").addEventListener("click", stackingClick);
+    //document.getElementById("stacking-click").addEventListener("click", stackingClick);
     document.getElementById("proficiencies-click").addEventListener("click", proficienciesClick);
     document.getElementById("sorcerer-click").addEventListener("click", sorcererClick);
     document.getElementById("information-click").addEventListener("click", informationClick);
@@ -357,10 +357,10 @@ will then be prompted to roll a <b>third d20</b> called the “<b>Second Explodi
         window.scrollTo(0, top - 100);
     }
 
-    function stackingClick() {
-        var top = document.getElementById("stacking-anchor").offsetTop;
-        window.scrollTo(0, top - 100);
-    }
+    //function stackingClick() {
+        //var top = document.getElementById("stacking-anchor").offsetTop;
+        //window.scrollTo(0, top - 100);
+    //}
 
     function proficienciesClick() {
         var top = document.getElementById("proficiencies-anchor").offsetTop;
