@@ -123,7 +123,6 @@ var all_factions = [
     scarlet_tides,
     silvered_institution,
     sky_strider,
-    steel_maidens,
     void_knights,
     wandering_scribes,
     underworld
